@@ -4,6 +4,15 @@ const express = require("express");
 const app = express();
 const path = require("path");
 
+const renderTemplate = (res, req, template, data = {}) => {
+const baseData = {
+bot: client,
+path: req.path,
+client: client,
+};
+res.render(path.resolve(`${templateDir}${path.sep}${template}`), Object.assign(baseData, data));
+};
+
 app.use(express.static("public"));
   app.use(
     "/css",
