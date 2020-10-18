@@ -12,6 +12,7 @@ client: client,
 };
 res.render(path.resolve(`${templateDir}${path.sep}${template}`), Object.assign(baseData, data));
 };
+app.engine("html", require("ejs").renderFile);
 
 app.use(express.static("public"));
   app.use(
@@ -25,11 +26,11 @@ app.use(express.static("public"));
   );
   
 app.get("/", (request, response) => {
-  response.sendFile(__dirname + "index.html");
+  response.sendFile(__dirname + "index.ejs");
 });
 app.get("/contributors", (request, response) => {
-  response.sendFile(__dirname + "contributors.html");
+  response.sendFile(__dirname + "contributors.ejs");
 });
 app.get("/*", (request, response) => {
-  response.sendFile(__dirname + "404.html");
+  response.sendFile(__dirname + "404.ejs");
 });
