@@ -4,16 +4,6 @@ const express = require("express");
 const app = express();
 const path = require("path");
 
-const renderTemplate = (res, req, template, data = {}) => {
-const baseData = {
-bot: client,
-path: req.path,
-client: client,
-};
-res.render(path.resolve(`${templateDir}${path.sep}${template}`), Object.assign(baseData, data));
-};
-app.engine("html", require("ejs").renderFile);
-
 app.use(express.static("public"));
   app.use(
     "/css",
@@ -26,11 +16,11 @@ app.use(express.static("public"));
   );
   
 app.get("/", (request, response) => {
-  response.sendFile(__dirname + "index.ejs");
+  response.sendFile(__dirname + "index.html");
 });
 app.get("/contributors", (request, response) => {
-  response.sendFile(__dirname + "contributors.ejs");
+  response.sendFile(__dirname + "contributors.html");
 });
 app.get("/*", (request, response) => {
-  response.sendFile(__dirname + "404.ejs");
+  response.sendFile(__dirname + "404.html");
 });
