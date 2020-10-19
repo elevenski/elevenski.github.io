@@ -1,0 +1,9 @@
+<script>
+	 var dil = navigator.language || navigator.userLanguage;
+    if (dil == "tr-TR"| dil == "tr") {
+  response.sendFile(__dirname + "tr.html");
+    }
+    else {
+  response.sendFile(__dirname + "en.html");
+    }
+</script>
