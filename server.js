@@ -15,9 +15,6 @@ app.use(express.static("public"));
     express.static(path.resolve(__dirname + `/js`))
   );
   
-/*app.get("/", (request, response) => {
-  response.sendFile(__dirname + "index.html");
-});*/
 app.get("/", (request, response) => {
 	 var dil = navigator.language || navigator.userLanguage;
     if (dil == "tr-TR"| dil == "tr") {
