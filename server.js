@@ -16,11 +16,11 @@ app.use(express.static("public"));
   );
   
 app.get("/", (request, response) => {
-  response.sendFile(__dirname + "pages/index.html");
+  response.sendFile(__dirname + "/pages/index.html");
 });
 app.get("/contributors", (request, response) => {
-  response.sendFile(__dirname + "pages/contributors.html");
+  response.sendFile(__dirname + "/pages/contributors.html");
 });
 app.get("/*", (request, response) => {
-  response.sendFile(__dirname + "pages/404.html");
+  response.sendFile(__dirname + "/pages/404.html");
 });
