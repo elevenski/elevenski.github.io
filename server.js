@@ -14,7 +14,9 @@ app.use(express.static("public"));
     "/js",
     express.static(path.resolve(__dirname + `/js`))
   );
-  
+
+  const templateDir = path.resolve(`${process.cwd()}${path.sep}pages`);
+
 app.get("/", (request, response) => {
   response.sendFile(__dirname + "/pages/index.html");
 });
