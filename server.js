@@ -16,13 +16,13 @@ app.use(express.static("public"));
   );
   
 app.get("/", (request, response) => {
-  response.sendFile(__dirname + "index.html");
+  response.sendFile(__dirname + "pages/index.html");
 });
 app.get("/tr", (request, response) => {
-  response.sendFile(__dirname + "tr.html");
+  response.sendFile(__dirname + "pages/tr/index.html");
 });
 app.get("/en", (request, response) => {
-  response.sendFile(__dirname + "en.html");
+  response.sendFile(__dirname + "pages/en/index.html");
 });
 app.get("/contributors", (request, response) => {
   response.sendFile(__dirname + "contributors.html");
