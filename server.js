@@ -16,13 +16,13 @@ app.use(express.static("public"));
   );
   
 app.get("/", (request, response) => {
-	 var dil = navigator.language || navigator.userLanguage;
-    if (dil == "tr-TR"| dil == "tr") {
+  response.sendFile(__dirname + "index.html");
+});
+app.get("/tr", (request, response) => {
   response.sendFile(__dirname + "tr.html");
-    }
-    else {
+});
+app.get("/en", (request, response) => {
   response.sendFile(__dirname + "en.html");
-    }
 });
 app.get("/contributors", (request, response) => {
   response.sendFile(__dirname + "contributors.html");
