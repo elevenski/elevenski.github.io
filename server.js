@@ -15,8 +15,17 @@ app.use(express.static("public"));
     express.static(path.resolve(__dirname + `/js`))
   );
   
-app.get("/", (request, response) => {
+/*app.get("/", (request, response) => {
   response.sendFile(__dirname + "index.html");
+});*/
+app.get("/", (request, response) => {
+	 var dil = navigator.language || navigator.userLanguage;
+    if (dil == "tr-TR"| dil == "tr") {
+  response.sendFile(__dirname + "tr.html");
+    }
+    else {
+  response.sendFile(__dirname + "en.html");
+    }
 });
 app.get("/contributors", (request, response) => {
   response.sendFile(__dirname + "contributors.html");
