@@ -18,9 +18,6 @@ app.use(express.static("public"));
 app.get("/", (request, response) => {
   response.sendFile(__dirname + "index.html");
 });
-app.get("/weg", (request, response) => {
-  response.sendFile(__dirname + "weg.html");
-});
 app.get("/contributors", (request, response) => {
   response.sendFile(__dirname + "contributors.html");
 });
