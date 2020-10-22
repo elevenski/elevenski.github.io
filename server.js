@@ -15,10 +15,6 @@ app.use(express.static("public"));
     express.static(path.resolve(__dirname + `/js`))
   );
 
-app.get("/youtube", (request, response) => {
-  response.sendFile(__dirname + "https://www.youtube.com/c/elevendev");
-});
-
 app.get("/*", (request, response) => {
   response.sendFile(__dirname + "404.html");
 });
