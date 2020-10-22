@@ -1,0 +1,140 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Demo</title>
+<style>
+* {
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+}
+
+body {
+  background-image: linear-gradient(to bottom right, #ff9800, #ffa726);
+}
+
+.blue {
+  color: #29b6f6;
+}
+
+.green {
+  color: #9ccc65;
+}
+
+.purple {
+  color: #ba68c8;
+}
+
+.cyan {
+  color: #4dd0e1;
+}
+
+.red {
+  color: #ef5350;
+}
+
+.content {
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  -webkit-perspective: 150rem;
+          perspective: 150rem;
+  height: 20rem;
+  width: 30rem;
+  position: relative;
+}
+.card__side {
+  height: 15rem;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+  width: 30rem;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+}
+.card__side--front {
+  background-color: #1c1c1c;
+}
+.card__side--back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  background-color: #1c1c1c;
+}
+.card:hover .card__side--front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+.card:hover .card__side--back {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+.card__cont {
+  height: 15rem;
+  background-color: #1c1c1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  color: white;
+}
+.card__cta p {
+  margin-left: 1rem;
+}
+.card__cta p > .space {
+  margin-left: 2rem;
+}
+</style>
+<script type="258432d32da4b821b3c9d6d1-text/javascript">
+  window.console = window.console || function(t) {};
+</script>
+<script type="258432d32da4b821b3c9d6d1-text/javascript">
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<div class="content">
+<div class="card">
+<div class="card__side card__side--front">
+<div class="card__cont">
+<span class="blue">alert</span><span>(<span class="green">'Hello World!'</span>)</span>
+</div>
+</div>
+<div class="card__side card__side--back">
+<div class="card__cta">
+<p><span class="purple">const</span> aboutMe <span class="cyan">=</span> {
+<br />
+<span class="space red">name</span><span class="cyan">:</span> <span class="green">'Alper'</span>,
+<br />
+<span class="space red">surName</span><span class="cyan">:</span> <span class="green">'İnce'</span>,
+<br />
+<span class="space red">mail</span><span class="cyan">:</span> <span class="green">'elevendev@gmail.com'</span>,
+<br />
+<span class="space red">is</span><span class="cyan">:</span> <span class="green">'Front-end Developer'</span>,
+<br />
+<span class="space red">website</span><span class="cyan">:</span> <span class="green">'eleven.js.org'</span>
+<br /> };
+</p>
+</div>
+</div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="258432d32da4b821b3c9d6d1-|49" defer=""></script></html>
