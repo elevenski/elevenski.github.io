@@ -1,0 +1,16 @@
+{
+   "name": "Homepage - eleven.js.org",
+   "short_name": "eleven.js.org",
+   "icons": [
+      {
+         "src": "https://cdn.discordapp.com/attachments/767355962016137227/769274471734837287/avatar.png",
+         "type": "image/PNG",
+         "sizes": "144x144"
+      }
+   ],
+
+   "start_url": "/",
+   "display": "standalone",
+   "background_color": "#ffffff",
+   "theme_color": "#200505"
+}
