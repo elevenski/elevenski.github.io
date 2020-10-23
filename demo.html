@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Abby Zahne</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="home">
+    <!-- Navigation Buttons -->
+    <div class="links">
+        <ul>
+        <li class="inner"><button id="about-btn">about</button></li>
+        <li class="inner"><button id="projects-btn">projects</button></li>
+        <li class="inner"><button id="contact-btn">contact</button></li> 
+        </ul>
+    </div>
+
+  
+    </header>
+    
+    <!-- About Me -->
+    <div id="about-me">
+        <div class="row">
+            <div class="col-1">
+                <img class="my-photo" src="images/myphoto.jpeg">
+            </div>
+
+            <div class="col-2">
+                <p class="typing introduction">Hello, world!</p>
+                <div class="para">
+                    <p class="blurb"> I'm Abigail Zahne, a fourth year Computer Science and Finance student at Northeastern University in Boston.
+                    I am currently searching for a software engineering co-op for Spring 2021. </p>
+                    <p class="blurb"> I am interested in both software development and data science. There is something so exciting about getting a program to work after struggling
+                        on it for so long, or being able to create a model that learns to accurately make predictions based on the data you provide it. 
+                        I previously worked at Rue Gilt Groupe as a Data Product Engineer, and am currently serving on e-board for Northeastern University's Esports club and Developer 
+                        Student Club. </p>
+                    <p class="blurb"> When I am not coding or working on a project, I enjoy exploring the area around Boston and obsessing over french bulldogs. 
+                        Some of my hobbies include building mechanical keyboards, watching ice hockey, and, because I'm a foodie, exploring new restaurants. </p>
+                        <p class="blurb"> 
+                            <a href="images/AZResume (1) (1).pdf" target="_blank">RESUME</a> </p>
+                </div>
+            </div>
+         </div>
+    </div>
+
+    <!-- Projects -->
+    
+    <div id="projects"> 
+        <h2> Projects: </h2>
+        <p class="more">Code + more can be found on my github!</p>
+        <div class="box">
+            <div class="icon"><img class="net" src="images/netflix.jpg">
+            </i></div>
+            <div class="content">
+                <h3>Netflix Updater</h3>
+                <p>A Discord bot that provides updates on the newest Netflix releases, titles that will leave Netflix soon, the Top 10 Movies and TV shows of the day, and titles that will 
+                    join Netflix soon. Built using JavaScript to scrape the data, Node.js, and Discord.js to connect the bot.
+                </p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icon"><img class="big" src="images/bigbang.PNG">
+            </i></div>
+            <div class="content">
+                <h3>Animation Player/Editor</h3>
+                <p>An animation player and editor that provides different ways to output an animation: textually, visually, or as an SVG file. Includes a way to play, pause,
+                    loop through the animation, and change the speed. Built using the Model-View-Controller design pattern in Java, and a GUI using Java Swing. </p>
+            </div>
+        </div>
+        
+        <div class="box">
+            <div class="icon"><img class ="plane" src="images/plane.jpg">
+            </i></div>
+            <div class="content">
+                <h3>Aircraft Crashes Predictor</h3>
+                <p>Created a Jupyter Notebook to analyze the data of aircraft crashes. Cleaned the data, trained and tuned various machine learning regression models to determine the 
+                    best algorithm for predicting the number of fatalities in an aircraft using Python, pandas, and scikit-learn. 
+                </p>
+            </div> 
+        </div>
+
+    </div>
+
+    <!-- Contact -->
+    <div id="contact">
+        <div class="col">
+            <div class="col-row-2">
+                <p class="contact-me">Let's get in touch! 👩‍💻</p>
+            </div>
+            <div class="col-row-3">
+                <p class="contact-info"> 
+                    <a href="https://www.linkedin.com/in/abigailzahne/">
+                        <img class="ln" src="images/linkedin.svg">
+                    </a>
+                    <a href="https://www.github.com/abbyzahne">
+                        <img class="gh" src="images/github.svg">
+                    </a>
+                    <a href="mailto:zahne.a@northeastern.edu">
+                        <img class="email" src="images/gmail.svg">
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
