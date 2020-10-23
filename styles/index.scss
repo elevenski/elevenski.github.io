@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$background: #3b3f41;
+$colors: (
+  "gray-normal": #55595a,
+  "gray-bright": #83898b,
+  "gray-light": #a1a5a7,
+  "gray-softlight": #56595a,
+  "blue-light": #94b2d6,
+  "gray-darklight": #636869,
+  "gray-tlight": #969d9e,
+);
+
+body {
+  background: $background;
+  background-image: url("https://i.imgur.com/XVwPH5r.png");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+@each $name, $color in $colors {
+  .bg-#{$name} {
+    background-color: $color;
+  }
+  .text-#{$name} {
+    color: $color;
+  }
+  .border-#{$name} {
+    border-color: $color;
+  }
+}
