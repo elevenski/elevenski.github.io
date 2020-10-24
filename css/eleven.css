@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+
+body {
+	height: 100%;
+	background-position: 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	overflow-x: hidden;
+	font-family: Poppins, sans-serif
+}
+
+.bg-gray-normal {
+	background-color: #55595a
+}
+
+.text-gray-normal {
+	color: #55595a
+}
+
+.border-gray-normal {
+	border-color: #55595a
+}
+
+.bg-gray-bright {
+	background-color: #83898b
+}
+
+.text-gray-bright {
+	color: #83898b
+}
+
+.border-gray-bright {
+	border-color: #83898b
+}
+
+.bg-gray-light {
+	background-color: #a1a5a7
+}
+
+.text-gray-light {
+	color: #a1a5a7
+}
+
+.border-gray-light {
+	border-color: #a1a5a7
+}
+
+.bg-gray-softlight {
+	background-color: #56595a
+}
+
+.text-gray-softlight {
+	color: #56595a
+}
+
+.border-gray-softlight {
+	border-color: #56595a
+}
+
+.bg-blue-light {
+	background-color: #94b2d6
+}
+
+.text-blue-light {
+	color: #94b2d6
+}
+
+.border-blue-light {
+	border-color: #94b2d6
+}
+
+.bg-gray-darklight {
+	background-color: #636869
+}
+
+.text-gray-darklight {
+	color: #636869
+}
+
+.border-gray-darklight {
+	border-color: #636869
+}
+
+.bg-gray-tlight {
+	background-color: #969d9e
+}
+
+.text-gray-tlight {
+	color: #969d9e
+}
+
+.border-gray-tlight {
+	border-color: #969d9e
+}
