@@ -125,7 +125,7 @@ body {
 .pbcontainer.jsx-2318397809 {
 	height: 23px;
 	width: 100%;
-	background: linear-gradient( to right, #14629c, #14629c 50%, #14629c 100%);
+	background: linear-gradient( to right, #0c2e46, #0c2e46 50%, #0c2e46 100%);
 	border-radius: 7px;
 }
 
@@ -134,7 +134,7 @@ body {
 	transition: width 1s ease-in-out;
 	height: 100%;
 	width: 1%;
-	background: #1572b7;
+	background: #0074c1;
 	border-radius: inherit;
 	text-align: right;
 }
@@ -193,7 +193,7 @@ body {
 .pbcontainer.jsx-3963280954 {
 	height: 23px;
 	width: 100%;
-	background: linear-gradient( to right, #954b6f, #954b6f 50%, #954b6f 100%);
+	background: linear-gradient( to right, #412231, #412231 50%, #412231 100%);
 	border-radius: 7px;
 }
 
