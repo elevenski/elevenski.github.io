@@ -7,7 +7,7 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	overflow-x: hidden;
-	font-family: Poppins, sans-serif
+	font-family: monospace,monospace
 }
 
 .bg-gray-normal {
