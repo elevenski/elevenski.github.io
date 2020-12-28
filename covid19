@@ -1,0 +1,405 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Tracker</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<nav class="navbar">
+		<a href="index.html" id="logo">GO CORONA GO</a>
+		<a href="https://yashvc.xyz/contact.html" id="world"> Contact </a>
+	</nav>
+		<div class="grid-container-1">
+			<div class="grid-item-1">
+						<p id="total_counter_india"></p>
+						<p id="total_p">Total number of cases in India</p>
+						Last Updated - <span id="last_updated"></span>
+			</div>
+			<div class="grid-item-1">
+						<p id="total_counter_world"></p>
+						<p id="total_p">Total number of cases in the World</p>
+			</div>
+			<div style="margin-top: 25px; font-family: 'Karla', sans-serif;">
+					<a type="button" href="https://www.altnews.in/?s=coronavirus" class="btn"
+						target="_blank" id="links">COVID-19 Fake News</a><span id="br"><br></span>
+					<a id="latestnewsbtn" type="button"
+						href="https://news.google.com/topics/CAAqBwgKMMqAmAsw9KmvAw?oc=3&ceid=IN:en"
+						class="btn" target="_blank">Latest COVID-19 News</a>
+				</div>
+		</div>
+		<div class="grid-container-2">
+			<div class="grid-item-2">
+				<p class="new_cases" id="new_cases_today"></p>
+				<p id="new_cases_description">New cases today</p>
+			</div>
+			<div class="grid-item-2">
+				<p class="new_cases" id="total_active_cases"></p>
+				<p id="new_cases_description">Total active cases</p>
+			</div>
+			<div class="grid-item-2">
+				<p class="new_cases" id="total_recovered_cases"></p>
+				<p id="new_cases_description">Total recovered cases</p>
+			</div>
+			<div class="grid-item-2">
+				<p class="new_cases" id="total_deaths"></p>
+				<p id="new_cases_description">Deaths</p>
+			</div>
+		</div>
+		<div class="table_scroll">
+		<table class="mytable">
+				<tr class="table_head">
+					<th>State</th>
+					<th>Total</th>
+					<th>New Cases</th>
+					<th>Active</th>
+					<th>Recovered</th>
+					<th>Deaths</th>
+					<th>Last Updated</th>
+				</tr>
+			<div class="table_body">
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+				<tr>
+					<td class="state"></td>
+					<td class="total"></td>
+					<td class="new-cases-today"></td>
+					<td class="active"></td>
+					<td class="recovered"></td>
+					<td class="deaths"></td>
+					<td class="last-updated"></td>
+				</tr>
+			</div>
+		</table>
+		</div><hr>
+		<footer>
+			Made with <i class="fa fa-heart" style="font-size:24px"></i> By <a href="https://yashvc.xyz/about.html" id="me">Yash Chaudhari.</a>
+		</footer>
+
+	<script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="crossorigin="anonymous"></script>
+  	<script src="index.js"></script>
+</body>
+</html>
