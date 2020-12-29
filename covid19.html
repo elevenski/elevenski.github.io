@@ -1,640 +1,126 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COVID-19 Tracker</title>
-    <link rel="stylesheet" type="text/css" href="covid19.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-	<nav class="navbar">
-		<a href="index.html" id="logo">GO CORONA GO</a>
-		<a href="https://yashvc.xyz/contact.html" id="world"> Contact </a>
-	</nav>
-		<div class="grid-container-1">
-			<div class="grid-item-1">
-						<p id="total_counter_india"></p>
-						<p id="total_p">Total number of cases in India</p>
-						Last Updated - <span id="last_updated"></span>
-			</div>
-			<div class="grid-item-1">
-						<p id="total_counter_world"></p>
-						<p id="total_p">Total number of cases in the World</p>
-			</div>
-			<div style="margin-top: 25px; font-family: 'Karla', sans-serif;">
-					<a type="button" href="https://www.altnews.in/?s=coronavirus" class="btn"
-						target="_blank" id="links">COVID-19 Fake News</a><span id="br"><br></span>
-					<a id="latestnewsbtn" type="button"
-						href="https://news.google.com/topics/CAAqBwgKMMqAmAsw9KmvAw?oc=3&ceid=IN:en"
-						class="btn" target="_blank">Latest COVID-19 News</a>
-				</div>
-		</div>
-		<div class="grid-container-2">
-			<div class="grid-item-2">
-				<p class="new_cases" id="new_cases_today"></p>
-				<p id="new_cases_description">New cases today</p>
-			</div>
-			<div class="grid-item-2">
-				<p class="new_cases" id="total_active_cases"></p>
-				<p id="new_cases_description">Total active cases</p>
-			</div>
-			<div class="grid-item-2">
-				<p class="new_cases" id="total_recovered_cases"></p>
-				<p id="new_cases_description">Total recovered cases</p>
-			</div>
-			<div class="grid-item-2">
-				<p class="new_cases" id="total_deaths"></p>
-				<p id="new_cases_description">Deaths</p>
-			</div>
-		</div>
-		<div class="table_scroll">
-		<table class="mytable">
-				<tr class="table_head">
-					<th>State</th>
-					<th>Total</th>
-					<th>New Cases</th>
-					<th>Active</th>
-					<th>Recovered</th>
-					<th>Deaths</th>
-					<th>Last Updated</th>
-				</tr>
-			<div class="table_body">
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-				<tr>
-					<td class="state"></td>
-					<td class="total"></td>
-					<td class="new-cases-today"></td>
-					<td class="active"></td>
-					<td class="recovered"></td>
-					<td class="deaths"></td>
-					<td class="last-updated"></td>
-				</tr>
-			</div>
-		</table>
-		</div><hr>
-		<footer>
-			Made with <i class="fa fa-heart" style="font-size:24px"></i> By <a href="https://yashvc.xyz/about.html" id="me">Yash Chaudhari.</a>
-		</footer>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-	<script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="crossorigin="anonymous"></script>
-  	<script src="index.js"></script>
-</body>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dataTables.bootstrap4.min.css" />
+
+    <title>Coronavirus Update (Live)</title>
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4"><i class="fa fa-question-circle" aria-hidden="true"></i> Coronavirus Information</h1>
+        <p class="lead">Get the latest update for Global Coronavirus Information. <br /></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                id="global"
+                data-toggle="tab"
+                href="#home"
+                role="tab"
+                aria-controls="home"
+                aria-selected="true"
+                >Global</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="bycountry"
+                data-toggle="tab"
+                href="#profile"
+                role="tab"
+                aria-controls="profile"
+                aria-selected="false"
+                >By Country</a
+              >
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="global">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card text-white bg-warning mb-3 mt-3">
+                    <div class="card-header"><h2>Cases</h2></div>
+                    <div class="card-body">
+                      <h3 id="cases" class="card-text"></h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card text-white bg-danger mb-3 mt-3">
+                    <div class="card-header"><h2>Deaths</h2></div>
+                    <div class="card-body">
+                      <h3 id="deaths" class="card-text"></h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card text-white bg-success mb-3 mt-3">
+                    <div class="card-header"><h2>Recovered</h2></div>
+                    <div class="card-body">
+                      <h3 id="recovered" class="card-text"></h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade mt-3" id="profile" role="tabpanel" aria-labelledby="bycountry">
+              <div class="table-responsive">
+                <table id="datatables" class="table table-bordered table-striped" width="100%">
+                  <thead>
+                    <tr>
+                      <th>No</th>
+                      <th>Country</th>
+                      <th>Cases</th>
+                      <th>Today Cases</th>
+                      <th>Deaths</th>
+                      <th>Today Deaths</th>
+                      <th>Recovered</th>
+                      <th>Active</th>
+                      <th>Critical</th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+            </div>
+          </div>
+          <footer class="bg-default text-dark text-center" style="margin: 0;">
+            <p class="mb-0 pt-4 pb-4" style="margin: 0;">© 2020 <a href="http://shidqi.github.io">Nauval S</a></p>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/dataTables.bootstrap4.min.js"></script>
+
+    <script src="index.js"></script>
+  </body>
 </html>
-<style>
-body{
-	user-select: none;
-}
-.navbar{
-	background-image: linear-gradient( 109.6deg, rgba(0, 0, 0, 1) 11.2%, rgba(11, 132, 145, 1) 91.1%);
-	font-size: 30px;
-	text-decoration: none;
-	padding: 20px;
-	margin: -8px;
-}
-#logo:link{
-	text-decoration: none;
-	color: white;
-}
-#logo:visited{
-	color: white;
-}
-#world{
-	float: right;
-	transition: 0.4s;
-}
-#world:visited{
-	color: white;
-}
-#world:link{
-	text-decoration: none;
-	color: white;
-}
-#world:hover{
-	transform: scale(1.2);
-}
-#total_counter_india,#total_counter_world{
-	font-size: 45px;
-	color: white;
-	font-family: sans-serif;
-}
-#total_p{
-	font-size: 30px;
-	color: white;
-	font-family: sans-serif;
-}
-.btn{
-	background-color: white;
-	border-radius: 5px;
-	font-size: 20px;
-	padding: 10px;
-}
-.btn:link{
-	text-decoration: none;
-}
-.btn:hover{
-	background-color: rgba(255,255,255,0.7);
-}
-#br{
-	display: none;
-}
-.grid-container-1{
-	display: grid;
-	grid-template-columns: auto auto;
-	background-color: rgb(16, 96, 153);
-	padding: 25px;
-	margin: 30px 150px;
-}
-.grid-container-2{
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-	grid-column-gap: 10px;
-	margin: 30px 80px;
-}
-.grid-item-2{
-	color: white;
-	font-family: sans-serif;
-}
-.grid-item-2:nth-child(1){
-	background: linear-gradient(90deg, #00b3db 0%, #3a47d5 100%);;
-}
-.grid-item-2:nth-child(2){
-	background: linear-gradient( 90.5deg, rgb(247, 133, 241) 1.6%, rgba(182, 76, 233, 1) 98.2%);;
-}
-.grid-item-2:nth-child(3){
-	background: radial-gradient( circle 862px at 6% 18%, rgb(37, 199, 142) 9.4%, rgb(135, 142, 235) 83.6%);;
-}
-.grid-item-2:nth-child(4){
-	background: linear-gradient( 117.8deg, rgba(240, 19, 77, 1) 22.2%, rgba(228, 0, 124, 1) 88.7%);;
-}
-.new_cases{
-	font-family: sans-serif;
-	font-size: 40px;
-	text-align: center;
-}
-#new_cases_description{
-	font-size: 25px;
-	text-align: center;
-}
-.mytable{
-	margin: 30px 150px;
-	border-collapse: collapse;
-	font-size: 25px;
-}
-.table_scroll{
-	height: 600px;
-	overflow-y: auto;
-}
-.table_head{
-	text-align: left;
-	color: white;
-	background: linear-gradient( 109.6deg, rgba(0, 0, 0, 1) 11.2%, rgba(11, 132, 145, 1) 91.1%);
-}
-th{
-	padding: 12px;
-}
-td{
-	padding: 12px;
-	border-bottom: 1px solid black;
-	text-align: center;
-}
-.state{
-	text-align: left;
-}
-tr:nth-child(even){
-	background-color: #f2f2f2;
-}
-footer{
-	text-align: center;
-	padding: 20px;
-	font-family: cursive;
-	font-size: 24px;
-}
-#me:link{
-	text-decoration: none;
-}
-#me:visited{
-	color: black;
-}
-
-/* width */
-::-webkit-scrollbar {
-  width: 20px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
-  border-radius: 10px;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background-image: linear-gradient( 109.6deg, rgba(0, 0, 0, 1) 11.2%, rgba(11, 132, 145, 1) 91.1%);
-  border-radius: 10px;
-}
-
-@media(max-width: 1294px){
-	.btn{
-		display: inline-block;
-	}
-	#br{
-		display: block;
-	}
-}
-@media(max-width: 1145px){
-	.mytable{
-		margin: 30px 50px;
-		font-size: 22px;
-	}
-	th,td{
-		padding: 10px;
-	}
-}
-@media(max-width: 992px){
-	.grid-container-1{
-		margin: 20px 50px;
-		padding: 15px;
-	}
-	#total_p{
-		font-size: 20px;
-	}
-	#total_counter_india,#total_counter_world{
-		font-size: 30px;
-	}
-	.btn{
-		font-size: 15px;
-	}
-	.grid-container-2{
-		margin: 20px 10px;
-		grid-column-gap: 5px;
-	}
-	.new_cases{
-		font-size: 30px;
-	}
-	#new_cases_description{
-		font-size: 20px;
-	}
-}
-@media(max-width: 840px){
-	.mytable{
-		margin: 10px 10px;
-	}
-}
-@media(max-width: 768px){
-	.mytable{
-		font-size: 18px;
-		margin: 10px 5px;
-	}
-	th,td{
-		padding: 2px;
-	}
-	.grid-container-2{
-		margin: 20px 5px;
-		grid-column-gap: 2.5px;
-	}
-	.new_cases{
-		font-size: 25px;
-	}
-	#new_cases_description{
-		font-size: 15px;
-	}
-}
-@media(max-width: 600px){
-	.navbar{
-		font-size: 20px;
-	}
-	.grid-container-1{
-		grid-template-columns: auto;
-	}
-	#total_p{
-		font-size: 15px;
-	}
-	.grid-container-2{
-		grid-template-columns: repeat(2, minmax(100px, 1fr));
-		grid-row-gap: 2.5px;
-	}
-}
-</style>
