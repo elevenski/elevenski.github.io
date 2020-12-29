@@ -10,13 +10,15 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/dataTables.bootstrap4.min.css" />
+    <script src="https://kit.fontawesome.com/492aa02ecb.js" crossorigin="anonymous"></script>
 
     <title>Coronavirus Update (Live)</title>
   </head>
   <body>
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <h1 class="display-4"><i class="fa fa-question-circle" aria-hidden="true"></i> Coronavirus Information</h1>
+        <p class="live"><i class="far fa-dot-circle live-icon"></i> Live BETA</p>
+        <h1 class="display-4">Coronavirus Information</h1>
         <p class="lead">Get the latest update for Global Coronavirus Information. <br /></p>
       </div>
     </div>
@@ -52,7 +54,32 @@
           </ul>
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="global">
-              <div class="row">
+              <div class="row cards-row">
+                <div class="col-lg-4">
+                  <div class="card total-cases">
+                    <ul class="list-group list-group-flush">
+                      <li id="cases" class="list-group-item card-body">---</li>
+                      <li class="list-group-item card-footer">Cases</li> 
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="card total-recovered">
+                    <ul class="list-group list-group-flush">
+                      <li id="recovered" class="list-group-item card-body">---</li>
+                      <li class="list-group-item card-footer">Recovered</li>        
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="card total-deaths">
+                    <ul class="list-group list-group-flush">
+                      <li id="deaths" class="list-group-item card-body">---</li>
+                      <li class="list-group-item card-footer">Deaths</li>
+                    </ul>
+                  </div>
+                </div>
+              <!--<div class="row">
                 <div class="col-md-4">
                   <div class="card text-white bg-warning mb-3 mt-3">
                     <div class="card-header"><h2>Cases</h2></div>
@@ -76,7 +103,7 @@
                       <h4 id="recovered" class="card-text">Loading...</h4>
                     </div>
                   </div>
-                </div>
+                </div>-->
               </div>
             </div>
             <div class="tab-pane fade mt-3" id="profile" role="tabpanel" aria-labelledby="bycountry">
