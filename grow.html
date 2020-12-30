@@ -57,3 +57,326 @@
     <div style="margin-top: 100px"></div>
 </body>
 </html>
+
+<style>
+/* body */
+html {
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background: #CE5937;
+  background: -moz-linear-gradient(-45deg, #ff4d4d 0%, #41b3ff 45%, #ffdc2e 100%);
+  background: -webkit-linear-gradient(-45deg, #ff4d4d 0%, #41b3ff 45%, #ffdc2e 100%);
+  background: linear-gradient(135deg, #ff4d4d 0%, #41b3ff 45%, #ffdc2e 100%);
+  scroll-behavior: smooth;
+}
+
+
+body {
+  background-color: rgb(247, 218, 178);
+  float: none;
+  margin: 0px auto;
+  width: 80%;
+  max-width: 900px;
+  min-width: 700px;
+  box-shadow: 2px 2px 13px 3px rgba(0,0,0,0.55);
+  text-align: center;
+}
+
+/* Content */
+p{
+  padding: 10px 50px 10px 50px;
+  text-align: center;
+  font-size: 25px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+/* Navigation */
+nav.horizontalNavigation a {
+  background-color: rgb(113, 86, 39);
+  font-family: Champagne, cursive;
+  font-size: 1.4em;
+  line-height: 1.8em;
+  text-align: center;
+  text-decoration: none;
+  padding: 4px 30px 4px 30px;
+  display: inline-block;
+}  
+
+nav.horizontalNavigation a:link, 
+nav.horizontalNavigation a:visited {
+  color: rgb(239, 220, 156);
+}
+
+nav.horizontalNavigation a:hover, 
+nav.horizontalNavigation a:active {
+  background-color: rgb(71, 52, 29);
+}   
+
+nav{
+  background-color: rgb(113, 86, 39);
+}
+
+/* Button */
+.btn-ready {
+  background: #33e872;
+  font-family: Georgia;
+  color: #000000;
+  width: 240px;
+  height: 80px;
+  font-size: 18px;
+  border-radius: 4px;
+  transition: .6s;
+  overflow: hidden;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+}
+
+.btn-ready:hover {
+  background: rgb(120, 255, 120);
+  text-decoration: none;
+}
+
+
+.to-recipe {
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  text-shadow: 1px 3px 3px #666666;
+  -webkit-box-shadow: 1px 2px 2px #666666;
+  -moz-box-shadow: 1px 2px 2px #666666;
+  box-shadow: 1px 2px 2px #666666;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 16px;
+  background: #33e872;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.to-recipe:hover {
+  background: #56f761;
+  text-decoration: none;
+}
+
+.gotopbtn{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background: rgb(247, 218, 178);
+  bottom: 40px;
+  right: 50px;
+
+  text-decoration: none;
+  text-align: center;
+  line-height: 25px;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 13px 3px rgba(0,0,0,0.55);
+}
+
+/* images */
+img.resize {
+  max-width:100%;
+  min-width: 100%;
+  max-height:50%;
+}
+
+img{
+  vertical-align: middle;
+}
+
+/* headings */
+h1{
+  text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff80;
+  padding: 0 0 30px 0;
+  font-size: 40px;
+}
+
+h2{
+  text-shadow: 2px 2px 0px #FFFFFF, 5px 4px 0px rgba(0,0,0,0.15), 2px 2px 2px rgba(206,89,55,0);
+  text-align: left;
+  padding: 0 40px 0 40px;
+  font-size: 30px;
+}
+
+.heading h2{ 
+  text-align: middle;
+}
+
+h3{
+  color: transparent;
+  background: #666666;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+  text-align: left;
+  padding: 0 40px 0 40px;
+  font-size: 25px;
+}
+
+
+ul > li{
+  text-decoration: none;
+  text-align: center;
+}
+
+div > ul{
+  text-align: left;
+}
+
+ul{
+  text-align: left;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 0 80px 0 40px;
+  font-size: 17px;
+}
+
+ul > a{
+  text-decoration: none;
+}
+
+#event{
+  text-align: center;
+}
+
+/* tables */
+table{
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border-spacing: 5px;
+  border-collapse: collapse;
+}
+
+th{
+	font-size: 1.1em;
+	line-height: 12px;
+	background-color: #e79300;
+	text-transform: uppercase;
+}
+
+tbody{
+	line-height: 16px;
+}
+
+tbody tr{
+	border-top: 1px solid rgba(255, 185, 72, 0.8)
+}
+
+tbody tr:nth-child(odd){
+	background-color: rgba(255, 255, 255, 0.2)
+}
+
+tbody tr:hover{
+	background-color: rgba(255, 192, 83, 0.6)
+}
+
+
+th{
+	width: 10%;
+}
+
+th, td{
+  padding: 5px 0 5px 0;
+}
+
+/* footer */
+footer {
+  margin-top: 15px;
+  background-color: rgb(71, 71, 71);
+  color: rgb(231, 231, 231);
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+footer, footer span  a {
+  font-size: 11px;
+  padding: 10px;
+  color: rgb(231, 231, 231);
+  font-size: 15px;
+}
+
+/* Social media */
+#socialmedia{
+  color: rgba(255, 255, 255, 0.767);
+  font-size: 13px;
+}
+
+/* scroll bar */
+::-webkit-scrollbar{
+  background: #ddd;
+  width: 20px;
+}
+
+::-webkit-scrollbar-track{
+  box-shadow: insert 0 0 10px #00000070;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(125deg, #646EFF, #9D64FF);
+  border-radius: 10px;
+}
+
+/* Form section */
+section{
+  padding: 0 50px 0 50px;
+  background-color: rgba(255, 185, 35, 0.527);
+  border-radius: 20px;
+  -webkit-flex: 1 1 300px;
+  flex: 1 1 300px;
+  font-size: 1.2em;
+  margin: 0 100px 50px 100px;
+  text-align: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+input[type='submit']{
+  font-size: 0.8em;
+  padding: 5px;
+  margin: 15px;
+  text-align: center;
+}
+
+textarea{
+  margin-top: 3px;
+  height: 100px;
+  width: 95%;
+}
+
+input[type=text], input[type=email] , textarea ,select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=range]{
+  width: 85%;
+  padding: 12px 20px;
+  vertical-align: middle;
+}
+
+input[type=submit]{
+  width: 40%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+div.submitbutton{
+  text-align: center;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+</style>
