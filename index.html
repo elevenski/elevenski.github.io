@@ -17,8 +17,31 @@
       <title>Eleven</title>
       <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-B9BoFFAuBaCfqw6lxWBZrhg/z4NkwqdBci+E+Sc2XlK/Rz25RYn8Fetb+Aw5irxa" crossorigin="anonymous">
       <link rel="stylesheet" href="css/eleven.css">
+      <style type="text/css">
+         .js div#preloader {
+         position: fixed;
+         left: 0;
+         top: 0;
+         z-index: 999;
+         width: 100%;
+         height: 100%;
+         overflow: visible;
+         background: #000 url('https://cdn.discordapp.com/attachments/794646511131689041/798269972958543902/tam.gif') no-repeat center center;
+         }
+      </style>
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script type="text/javascript">
+         jQuery(document).ready(function ($) {
+         
+         	$(window).load(function () {
+         		$('#preloader').fadeOut('slow', function () { $(this).remove(); });
+         	});
+         
+         });
+      </script>
    </head>
-   <body class="select-none" draggable="false" style="background-color:#200505">
+   <body class="js" class="select-none" draggable="false" style="background-color:#200505">
+      <div id="preloader"></div>
       <div data-server-rendered="true" id="app">
          <a href="https://github.com/elevenvac/elevendev.github.io" target="_blank" aria-label="View source on GitHub" class="github-corner" data-v-20441cb6>
             <svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true" style="fill:#773737; color:#fff; position: fixed; top: 0; border: 0; right: 0;z-index: 100;" data-v-20441cb6>
@@ -250,7 +273,7 @@
             </div>
          </div>
          <center>
-            <text style="color:#592222;"><b>Last Update 11.01.2021 9:28 PM</b></text>
+            <text style="color:#592222;"><b>Last Update 11.01.2021 10:48 PM</b></text>
          </center>
       </div>
    </body>
