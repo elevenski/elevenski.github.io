@@ -1,5 +1,7 @@
+@import"https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;900&display=swap";
+
 html {
-	font-family: sans-serif;
+	font-family: "Inter";
 	line-height: 1.15;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%
@@ -40,7 +42,7 @@ hr {
 }
 
 pre {
-	font-family: monospace, monospace;
+	font-family: "Inter";
 	font-size: 1em
 }
 
@@ -73,7 +75,7 @@ strong {
 code,
 kbd,
 samp {
-	font-family: monospace, monospace;
+	font-family: "Inter";
 	font-size: 1em
 }
 
@@ -129,7 +131,7 @@ input,
 optgroup,
 select,
 textarea {
-	font-family: sans-serif;
+	font-family: "Inter";
 	font-size: 100%;
 	line-height: 1.15;
 	margin: 0
@@ -240,7 +242,7 @@ h1,
 h2,
 h3,
 h4 {
-	font-family: "Titillium Web", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Inter";
 	font-weight: 700;
 	font-style: normal
 }
@@ -418,7 +420,7 @@ aside.sidebar.open {
 
 aside.sidebar h2 {
 	margin: 0 1.25rem 0;
-	font-family: "Titillium Web", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Inter";
 	font-weight: 400;
 	font-style: normal;
 	font-size: 1.125rem;
@@ -454,7 +456,7 @@ aside.sidebar nav ul li a {
 	display: block;
 	padding: .9375rem 1.25rem;
 	text-decoration: none;
-	font-family: "Titillium Web", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Inter";
 	font-weight: 300;
 	font-style: normal;
 	color: #141414
@@ -489,11 +491,11 @@ aside.sidebar nav ul li a:hover {
 
 .hero .pixels {
 	opacity: 0.8;
-	background-image: url(../../assets/img/pixels.png)
+/*	background-image: url(https://img5.goodfon.com/wallpaper/nbig/1/61/fon-netflix-logo-raduga-tsvet-fon-background-skachat-oboi-sk.jpg)*/
 }
 
 .hero .gradient {
-	background-image: linear-gradient(0deg, #141414 5%, transparent 30%)
+	background-image: linear-gradient(0deg, #141414 0%, transparent 100%)
 }
 
 .hero .content {
@@ -566,7 +568,7 @@ aside.sidebar nav ul li a:hover {
 }
 
 .hero .content .button:hover {
-	background-color: rgba(255, 255, 255, 0.5);
+  opacity:0.7;
 	box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.2)
 }
 
@@ -610,7 +612,7 @@ aside.sidebar nav ul li a:hover {
 	width: 100%;
 	height: 2.5rem;
 	line-height: 1.875rem;
-	font-family: "Titillium Web", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Inter";
 	font-weight: 300;
 	font-style: normal;
 	font-size: 1.25rem;
@@ -635,7 +637,7 @@ aside.sidebar nav ul li a:hover {
 .search-form .search-list {
 	position: absolute;
 	width: 100%;
-	font-family: "Titillium Web", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Inter";
 	font-weight: 300;
 	font-style: normal;
 	display: none;
@@ -895,11 +897,10 @@ body.light:not(.main-page) .bar-header .version {
 }
 
 .home {
-	font-family: "Titillium Web", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Inter";
 	font-weight: 400;
 	font-style: normal;
 	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 	padding-top: 5rem
 }
 
@@ -948,7 +949,6 @@ body.light:not(.main-page) .bar-header .version {
 	flex: 1 0 300px;
 	margin: 0 0 1.875rem;
 	display: inline-block;
-	min-height: 17.8125rem;
 	transition: all 0.3s;
 	position: relative;
 	z-index: 1
@@ -1002,9 +1002,7 @@ body.light:not(.main-page) .bar-header .version {
 }
 
 .box-item:hover img {
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
-	transform: scale(1.05)
+
 }
 
 .box-item:hover .box-body time,
@@ -1056,7 +1054,7 @@ body.light:not(.main-page) .bar-header .version {
 .box-item .box-body h2 {
 	margin: .625rem 0;
 	font-size: 1.5rem;
-	font-family: "Titillium Web", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Inter";
 	font-weight: 800;
 	font-style: normal;
 	color: #fff;
@@ -1212,7 +1210,7 @@ body.light:not(.main-page) .bar-header .version {
 	display: block;
 	color: #a6a6a6;
 	text-align: center;
-	font-family: "Titillium Web", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Inter";
 	font-weight: 300;
 	font-style: normal
 }
@@ -1235,7 +1233,7 @@ body.light:not(.main-page) .bar-header .version {
 	margin-left: auto;
 	padding-left: 0;
 	padding-right: 0;
-	font-family: "Titillium Web", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Inter";
 	font-weight: 400;
 	font-style: normal;
 	font-size: 1.0625rem;
@@ -1310,7 +1308,7 @@ body.light:not(.main-page) .bar-header .version {
 }
 
 .post-content p.post-info {
-	font-family: "Titillium Web", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Inter";
 	font-weight: 300;
 	font-style: normal;
 	font-size: .8125rem;
@@ -1395,7 +1393,7 @@ body.light:not(.main-page) .bar-header .version {
 .post-content h4,
 .post-content h5,
 .post-content h6 {
-	font-family: "Titillium Web", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Inter";
 	font-weight: 700;
 	font-style: normal;
 	margin-top: 0;
@@ -1527,7 +1525,7 @@ body.light:not(.main-page) .bar-header .version {
 }
 
 .post-content table {
-	font-family: "Titillium Web", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Inter";
 	font-weight: 400;
 	font-style: normal;
 	font-size: 1.0625rem;
@@ -1677,8 +1675,7 @@ body.light:not(.main-page) .bar-header .version {
 }
 
 .see-also ul li a:hover img {
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%)
+
 }
 
 .progress-bar {
@@ -1766,7 +1763,7 @@ body.light:not(.main-page) .bar-header .version {
 
 .time-bar .time-completed,
 .time-bar .time-remaining {
-	font-family: "Titillium Web", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Inter";
 	font-weight: 400;
 	font-style: normal;
 	font-size: 1.125rem;
@@ -1782,7 +1779,7 @@ body.light:not(.main-page) .bar-header .version {
 }
 
 .recommendation {
-	font-family: "Titillium Web", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Inter";
 	font-weight: 400;
 	font-style: normal;
 	position: fixed;
@@ -1887,8 +1884,7 @@ body.light:not(.main-page) .bar-header .version {
 }
 
 .recommendation .post-preview:hover .image>img {
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%)
+
 }
 
 .recommendation .post-preview .image,
@@ -1931,7 +1927,7 @@ body.light:not(.main-page) .bar-header .version {
 	margin-left: auto;
 	padding-left: 0;
 	padding-right: 0;
-	font-family: "Titillium Web", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Inter";
 	font-weight: 400;
 	font-style: normal;
 	font-size: 1.125rem;
@@ -1979,7 +1975,7 @@ body.light:not(.main-page) .bar-header .version {
 }
 
 .post-content .tag-title {
-	font-family: "Titillium Web", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Inter";
 	font-weight: 300;
 	font-style: normal;
 	width: auto;
@@ -2124,7 +2120,7 @@ body.light:not(.main-page) .bar-header .version {
 }
 
 .pagination.pagination-post a {
-	font-family: "Titillium Web", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Inter";
 	font-weight: bold;
 	font-style: normal;
 	font-size: 1rem;
@@ -2148,8 +2144,7 @@ body.light:not(.main-page) .bar-header .version {
 }
 
 .pagination.pagination-post a:hover {
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%)
+
 }
 
 .pagination.pagination-post a .arrow {
@@ -2264,7 +2259,7 @@ pre code::after {
 
 pre span {
 	line-height: 1.5rem;
-	font-family: "Monaco", "Consolas", "Menlo", monospace
+	font-family: "Inter";
 }
 
 .highlight {
@@ -2382,7 +2377,7 @@ pre span {
 }
 
 .contact-form {
-	font-family: "Titillium Web", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Inter";
 	font-weight: 700;
 	font-style: normal;
 	padding: .625rem
@@ -2405,7 +2400,7 @@ pre span {
 	border: none;
 	border-bottom: 1px solid #ddd;
 	margin-bottom: 10px;
-	font-family: inherit;
+	font-family: "Inter";
 	font-size: 1.125rem;
 	height: 2.8125rem
 }
@@ -2518,7 +2513,7 @@ pre span {
 .author .def {
 	color: gray;
 	font-size: 1.125rem;
-	font-family: "Titillium Web", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Inter";
 	font-weight: 300;
 	font-style: normal;
 	margin: .625rem
@@ -2535,7 +2530,7 @@ pre span {
 }
 
 .author .name a {
-	font-family: "Titillium Web", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Inter";
 	font-weight: 700;
 	font-style: normal;
 	text-decoration: none;
@@ -2554,7 +2549,7 @@ pre span {
 }
 
 .author .desc {
-	font-family: "Titillium Web", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Inter";
 	font-weight: 300;
 	font-style: normal;
 	margin: .625rem;
@@ -2749,8 +2744,7 @@ pre span {
 }
 
 .modal .window .content ul li a:hover img {
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%)
+
 }
 
 .modal .window .content ul li a:hover figure:after {
@@ -2819,7 +2813,7 @@ footer {
 	padding: 1.25rem 1.5625rem;
 	margin-top: 3.125rem;
 	margin-bottom: 7.5rem;
-	font-family: "Titillium Web", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Inter";
 	font-weight: 300;
 	font-style: normal
 }
