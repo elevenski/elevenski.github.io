@@ -35,7 +35,7 @@
    "display": "minimal-ui",
    "orientation": "any",
    "serviceworker": {
-       "src": "https://www.socioo.tech/service-worker.js",
+       "src": "https://eleven.js.org/apptime-service_worker.js",
        "scope": "/",
        "update_via_cache": "none"
 },
