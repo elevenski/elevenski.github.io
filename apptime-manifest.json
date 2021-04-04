@@ -1,0 +1,44 @@
+{
+   "name": "Apptime",
+   "description": "",
+   "short_name": "Apptime",
+   "icons": [
+      {
+         "src": "https://lyertia.is-super-cute.xyz/n7pglh.png",
+         "sizes": "192x192",
+         "type": "image/png"
+      },
+      {
+         "src": "https://lyertia.is-super-cute.xyz/eg72n8.png",
+         "sizes": "256x256",
+         "type": "image/png"
+      },
+      {
+         "src": "https://lyertia.is-super-cute.xyz/qyly29.png",
+         "sizes": "384x384",
+         "type": "image/png"
+      },
+      {
+         "src": "https://lyertia.is-super-cute.xyz/9kxhah.png",
+         "sizes": "512x512",
+         "type": "image/png"
+      },
+      {
+        "src": "https://lyertia.is-super-cute.xyz/k10s8.png",
+        "sizes": "120x120",
+        "type": "image/png",
+        "purpose": "maskable"
+      }
+   ],
+   "scope": "/",
+   "start_url": "https:/www.socioo.tech",
+   "display": "minimal-ui",
+   "orientation": "any",
+   "serviceworker": {
+       "src": "https://www.socioo.tech/service-worker.js",
+       "scope": "/",
+       "update_via_cache": "none"
+},
+   "theme_color": "#ffbbcc",
+   "background_color": "#000000"
+}
