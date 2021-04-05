@@ -119,7 +119,10 @@ audio:not([controls]) {
 }
 
 img {
-	border-style: none
+	border-style: none;
+	-webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none
 }
 
 svg:not(:root) {
