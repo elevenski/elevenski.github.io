@@ -1,8 +1,1 @@
-# Personal Website
-### Contact
-* [Discord](https://discord.gg/T4BMtSu)
-
-### Creators / Developers
-👤 Eleven
-<br>
-👤 Cenap
+# GitHub pages repository for my personal website.
