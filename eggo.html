@@ -1,18 +1,24 @@
-{<br>
-"author": "Eleven",<br>
-"prefix": "11",<br>
-"example_command_usage": "11help",<br>
-"total_commands": "14",<br>
-"command_categories": [<br>
-&nbsp;&nbsp;"moderation",<br>
-&nbsp;&nbsp;"settings",<br>
-&nbsp;&nbsp;"misc_other_general"<br>
-]<br>
-}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Eleven's Eggo</title>
 <style>
 @import"https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;900&display=swap";
-html {
-  font-family: "Inter";
-  font-size: 15px;
-}
+html {font-family: "Inter";font-size: 15px}
 </style>
+</head>
+<body>
+<div id="app">
+{<br>
+"version": "{{version}}"  
+"author": "{{author}}",<br>
+"prefix": "{{prefix}}",<br>
+"example_command_usage": "{{prefix}}{{example_command}}",<br>
+"total_commands": "{{total_commands}}",<br>
+}
+<div>
+<script src="eggo.js"></script>
+</body>
+</html>
