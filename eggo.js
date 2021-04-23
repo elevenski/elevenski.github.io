@@ -6,8 +6,8 @@ new Vue({
         example_command: "help",
         total_commands: "14",
         developers: [
-            "Eleven",
-            "Eleven 2"
+            'Eleven',
+            'Eleven 2'
         ],
     }
 });
