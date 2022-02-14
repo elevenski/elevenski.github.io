@@ -3,10 +3,10 @@
 </p>
 
 ## Description
-🎫 GitHub pages repository for my personal website. (for redirect only, actual website is in "elevenvac/website" repository)
+⚡ Source code of my personal website, Everything is included.
 
 ## Programming Languages
-`HTML`
+`HTML` & `CSS`
 
 ## Contributors
 Thanks for contributions: `-`
