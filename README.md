@@ -1,5 +1,18 @@
-# Blog
+<p align="center">
+  <img width="100" src="https://raw.githubusercontent.com/elevenvac/elevenvac/master/Eleven_icon_higer_florence.png" alt="Eleven Icon">
+</p>
 
-This is a place where I keep my random thought tidbits.
+## Description
+⚡ Source code of my personal website, Everything is included.
 
-I don't intend on making this a reusable template at the moment but if you feel like using it for your own blog I can't stop you from forking it; I'm not your mom.
+## Programming Languages
+`HTML` & `CSS`
+
+## Contributors
+Thanks for contributions: `-`
+
+## Installation
+not needed
+
+## Discord Server
+<a href="https://discord.gg/P578T3aYbj"><img src="http://invidget.switchblade.xyz/HWjPAAs9d3"/></a>
