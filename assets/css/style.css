@@ -1,0 +1,184 @@
+@import"https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap";
+
+body {
+    font-family: "Poppins";
+    background-color: #141621;
+    color: white;
+    text-decoration: none
+}
+
+img {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.decoration {
+    text-decoration: underline;
+}
+
+.decoration:hover {
+    text-decoration: underline;
+    color: unset;
+}
+
+::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #1f2937;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #141621;
+}
+
+@media only screen and (min-width: 640px) {
+    .padding {
+        padding-left: 9%;
+        padding-right: 9%;
+    }
+    .section {
+		padding-top: 10%;
+        padding-bottom: 10%;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 60px;
+    }
+    .grid-container > div {
+        text-align: left;
+        font-size: 30px;
+    }
+    .mobile-grid-ayrac {
+        display: none;
+    }
+    .mobile-grid-top {
+        display: none;
+    }
+    #nopc {
+        display: none
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .padding {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .section {
+		padding-top: 10%;
+        padding-bottom: 10%
+	}
+    .mobile-grid-ayrac {
+        display: block;
+        padding-top: 5rem
+    }
+    .mobile-grid-top {
+        display: block;
+        padding-top: 1.5rem
+    }
+}
+
+.primary-text {
+    font-size: 45px;
+    max-width: 35rem;
+    font-weight: 700;
+}
+
+.primary-sec-text {
+    font-size: 15px;
+    max-width: 30rem;
+}
+
+.primary-text-d {
+    max-width: 35rem;
+}
+
+h2 {
+    font-size: 1.5rem !important
+}
+
+.icons {
+    display: inline-block;
+}
+
+.icons-a:hover {
+    color: white;
+}
+
+.post-siz-text {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.post-sr-text {
+    font-size: 12px;
+}
+
+.post-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.post-date {
+    font-size: 13px;
+}
+
+.post-sdescription {
+    font-size: 15px;
+}
+
+.post:hover > .post-title {
+    text-decoration: underline;
+}
+
+.left {
+    float: left;
+    text-align: left;
+    align-items: left;
+}
+
+.right {
+    float: right;
+    text-align: right;
+    align-items: right;
+}
+
+.crrnt-pr {
+    color: #49c7ff
+}
+
+.crrnt-pr:hover {
+    color: #49c7ff;
+    text-decoration: underline;
+}
+
+.src-code:hover {
+    text-decoration: underline;
+}
+
+.avatar {
+    position: relative;
+}
+  
+.avatar > p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.avatar-status {
+    border: 23px double  #141621;
+}
