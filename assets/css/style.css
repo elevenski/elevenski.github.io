@@ -1,10 +1,21 @@
 @import"https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap";
 
+:root {
+    --primary-color: #f0f0ff
+}
+
 body {
     font-family: "Poppins";
-    background-color: #141621;
+    background-color: var(--primary-color);
     color: white;
-    text-decoration: none
+    text-decoration: none;
+    color: black
+}
+
+html {
+    background-color: var(--primary-color);
+	scroll-behavior: smooth;
+    color: black
 }
 
 img {
@@ -15,13 +26,23 @@ img {
 
 a:hover {
     text-decoration: none;
+    color: unset;
 }
 
-.decoration {
+.decoration_nh {
     text-decoration: underline;
 }
 
-.decoration:hover {
+.decoration_nh:hover {
+    text-decoration: underline;
+    color: unset;
+}
+
+.decoration_yh {
+    text-decoration: none;
+}
+
+.decoration_yh:hover {
     text-decoration: underline;
     color: unset;
 }
@@ -36,39 +57,24 @@ a:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #1f2937;
+	background-color: #d1d1ff;
 }
 
 ::-webkit-scrollbar-track {
-	background-color: #141621;
+	background-color: transparent;
 }
 
 @media only screen and (min-width: 640px) {
     .padding {
-        padding-left: 9%;
-        padding-right: 9%;
+        padding-left: 21%;
+        padding-right: 21%;
     }
     .section {
-		padding-top: 10%;
-        padding-bottom: 10%;
+        padding-top: 3%;
+        padding-bottom: 3%
     }
-    .grid-container {
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 60px;
-    }
-    .grid-container > div {
-        text-align: left;
-        font-size: 30px;
-    }
-    .mobile-grid-ayrac {
-        display: none;
-    }
-    .mobile-grid-top {
-        display: none;
-    }
-    #nopc {
-        display: none
+    .head-name {
+        font-size: 40px;
     }
 }
 
@@ -78,107 +84,191 @@ a:hover {
         padding-right: 3%;
     }
     .section {
-		padding-top: 10%;
-        padding-bottom: 10%
-	}
-    .mobile-grid-ayrac {
-        display: block;
-        padding-top: 5rem
+        padding-top: 2rem;
+        padding-bottom: 2rem
     }
-    .mobile-grid-top {
-        display: block;
-        padding-top: 1.5rem
+    .head-name {
+        font-size: 30px;
+    }
+    .project-right-img, .contact-right-img {
+        display: none;
     }
 }
 
-.primary-text {
-    font-size: 45px;
-    max-width: 35rem;
-    font-weight: 700;
+.head-name {
+    font-weight: 900;
 }
 
-.primary-sec-text {
-    font-size: 15px;
-    max-width: 30rem;
+.head-description {
+    max-width: 45rem;
+    font-size: 18px
 }
 
-.primary-text-d {
-    max-width: 35rem;
+.head-description-btn {
+    color: #5f5fa7
 }
 
-h2 {
-    font-size: 1.5rem !important
+.head-description-btn:hover {
+    color: #5f5fa7
 }
 
-.icons {
+.projects-title {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.project-title {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.project {
+    width: 100%;
     display: inline-block;
+    background-color: transparent;
+    text-decoration: none;
+    transition: .2s;
+    margin: 8px 0;
+    transform: scale(1);
 }
 
-.icons-a:hover {
-    color: white;
+.project:hover {
+    transform: scale(1.03);
+    background-color: #e1e1fd;
+    color: unset
 }
 
-.post-siz-text {
-    font-size: 15px;
-    font-weight: 600;
-}
-
-.post-sr-text {
-    font-size: 12px;
-}
-
-.post-title {
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.post-date {
-    font-size: 13px;
-}
-
-.post-sdescription {
-    font-size: 15px;
-}
-
-.post:hover > .post-title {
-    text-decoration: underline;
-}
-
-.left {
+.project-left {
+    display: inline-block;
     float: left;
-    text-align: left;
-    align-items: left;
 }
 
-.right {
+.project-right {
+    display: inline-block;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    align-items: center;
     float: right;
-    text-align: right;
-    align-items: right;
 }
 
-.crrnt-pr {
-    color: #49c7ff
+.project-right-img {
+    filter: grayscale(100%);
+    opacity: 0.3;
+    padding: 20px 0px;
 }
 
-.crrnt-pr:hover {
-    color: #49c7ff;
-    text-decoration: underline;
+.project-right-img-border-radius {
+    border-radius: 999%;
 }
 
-.src-code:hover {
-    text-decoration: underline;
+.contacts-title {
+    font-size: 25px;
+    font-weight: 600;
 }
 
-.avatar {
-    position: relative;
-}
-  
-.avatar > p {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+.contact-title {
+    font-size: 22px;
+    font-weight: 500;
 }
 
-.avatar-status {
-    border: 23px double  #141621;
+.contact {
+    width: 100%;
+    display: inline-block;
+    background-color: transparent;
+    text-decoration: none;
+    transition: .2s;
+    margin: 8px 0;
+    transform: scale(1);
+}
+
+.contact:hover {
+    transform: scale(1.03);
+    background-color: #e1e1fd;
+    color: unset
+}
+
+.contact-left {
+    display: inline-block;
+    float: left;
+}
+
+.contact-right {
+    display: inline-block;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    align-items: center;
+    float: right;
+}
+
+.contact-right-img {
+    filter: grayscale(100%);
+    opacity: 0.3;
+    padding: 6px 0px;
+}
+
+.contact-right-img-border-radius {
+    border-radius: 999%;
+}
+
+#goTop {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	z-index: 99;
+	border: none; 
+	outline: none;
+	background-color: #e1e1fd;
+	cursor: pointer;
+	padding: 15px;
+	border-radius: 999%;
+	font-size: 18px;
+    transition: .2s;
+    transform: scale(1);
+}
+
+.goTop-in {
+	margin-bottom: -5px;
+	margin-top: -5px;
+    transition: .2s;
+    transform: scale(1);
+}
+
+.tippy-box[data-theme~=ws] {
+	color: #fff;
+	/*box-shadow: 0 0 20px 4px rgba(154, 161, 177, .15), 0 4px 80px -8px rgba(36, 40, 47, .25), 0 4px 4px -2px rgba(91, 94, 105, .15);*/
+	background-color: black
+}
+
+.tippy-box[data-theme~=ws][data-placement^=top]>.tippy-arrow:before {
+	border-top-color: black
+}
+
+.tippy-box[data-theme~=ws][data-placement^=bottom]>.tippy-arrow:before {
+	border-bottom-color: black
+}
+
+.tippy-box[data-theme~=ws][data-placement^=left]>.tippy-arrow:before {
+	border-left-color: black
+}
+
+.tippy-box[data-theme~=ws][data-placement^=right]>.tippy-arrow:before {
+	border-right-color: black
+}
+
+.tippy-box[data-theme~=ws]>.tippy-backdrop {
+	background-color: black
+}
+
+.tippy-box[data-theme~=ws]>.tippy-svg-arrow {
+	background-color: black;
+	fill: black
+}
+
+.badge-beta {
+    font-size: 12px;
+    background-color: orange;
+    padding: 2px 5px;
 }

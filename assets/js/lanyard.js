@@ -42,20 +42,16 @@ function update_presence() {
     update_status(api.d.discord_status);
   }
 
-  if (api.d.discord_status === "dnd") {
-    statusContent.innerHTML = `<span class="w-3 h-3 avatar-status bg-green-500 rounded-full inline-flex inline-block"></span>`;
-
-  } else if (api.d.discord_status === "idle") {
-    statusContent.innerHTML = `<span class="w-3 h-3 avatar-status bg-green-500 rounded-full inline-flex inline-block"></span>`;
-
-  } else if (api.d.discord_status === "online") {
-    statusContent.innerHTML = `<span class="w-3 h-3 avatar-status bg-green-500 rounded-full inline-flex inline-block"></span>`;
-
-  } else if (api.d.discord_status === "offline") {
-    statusContent.innerHTML = `<span class="w-3 h-3 avatar-status bg-gray-500 rounded-full inline-flex inline-block"></span>`;
-
+  if (api.d.listening_to_spotify == true) {
+    var artist = `${
+      api.d.spotify.artist.split(";")[0].split(",")[0]
+    }`;
+    var song = `${
+      api.d.spotify.song.split("(")[0]
+    }`;
+    spotifyListening.innerHTML = `<a href="https://open.spotify.com/track/${api.d.spotify.track_id}" target="_blank" class="text-black"><i class="fa-brands fa-spotify text-green-500 mr-2"></i>Listening ${song} by ${artist}</a>`;
   } else {
-    statusContent.innerHTML = `<span class="w-3 h-3 avatar-status bg-gray-500 rounded-full inline-flex inline-block"></span>`;
-
+    spotifyListening.innerHTML = ``;
   }
+
 }
