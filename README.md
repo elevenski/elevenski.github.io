@@ -6,7 +6,7 @@
 ⚡ Source code of my personal website, Everything is included.
 
 ## Programming Languages
-`HTML` & `CSS`
+`HTML`, `CSS` & `JavaScript`
 
 ## Contributors
 Thanks for contributions: `-`
