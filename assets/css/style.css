@@ -267,8 +267,9 @@ a:hover {
 	fill: black
 }
 
-.badge-beta {
-    font-size: 12px;
+.beta_section {
+    font-size: 15px;
     background-color: orange;
-    padding: 2px 5px;
+    padding: 3px 5px;
+    text-align: center
 }
