@@ -49,7 +49,7 @@ function update_presence() {
     var song = `${
       api.d.spotify.song.split("(")[0]
     }`;
-    spotifyListening.innerHTML = `<div class="spotify_section"><a href="https://open.spotify.com/track/${api.d.spotify.track_id}" target="_blank" class="text-white decoration_yh"><i class="fa-brands fa-spotify text-white mr-2"></i>Listening ${song} by ${artist}</a></div>`;
+    spotifyListening.innerHTML = `<div class="spotify_section animate__animated animate__flash"><a href="https://open.spotify.com/track/${api.d.spotify.track_id}" target="_blank" class="text-white decoration_yh"><i class="fa-brands fa-spotify text-white mr-2"></i>Listening ${song} by ${artist}</a></div>`;
   } else {
     spotifyListening.innerHTML = ``;
   }
