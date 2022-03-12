@@ -49,9 +49,26 @@ function update_presence() {
     var song = `${
       api.d.spotify.song.split("(")[0]
     }`;
-    spotifyListening.innerHTML = `<a href="https://open.spotify.com/track/${api.d.spotify.track_id}" target="_blank" class="text-black ml-1"><i class="fa-brands fa-spotify text-green-500 mr-2"></i>Listening ${song} by ${artist}</a>`;
+    spotifyListening.innerHTML = `<div class="spotify_section"><a href="https://open.spotify.com/track/${api.d.spotify.track_id}" target="_blank" class="text-white decoration_yh"><i class="fa-brands fa-spotify text-white mr-2"></i>Listening ${song} by ${artist}</a></div>`;
   } else {
     spotifyListening.innerHTML = ``;
+  }
+
+  if (api.d.discord_status === "dnd") {
+    statusContent.innerHTML = `<span class="w-3 h-3 bg-red-500 rounded-full inline-flex ml-1 mr-1"></span> Online`;
+
+  } else if (api.d.discord_status === "idle") {
+    statusContent.innerHTML = `<span class="w-3 h-3 bg-yellow-500 rounded-full inline-flex ml-1 mr-1"></span> Online`;
+
+  } else if (api.d.discord_status === "online") {
+    statusContent.innerHTML = `<span class="w-3 h-3 bg-green-500 rounded-full inline-flex ml-1 mr-1"></span> Online`;
+
+  } else if (api.d.discord_status === "offline") {
+    statusContent.innerHTML = `<span class="w-3 h-3 bg-gray-500 rounded-full inline-flex ml-1 mr-1"></span> Offline`;
+
+  } else {
+    statusContent.innerHTML = `<span class="w-3 h-3 bg-gray-500 rounded-full inline-flex ml-1 mr-1"></span> Loading`;
+
   }
 
 }

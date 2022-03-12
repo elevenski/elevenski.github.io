@@ -90,7 +90,7 @@ a:hover {
     .head-name {
         font-size: 30px;
     }
-    .project-right-img, .contact-right-img {
+    .project-right-img, .contact-right-img, .github-right-img {
         display: none;
     }
 }
@@ -270,6 +270,63 @@ a:hover {
 .beta_section {
     font-size: 15px;
     background-color: orange;
-    padding: 3px 5px;
+    padding: 7px 5px;
     text-align: center
+}
+
+.spotify_section {
+    font-size: 15px;
+    background-color: #1DB954;
+    padding: 9px 5px;
+    text-align: center
+}
+
+.githubs-title {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.github-title {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.github {
+    width: 100%;
+    display: inline-block;
+    background-color: transparent;
+    text-decoration: none;
+    transition: .2s;
+    margin: 8px 0;
+    transform: scale(1);
+}
+
+.github:hover {
+    transform: scale(1.03);
+    background-color: #e1e1fd;
+    color: unset
+}
+
+.github-left {
+    display: inline-block;
+    float: left;
+}
+
+.github-right {
+    display: inline-block;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    align-items: center;
+    float: right;
+}
+
+.github-right-img {
+    filter: grayscale(100%);
+    opacity: 0.3;
+    padding: 20px 0px;
+}
+
+.github-right-img-border-radius {
+    border-radius: 999%;
 }
