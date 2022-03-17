@@ -237,9 +237,10 @@ a:hover {
 }
 
 .tippy-box[data-theme~=ws] {
-	color: #fff;
-	/*box-shadow: 0 0 20px 4px rgba(154, 161, 177, .15), 0 4px 80px -8px rgba(36, 40, 47, .25), 0 4px 4px -2px rgba(91, 94, 105, .15);*/
-	background-color: black
+	color: white;
+	box-shadow: 0 0 20px 4px rgba(154, 161, 177, .15), 0 4px 80px -8px rgba(36, 40, 47, .25), 0 4px 4px -2px rgba(91, 94, 105, .15);
+	background-color: black;
+    font-weight: 500;
 }
 
 .tippy-box[data-theme~=ws][data-placement^=top]>.tippy-arrow:before {
@@ -265,6 +266,10 @@ a:hover {
 .tippy-box[data-theme~=ws]>.tippy-svg-arrow {
 	background-color: black;
 	fill: black
+}
+
+#statusContent {
+    cursor: default
 }
 
 .beta_section {

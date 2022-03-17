@@ -42,17 +42,29 @@ function update_presence() {
     update_status(api.d.discord_status);
   }
 
-  if (api.d.listening_to_spotify == true) {
-    var artist = `${
-      api.d.spotify.artist.split(";")[0].split(",")[0]
-    }`;
-    var song = `${
-      api.d.spotify.song.split("(")[0]
-    }`;
-    spotifyListening.innerHTML = `<div class="spotify_section animate__animated animate__flash"><a href="https://open.spotify.com/track/${api.d.spotify.track_id}" target="_blank" class="text-white decoration_yh"><i class="fa-brands fa-spotify text-white mr-2"></i>Listening ${song} by ${artist}</a></div>`;
-  } else {
-    spotifyListening.innerHTML = ``;
-  }
+  setInterval(function () {
+
+    if (api.d.listening_to_spotify == true) {
+
+    var countDownDate = new Date(api.d.spotify.timestamps.end).getTime();
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    var spotify_time = minutes + "m " + seconds + "s "
+
+      var artist = `${
+        api.d.spotify.artist.split(";")[0].split(",")[0]
+      }`;
+      var song = `${
+        api.d.spotify.song.split("(")[0]
+      }`;
+      spotifyListening.innerHTML = `<div class="spotify_section text-white"><i class="fa-brands fa-spotify text-white mr-2"></i>Listening <a href="https://open.spotify.com/track/${api.d.spotify.track_id}" target="_blank" class="text-white decoration_yh">${song} by ${artist}</a> <span class="ml-1 mr-1" style="color:#b5ffce">—</span> <span class="text-white"> left ${spotify_time}</span></div>`;
+    } else {
+      spotifyListening.innerHTML = ``;
+    }
+
+  }, 1000); //removed: animate__animated animate__flash
 
   if (api.d.discord_status === "dnd") {
     statusContent.innerHTML = `<span class="w-3 h-3 bg-red-500 rounded-full inline-flex ml-1 mr-1"></span> Online`;

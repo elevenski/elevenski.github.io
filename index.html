@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Website! | Eleven | Eleven.js.org</title>
+    <title>This is my Website! | Eleven | Eleven.js.org</title>
     <meta name="theme-color" content="#111827">
     <meta property="og:site_name" content="eleven.js.org">
     <link rel='icon' type='image/png'
@@ -28,7 +28,7 @@
     <div class="beta_section">
         <p>You are currently viewing the beta design.</p>
     </div>
-    
+
     <div id="spotifyListening">
     </div>
 
@@ -54,7 +54,8 @@
                 Ltd</a>. I’m a <del>15</del> > 16 years old Self taught Full-stack developer, I usually make and
             share open-source projects. Also share all my open-source projects on Github.
         </p>
-        <p id="statusContent" class="mt-2 animate__animated animate__flash"><span class="w-3 h-3 bg-gray-500 rounded-full inline-flex ml-1 mr-1"></span> Loading</p>
+        <p class="mt-2 animate__animated animate__flash"><span id="statusContent"><span
+                    class="w-3 h-3 bg-gray-500 rounded-full inline-flex ml-1 mr-1"></span> Loading</span></p>
     </div>
 
     <div class="projects padding section">
@@ -121,12 +122,24 @@
     <div class="githubs padding section">
         <p class="githubs-title">Pinned Repositories</p>
         <p class="github-description">Only 50 IP requests per hour for GitHub API.</p>
-        <div class="github-card" data-repo="elevenvac/uptime-bot"></div>
-        <div class="github-card" data-repo="elevenvac/url-shorter"></div>
-        <div class="github-card" data-repo="elevenvac/website"></div>
-        <div class="github-card" data-repo="elevenvac/apptime-desktop"></div>
-        <div class="github-card" data-repo="elevenvac/covid19-tracker"></div>
-        <div class="github-card" data-repo="elevenvac/elbase"></div>
+        <a href="https://github.com/elevenvac/uptime-bot" target="_blank">
+            <div class="github-card" data-repo="elevenvac/uptime-bot"></div>
+        </a>
+        <a href="https://github.com/elevenvac/url-shorter" target="_blank">
+            <div class="github-card" data-repo="elevenvac/url-shorter"></div>
+        </a>
+        <a href="https://github.com/elevenvac/website" target="_blank">
+            <div class="github-card" data-repo="elevenvac/website"></div>
+        </a>
+        <a href="https://github.com/elevenvac/apptime-desktop" target="_blank">
+            <div class="github-card" data-repo="elevenvac/apptime-desktop"></div>
+        </a>
+        <a href="https://github.com/elevenvac/covid19-tracker" target="_blank">
+            <div class="github-card" data-repo="elevenvac/covid19-tracker"></div>
+        </a>
+        <a href="https://github.com/elevenvac/elbase" target="_blank">
+            <div class="github-card" data-repo="elevenvac/elbase"></div>
+        </a>
     </div>
 
     <div class="contacts padding section">
@@ -198,8 +211,12 @@
     </div>
 
     <button onclick="topFunction()" id="goTop" class="transition-shadow hover:shadow-md text-gray-400">
-        <p class="goTop-in"><i style="color:" class="fa-regular fa-chevron-up"></i></p>
+        <p class="goTop-in"><i class="fa-regular fa-chevron-up"></i></p>
     </button>
+
+    <div id="template" style="display: none;">
+        <strong>Bolded content</strong>
+    </div>
 
 </body>
 
