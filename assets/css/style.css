@@ -392,3 +392,7 @@ a:hover {
     padding-top: 1.2%;
     padding-bottom: 1.2%
 }
+
+.sticky-top {
+    transition: all 0.35s ease;
+}
