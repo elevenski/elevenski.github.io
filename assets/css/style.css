@@ -367,7 +367,7 @@ a:hover {
     color: var(--primary-text-color)
 }
 
-.switch-mode-btn:hover, .navbar-brand-text:hover {
+.switch-mode-btn:hover, .navbar-brand-text:hover, .footer-text:hover {
     color: var(--primary-text-color) !important
 }
 
@@ -378,4 +378,17 @@ a:hover {
 #switch-mode-btn {
     text-transform: capitalize;
     transition: all 0.3s linear;
+}
+
+.footer {
+    background-color: var(--secondary-backround-color);
+}
+
+.footer-text {
+    color: var(--primary-text-color)
+}
+
+.footer-in {
+    padding-top: 1.2%;
+    padding-bottom: 1.2%
 }
