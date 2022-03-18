@@ -14,5 +14,5 @@ app.use(express.static("public"));
   );*/
 
 app.get("/*", (req, res) => {
-  res.render("/e/404.html")
+  res.send("404 Not Found")
 });
