@@ -1,19 +1,43 @@
 @import"https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap";
 
 :root {
-    --primary-color: #f0f0ff
+    --background-color: #f0f0ff;
+    --secondary-backround-color: #e1e1fd;
+    --thirdy-background-color: #d1d1ff;
+    --primary-text-color: #000;
+    --secondary-text-color: rgba(75,85,99, 1);
+    --primary-btn-color: #5f5fa7;
+    --primary-box-shadow: 0 0 20px 4px rgba(154, 161, 177, .15), 0 4px 80px -8px rgba(36, 40, 47, .25), 0 4px 4px -2px rgba(91, 94, 105, .15);
+}
+  
+.dark-theme {
+    --background-color: #111112;
+    --secondary-backround-color: #1b1b20;
+    --thirdy-background-color: #212133;
+    --primary-text-color: #fff;
+    --secondary-text-color: rgba(140,149,156, 1);
+    --primary-btn-color: #8d8dcb;
+    --primary-box-shadow: 0 0 20px 4px rgba(45, 47, 52, .15), 0 4px 80px -8px rgba(45, 47, 52, .25), 0 4px 4px -2px rgba(45, 47, 52, .15);
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
     font-family: "Poppins";
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
     color: white;
     text-decoration: none;
     color: black
 }
 
 html {
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
 	scroll-behavior: smooth;
     color: black
 }
@@ -57,7 +81,7 @@ a:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #d1d1ff;
+	background-color: var(--thirdy-background-color);
 }
 
 ::-webkit-scrollbar-track {
@@ -105,11 +129,11 @@ a:hover {
 }
 
 .head-description-btn {
-    color: #5f5fa7
+    color: var(--primary-btn-color)
 }
 
 .head-description-btn:hover {
-    color: #5f5fa7
+    color: var(--primary-btn-color)
 }
 
 .projects-title {
@@ -134,7 +158,7 @@ a:hover {
 
 .project:hover {
     transform: scale(1.03);
-    background-color: #e1e1fd;
+    background-color: var(--secondary-backround-color);
     color: unset
 }
 
@@ -184,7 +208,7 @@ a:hover {
 
 .contact:hover {
     transform: scale(1.03);
-    background-color: #e1e1fd;
+    background-color: var(--secondary-backround-color);
     color: unset
 }
 
@@ -220,7 +244,7 @@ a:hover {
 	z-index: 99;
 	border: none; 
 	outline: none;
-	background-color: #e1e1fd;
+	background-color: var(--secondary-backround-color);
 	cursor: pointer;
 	padding: 15px;
 	border-radius: 999%;
@@ -238,7 +262,7 @@ a:hover {
 
 .tippy-box[data-theme~=ws] {
 	color: white;
-	box-shadow: 0 0 20px 4px rgba(154, 161, 177, .15), 0 4px 80px -8px rgba(36, 40, 47, .25), 0 4px 4px -2px rgba(91, 94, 105, .15);
+	box-shadow: var(--primary-box-shadow);
 	background-color: black;
     font-weight: 500;
 }
@@ -283,7 +307,7 @@ a:hover {
     font-size: 15px;
     background-color: #1DB954;
     padding: 9px 5px;
-    text-align: center
+    text-align: center;
 }
 
 .githubs-title {
@@ -308,7 +332,7 @@ a:hover {
 
 .github:hover {
     transform: scale(1.03);
-    background-color: #e1e1fd;
+    background-color: var(--secondary-backround-color);
     color: unset
 }
 
@@ -335,3 +359,23 @@ a:hover {
 .github-right-img-border-radius {
     border-radius: 999%;
 }
+
+.navbar-brand-text, .switch-mode-btn, .head-name, .head-description, #statusContent, .projects-title, .project-title, .githubs-title, .contacts-title, .contact-title, .github-title {
+    color: var(--primary-text-color)
+}
+
+.switch-mode-btn:hover, .navbar-brand-text:hover {
+    color: var(--primary-text-color) !important
+}
+
+.github-description, .github-sdescription, .project-sdescription , .project-description, .contact-sdescription {
+    color: var(--secondary-text-color)
+}
+
+.spotify-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+}
+

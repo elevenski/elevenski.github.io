@@ -25,28 +25,29 @@
 
 <body class="animate__animated animate__fadeIn">
 
-    <div class="beta_section">
+    <!--<div class="beta_section">
         <p>You are currently viewing the beta design.</p>
-    </div>
+    </div>-->
 
-    <div class="animate__animated animate__flash" id="spotifyListening">
+    <div class="animate__animated animate__flash sticky" id="spotifyListening">
     </div>
 
     <div class="navbar padding mt-3">
-        <a href="/" class="text-black navbar-brand hover:opacity-80"><b>Eleven</b>.js.org</a>
+        <a href="/" class="navbar-brand navbar-brand-text hover:opacity-80"><b>Eleven</b>.js.org</a>
         <div class="navbar-nav">
         </div>
         <div class="navbar-nav ms-auto">
-            <a href="https://github.com/elevenvac/elevenvac.github.io" target="_blank"
-                class="nav-item nav-link decoration_yh">Source Code</a>
+            <a href="javascript:void(0)" id="switch-mode-btn" class="switch-mode-btn nav-item nav-link decoration_yh">Change Theme</a>
+            <!--<a href="https://github.com/elevenvac/elevenvac.github.io" target="_blank"
+                class="nav-item nav-link decoration_yh">Source Code</a>-->
         </div>
     </div>
 
     <div class="head padding section">
-        <p class="head-name text-black">
+        <p class="head-name">
             Hi, I’m Eleven.
         </p>
-        <p class="head-description text-black">
+        <p class="head-description">
             I’m currently working as a full-stack developer for <a href="https://apptime.tech" target="_blank"
                 class="head-description-btn decoration_yh">Apptime</a> and <a href="https://linksee.ga" target="_blank"
                 class="head-description-btn decoration_yh">Linksee</a> in organization of <a
@@ -63,13 +64,13 @@
         <a href="https://linksee.ga" target="_blank">
             <div class="project mt-2 p-3 rounded-lg">
                 <div class="project-left">
-                    <div class="project-title text-black">
+                    <div class="project-title">
                         Linksee
                     </div>
-                    <div class="project-sdescription text-gray-600 mt-1">
+                    <div class="project-sdescription mt-1">
                         Co-Founder & Developer <span class="ml-1 mr-1">•</span> 2022-Present
                     </div>
-                    <div class="project-description text-gray-600 mt-1">
+                    <div class="project-description mt-1">
                         Do everything with just one link.
                     </div>
                 </div>
@@ -82,13 +83,13 @@
         <a href="https://www.apptime.tech" target="_blank">
             <div class="project mt-2 p-3 rounded-lg">
                 <div class="project-left">
-                    <div class="project-title text-black">
+                    <div class="project-title">
                         Apptime
                     </div>
-                    <div class="project-sdescription text-gray-600 mt-1">
+                    <div class="project-sdescription mt-1">
                         Founder & Developer <span class="ml-1 mr-1">•</span> 2019-Present
                     </div>
-                    <div class="project-description text-gray-600 mt-1">
+                    <div class="project-description mt-1">
                         %99 Free Uptime & SSL Check Monitoring with The Best Service Ever.
                     </div>
                 </div>
@@ -101,13 +102,13 @@
         <a href="https://orcsan.github.io" target="_blank">
             <div class="project mt-2 p-3 rounded-lg">
                 <div class="project-left">
-                    <div class="project-title text-black">
+                    <div class="project-title">
                         Orcsan
                     </div>
-                    <div class="project-sdescription text-gray-600 mt-1">
+                    <div class="project-sdescription mt-1">
                         BC Member <span class="ml-1 mr-1">•</span> 2019-Present
                     </div>
-                    <div class="project-description text-gray-600 mt-1">
+                    <div class="project-description mt-1">
                         Let’s create our own world together.
                     </div>
                 </div>
@@ -121,7 +122,6 @@
 
     <div class="githubs padding section">
         <p class="githubs-title">Pinned Repositories</p>
-        <p class="github-description">Only 50 IP requests per hour for GitHub API.</p>
         <a href="https://github.com/elevenvac/uptime-bot" target="_blank">
             <div class="github-card" data-repo="elevenvac/uptime-bot"></div>
         </a>
@@ -147,10 +147,10 @@
         <a href="https://twitter.com/elevenvac" target="_blank">
             <div class="contact mt-2 p-3 rounded-lg">
                 <div class="contact-left">
-                    <div class="contact-title text-black">
+                    <div class="contact-title">
                         Twitter
                     </div>
-                    <div class="contact-sdescription text-gray-600 mt-1">
+                    <div class="contact-sdescription mt-1">
                         500+ Followers <span class="ml-1 mr-1">•</span> Follow my updates.
                     </div>
                 </div>
@@ -163,10 +163,10 @@
         <a href="https://github.com/elevenvac" target="_blank">
             <div class="contact mt-2 p-3 rounded-lg">
                 <div class="contact-left">
-                    <div class="contact-title text-black">
+                    <div class="contact-title">
                         GitHub
                     </div>
-                    <div class="contact-sdescription text-gray-600 mt-1">
+                    <div class="contact-sdescription mt-1">
                         150+ Followers <span class="ml-1 mr-1">•</span> See my Repositories.
                     </div>
                 </div>
@@ -179,10 +179,10 @@
         <a href="https://discord.com/invite/HWjPAAs9d3" target="_blank">
             <div class="contact mt-2 p-3 rounded-lg">
                 <div class="contact-left">
-                    <div class="contact-title text-black">
+                    <div class="contact-title">
                         Discord
                     </div>
-                    <div class="contact-sdescription text-gray-600 mt-1">
+                    <div class="contact-sdescription mt-1">
                         500+ Members <span class="ml-1 mr-1">•</span> Join my Discord server.
                     </div>
                 </div>
@@ -195,10 +195,10 @@
         <a href="mailto:elevenvac@pm.me">
             <div class="contact mt-2 p-3 rounded-lg">
                 <div class="contact-left">
-                    <div class="contact-title text-black">
+                    <div class="contact-title">
                         Mail
                     </div>
-                    <div class="contact-sdescription text-gray-600 mt-1">
+                    <div class="contact-sdescription mt-1">
                         Send mail if you need help.
                     </div>
                 </div>
@@ -210,6 +210,12 @@
         </a>
     </div>
 
+    <section class="followers">
+        <div class="container"></div>
+
+        <div class="btn-container"></div>
+      </section>
+
     <button onclick="topFunction()" id="goTop" class="transition-shadow hover:shadow-md text-gray-400">
         <p class="goTop-in"><i class="fa-regular fa-chevron-up"></i></p>
     </button>
@@ -220,11 +226,16 @@
 
 </body>
 
-<script src="/assets/js/lanyard.js"></script>
-<script src='/assets/js/goTop.js'></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="https://unpkg.com/@popperjs/core@2"></script>
 <script src="https://unpkg.com/tippy.js@6"></script>
+<script src="/assets/js/lanyard.js"></script>
+<script src='/assets/js/goTop.js'></script>
 <script src="/assets/js/tippy.js"></script>
-<script src="/assets/js/github.js"></script>
+<script src="/assets/js/githubRepositories.js"></script>
+<script src="/assets/js/darkMode.js"></script>
+
+
 
 </html>
