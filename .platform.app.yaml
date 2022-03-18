@@ -1,0 +1,10 @@
+web:
+    commands:
+      start: node 404.js
+    locations:
+      '/':
+        root: 'build'
+        index: ['index.html']
+        scripts: false
+        allow: true
+        passthru: true
