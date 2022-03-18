@@ -16,6 +16,8 @@ toggleBtn.addEventListener('click', () => {
 });
 
 $(document).ready(function(){
+    console.log("%c Eleven", "background: transparent; color: #b5b5e7; font-size: 30px; font-weight: 500")
+    console.log("%c Temalar yükleniyor...", "background: transparent; color: red; font-size: 18px; font-weight: 400")
     let theme = localStorage.getItem("data-theme");
     if (theme === "dark") {
         document.documentElement.classList.toggle('dark-theme');
