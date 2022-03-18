@@ -35,7 +35,8 @@ body {
     background-color: var(--background-color);
     color: white;
     text-decoration: none;
-    color: black
+    color: black;
+    transition: all 0.3s linear;
 }
 
 html {
@@ -373,11 +374,3 @@ a:hover {
 .github-description, .github-sdescription, .project-sdescription , .project-description, .contact-sdescription {
     color: var(--secondary-text-color)
 }
-
-.spotify-sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: block;
-}
-
