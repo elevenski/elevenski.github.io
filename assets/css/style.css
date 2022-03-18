@@ -374,3 +374,8 @@ a:hover {
 .github-description, .github-sdescription, .project-sdescription , .project-description, .contact-sdescription {
     color: var(--secondary-text-color)
 }
+
+#switch-mode-btn {
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+}
