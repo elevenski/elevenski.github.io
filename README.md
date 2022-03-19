@@ -12,7 +12,7 @@
 `HTML`, `CSS` & `JavaScript`
 
 ## Contributors
-Thanks for contributions: `-`
+Thanks for contributions: `john-smilga`
 
 ## Installation
 not needed
