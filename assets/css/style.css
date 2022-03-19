@@ -103,6 +103,13 @@ a:hover {
     .head-name {
         font-size: 40px;
     }
+    .footer-in {
+        padding-top: 1.2%;
+        padding-bottom: 1.2%
+    }
+    .switch-mode-btn:hover {
+        text-decoration: underline;
+    }
 }
 
 @media only screen and (max-width: 640px) {
@@ -111,14 +118,21 @@ a:hover {
         padding-right: 3%;
     }
     .section {
-        padding-top: 2rem;
-        padding-bottom: 2rem
+        padding-top: 3rem;
+        padding-bottom: 3rem
     }
     .head-name {
         font-size: 30px;
     }
     .project-right-img, .contact-right-img, .github-right-img {
         display: none;
+    }
+    .footer-in {
+        padding-top: 1rem;
+        padding-bottom: 1rem
+    }
+    .switch-mode-btn:hover {
+        text-decoration: none;
     }
 }
 
@@ -386,11 +400,6 @@ a:hover {
 
 .footer-text {
     color: var(--primary-text-color)
-}
-
-.footer-in {
-    padding-top: 1.2%;
-    padding-bottom: 1.2%
 }
 
 .sticky-top {
