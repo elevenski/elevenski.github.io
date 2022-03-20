@@ -29,7 +29,7 @@
         <p>You are currently viewing the beta design.</p>
     </div>
 
-    <div class="animate__animated animate__flash sticky-top" id="spotifyListening">
+    <div class="animate__animated animate__flash" id="spotifyListening">
     </div>
 
     <div class="navbar padding mt-3">
@@ -56,6 +56,14 @@
         </p>
     </div>
 
+    <div id="space-area" class="padding section">
+        <center>
+            <button id="command-palette-btn" class="navbar-btns command-palette-btn transition-shadow hover:shadow-md">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </center>
+    </div>
+
     <button onclick="topFunction()" id="goTop" class="transition-shadow hover:shadow-md">
         <i class="fa-regular fa-chevron-up"></i>
     </button>
@@ -66,12 +74,9 @@
                 <div class="modal-body">
                     <div id="modal-body-in" class="modal-body-in p-3">
                         <div id="modal-body-in-header" class="modal-body-in-header">
-                            <span id="modal-cmdp-btn-shift" class="rounded-lg mr-2" data-dismiss="modal">
-                                <a id="modal_shift_key" class="ml-3 mr-3">SHIFT</a>
-                            </span>
-                            <span id="modal-cmdp-btn-k" class="rounded-lg" data-dismiss="modal">
-                                <a id="modal_k_key" class="ml-3 mr-3">K</a>
-                            </span>
+                            <center>
+                                <img draggable="false" class="modal_header_img mr-2" width="73" src="assets/img/shift-button_grayscale.png" alt="Shift-Button"><img draggable="false" class="modal_header_img" width="50" src="assets/img/k-button_grayscale.png" alt="K-Button">
+                            </center>
                         </div>
                         <div class="modal-body-in-content mt-4">
                             <div id="modal-content" class="">
