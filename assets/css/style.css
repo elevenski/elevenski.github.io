@@ -410,9 +410,9 @@ a:hover {
     transition: all 0.35s ease;
 }
 
-/*.modal {
-    display: block !important;
-}*/
+.modal {
+    backdrop-filter: blur(2px);
+}
 
 .modal-dialog {
     overflow-y: initial !important
