@@ -110,6 +110,14 @@ a:hover {
     .switch-mode-btn:hover {
         text-decoration: underline;
     }
+    .modal-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+    .modal-item {
+        /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+        text-align: left;
+    }
 }
 
 @media only screen and (max-width: 640px) {
@@ -377,7 +385,7 @@ a:hover {
     border-radius: 999%;
 }
 
-.navbar-brand-text, .switch-mode-btn, .head-name, .head-description, #statusContent, .projects-title, .project-title, .githubs-title, .contacts-title, .contact-title, .github-title {
+.navbar-brand-text, .switch-mode-btn, .head-name, .head-description, #statusContent, .projects-title, .project-title, .githubs-title, .contacts-title, .contact-title, .github-title, .modal-cmdp-btn, .footer-text, #modal_shift_key, #modal_k_key, #modal_github_btn, .modal_tech_names {
     color: var(--primary-text-color)
 }
 
@@ -398,10 +406,50 @@ a:hover {
     background-color: var(--secondary-backround-color);
 }
 
-.footer-text {
-    color: var(--primary-text-color)
-}
-
 .sticky-top {
     transition: all 0.35s ease;
+}
+
+/*.modal {
+    display: block !important;
+}*/
+
+.modal-dialog {
+    overflow-y: initial !important
+}
+
+.modal-body {
+    height: 80vh;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: var(--background-color);
+    border: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.modal-body-in-header {
+    text-align: center;
+}
+
+#modal-cmdp-btn-shift, #modal-cmdp-btn-k {
+    background-color: var(--secondary-backround-color);
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer
+}
+
+#modal_description {
+    color: var(--primary-text-color);
+}
+
+.modal_title {
+    font-weight: 700;
+    color: gray;
+    font-size: 12px
 }
