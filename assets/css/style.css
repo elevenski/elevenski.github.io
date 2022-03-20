@@ -400,10 +400,6 @@ a:hover {
     background-color: var(--secondary-backround-color);
 }
 
-.sticky-top {
-    transition: all 0.35s ease;
-}
-
 .modal {
     backdrop-filter: blur(2px);
 }
