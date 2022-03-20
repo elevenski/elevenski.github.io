@@ -1,11 +1,11 @@
 document.addEventListener("keydown", function (zEvent) {
-    const modal = document.getElementById("commandPallette");
+    const modal = document.getElementById("commandPalette");
     if (zEvent.shiftKey && zEvent.key === "K") {
         if(modal.classList.contains("show") === true) {
-            $('#commandPallette').modal('hide');
+            $('#commandPalette').modal('hide');
             console.log("modal kapatıldı")
         } else {
-            $("#commandPallette").modal();
+            $("#commandPalette").modal();
             console.log("modal açıldı")
         }
     }
