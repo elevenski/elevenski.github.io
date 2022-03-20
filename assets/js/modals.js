@@ -10,3 +10,10 @@ document.addEventListener("keydown", function (zEvent) {
         }
     }
 });
+
+/*const btn_c = document.querySelector('.command-palette-btn');
+
+btn_c.addEventListener('click', () => {
+    $("#commandPalette").modal();
+    console.log("modal açıldı")
+});*/

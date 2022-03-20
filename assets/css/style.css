@@ -107,9 +107,6 @@ a:hover {
         padding-top: 1.2%;
         padding-bottom: 1.2%
     }
-    .switch-mode-btn:hover {
-        text-decoration: underline;
-    }
     .modal-container {
         display: grid;
         grid-template-columns: auto auto auto auto;
@@ -138,9 +135,6 @@ a:hover {
     .footer-in {
         padding-top: 1rem;
         padding-bottom: 1rem
-    }
-    .switch-mode-btn:hover {
-        text-decoration: none;
     }
 }
 
@@ -262,27 +256,32 @@ a:hover {
 }
 
 #goTop {
-	display: none;
-	position: fixed;
-	bottom: 20px;
-	right: 30px;
-	z-index: 99;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
 	border: none; 
 	outline: none;
 	background-color: var(--secondary-backround-color);
 	cursor: pointer;
-	padding: 15px;
 	border-radius: 999%;
 	font-size: 18px;
     transition: .2s;
     transform: scale(1);
+    width: 40px;
+    height: 40px;
+    color: var(--primary-text-color);
 }
 
-.goTop-in {
-	margin-bottom: -5px;
-	margin-top: -5px;
-    transition: .2s;
-    transform: scale(1);
+#goTop:hover {
+    border: none;
+    outline: none;
+}
+
+#goTop:focus {
+    border: none;
+    outline: none;
 }
 
 .tippy-box[data-theme~=ws] {
@@ -385,7 +384,7 @@ a:hover {
     border-radius: 999%;
 }
 
-.navbar-brand-text, .switch-mode-btn, .head-name, .head-description, #statusContent, .projects-title, .project-title, .githubs-title, .contacts-title, .contact-title, .github-title, .modal-cmdp-btn, .footer-text, #modal_shift_key, #modal_k_key, #modal_github_btn, .modal_tech_names {
+.navbar-brand-text, .switch-mode-btn, .head-name, .head-description, #statusContent, .projects-title, .project-title, .githubs-title, .contacts-title, .contact-title, .github-title, .modal-cmdp-btn, .footer-text, #modal_shift_key, #modal_k_key, #modal_github_btn, .modal_tech_names, .command-palette-btn {
     color: var(--primary-text-color)
 }
 
@@ -395,11 +394,6 @@ a:hover {
 
 .github-description, .github-sdescription, .project-sdescription , .project-description, .contact-sdescription {
     color: var(--secondary-text-color)
-}
-
-#switch-mode-btn {
-    text-transform: capitalize;
-    transition: all 0.3s linear;
 }
 
 .footer {
@@ -452,4 +446,28 @@ a:hover {
     font-weight: 700;
     color: gray;
     font-size: 12px
+}
+
+.navbar-btns {
+	border: none; 
+	outline: none;
+	background-color: var(--secondary-backround-color);
+	cursor: pointer;
+	border-radius: 999%;
+	font-size: 18px;
+    transition: .2s;
+    transform: scale(1);
+    width: 40px;
+    height: 40px;
+    color: var(--primary-text-color);
+}
+
+.navbar-btns:hover {
+    border: none;
+    outline: none;
+}
+
+.navbar-btns:focus {
+    border: none;
+    outline: none;
 }

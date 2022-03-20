@@ -1,17 +1,17 @@
-const toggleBtn = document.querySelector('.switch-mode-btn');
+const btn = document.querySelector('.switch-mode-btn');
 
-toggleBtn.addEventListener('click', () => {
+btn.addEventListener('click', () => {
     let theme = localStorage.getItem("data-theme");
     if (theme === "dark") {
         localStorage.setItem("data-theme", "light");
         document.documentElement.classList.remove('dark-theme');
         console.log("light moda geçildi")
-        document.getElementById("switch-mode-btn").innerHTML = "<i class='fa-solid fa-moon mr-2'></i>Switch Dark Mode"
+        document.getElementById("switch-mode-btn").innerHTML = "<i class='fa-solid fa-sun-bright'></i>"
     } else if (theme === null || theme === "light") {
         localStorage.setItem("data-theme", "dark");
         document.documentElement.classList.toggle('dark-theme');
         console.log("dark moda geçildi")
-        document.getElementById("switch-mode-btn").innerHTML = "<i class='fa-solid fa-sun-bright mr-2'></i>Switch Light Mode"
+        document.getElementById("switch-mode-btn").innerHTML = "<i class='fa-solid fa-moon'></i>"
     }
 });
 
@@ -22,11 +22,11 @@ $(document).ready(function () {
     if (theme === "dark") {
         document.documentElement.classList.toggle('dark-theme');
         console.log("dark moda geçildi")
-        document.getElementById("switch-mode-btn").innerHTML = "<i class='fa-solid fa-sun-bright mr-2'></i>Switch Light Mode"
+        document.getElementById("switch-mode-btn").innerHTML = "<i class='fa-solid fa-moon'></i>"
     } else if (theme === null || theme === "light") {
         document.documentElement.classList.remove('dark-theme');
         console.log("light moda geçildi")
-        document.getElementById("switch-mode-btn").innerHTML = "<i class='fa-solid fa-moon mr-2'></i>Switch Dark Mode"
+        document.getElementById("switch-mode-btn").innerHTML = "<i class='fa-solid fa-sun-bright'></i>"
     }
 });
 
@@ -41,7 +41,7 @@ document.addEventListener("keydown", function (zEvent) {
                 localStorage.setItem("data-theme", "dark");
                 document.documentElement.classList.toggle('dark-theme');
                 console.log("system dark moda geçildi")
-                document.getElementById("switch-mode-btn").innerHTML = "<i class='fa-solid fa-sun-bright mr-2'></i>Switch Light Mode"
+                document.getElementById("switch-mode-btn").innerHTML = "<i class='fa-solid fa-moon'></i>"
             }
         } else if (!darkThemeMq.matches) {
             if (theme === "light") {
@@ -50,7 +50,7 @@ document.addEventListener("keydown", function (zEvent) {
                 localStorage.setItem("data-theme", "light");
                 document.documentElement.classList.remove('dark-theme');
                 console.log("system light moda geçildi")
-                document.getElementById("switch-mode-btn").innerHTML = "<i class='fa-solid fa-moon mr-2'></i>Switch Dark Mode"
+                document.getElementById("switch-mode-btn").innerHTML = "<i class='fa-solid fa-sun-bright'></i>"
             }
         }
     }
