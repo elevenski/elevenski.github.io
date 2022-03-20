@@ -8,7 +8,7 @@ tippy('#statusContent', {
     allowHTML: true
 });
 
-/*tippy('#command-palette-btn', {
+tippy('#command-palette-btn', {
     content: '<p class="ml-1 mr-1">Shift + K</p>',
     animation: 'scale',
     placement: 'bottom',
@@ -16,4 +16,4 @@ tippy('#statusContent', {
     inertia: true,
     interactive: false,
     allowHTML: true
-});*/
+});

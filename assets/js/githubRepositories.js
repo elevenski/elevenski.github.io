@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', async function() {
                 </div>
                 <div class="github-right">
                     <img draggable="false" class="project-right-img" width="50"
-                        src="https://i.ibb.co/DgdKgLZ/github.png" alt="GitHub">
+                        src="assets/img/github_grayscale.png" alt="GitHub">
                 </div>
             </div>
         </a>
