@@ -138,6 +138,12 @@ a:hover {
     }
 }
 
+@media only screen and (max-width: 1069px) {
+    .project-right-img, .contact-right-img, .github-right-img {
+        display: none;
+    }
+}
+
 .head-name {
     font-weight: 900;
 }
@@ -352,6 +358,7 @@ a:hover {
     transition: .2s;
     margin: 8px 0;
     transform: scale(1);
+    cursor: pointer
 }
 
 .github:hover {
@@ -462,4 +469,5 @@ a:hover {
 
 .modal_header_img {
     display: inline;
+    cursor: pointer
 }
