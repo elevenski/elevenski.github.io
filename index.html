@@ -37,17 +37,20 @@
         <div class="navbar-nav">
         </div>
         <div class="navbar-nav ms-auto">
-            <!--<button id="command-palette-btn" class="navbar-btns command-palette-btn transition-shadow hover:shadow-md">
-                <i class="fa-solid fa-bars-staggered"></i>
-            </button>-->
-            <button id="switch-mode-btn" class="navbar-btns switch-mode-btn transition-shadow hover:shadow-md">
-                <i class='fa-solid fa-sun-bright'></i>
-            </button>
+            <div id="buttons">
+                <button id="switch-mode-btn" class="navbar-btns switch-mode-btn transition-shadow hover:shadow-md mr-1">
+                    <i class='fa-solid fa-sun-bright'></i>
+                </button>
+                <button id="command-palette-btn"
+                    class="navbar-btns command-palette-btn transition-shadow hover:shadow-md">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
         </div>
     </div>
 
     <div class="head padding section">
-        <p class="head-name">
+        <p id="day-message" class="head-name">
             Hi, I’m Eleven.
         </p>
         <p class="head-description">
@@ -60,6 +63,12 @@
         </p>
         <p class="mt-2 animate__animated animate__flash"><span id="statusContent"><span
                     class="w-3 h-3 bg-gray-500 rounded-full inline-flex ml-1 mr-2"></span>Loading</span></p>
+        <!--<p class="mt-2 animate__animated animate__flash"><span id="date"><i
+                    class="fa-regular fa-spinner-third animate-spin text-gray-500 inline-flex ml-1 mr-2"></i>Loading</span>
+        </p>-->
+        <p class="mt-2 animate__animated animate__flash"><span id="cat"><i
+                    class="fa-regular fa-spinner-third animate-spin text-gray-500 inline-flex ml-1 mr-2"></i>Loading</span>
+        </p>
     </div>
 
     <div class="projects padding section">
@@ -200,14 +209,6 @@
                 </div>
             </div>
         </a>
-    </div>
-
-    <div id="space-area" class="padding section">
-        <center>
-            <button id="command-palette-btn" class="navbar-btns command-palette-btn transition-shadow hover:shadow-md">
-                <i class="fa-solid fa-bars-staggered"></i>
-            </button>
-        </center>
     </div>
 
     <div class="footer">
@@ -467,5 +468,6 @@
 <script src="/assets/js/darkMode.js"></script>
 <script src="/assets/js/localStorage.js"></script>
 <script src="/assets/js/modals.js"></script>
+<script src="/assets/js/time.js"></script>
 
 </html>
