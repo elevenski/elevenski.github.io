@@ -27,3 +27,13 @@ tippy('#date', {
     interactive: false,
     allowHTML: true
 });
+
+tippy('#cat', {
+    content: '<p class="ml-1 mr-1">ATM Daily Activity</p>',
+    animation: 'scale',
+    placement: 'bottom',
+    theme: 'ws',
+    inertia: true,
+    interactive: false,
+    allowHTML: true
+});
