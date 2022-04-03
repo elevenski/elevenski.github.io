@@ -460,6 +460,8 @@ a:hover {
 .navbar-btns:hover {
     border: none;
     outline: none;
+    /*background-color: gray; SUPER SECRET -___________________-
+    border-bottom: 2px solid green;*/
 }
 
 .navbar-btns:focus {
