@@ -43,7 +43,7 @@ $(document).ready(function () {
     }
 
     setInterval(time, 1000);
-    setInterval(day_message, 4000);
+    setInterval(day_message, 5000);
     setInterval(cat, 1000);
 });
 

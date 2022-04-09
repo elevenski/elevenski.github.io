@@ -336,7 +336,7 @@ a:hover {
 .spotify_section {
     font-size: 15px;
     background-color: var(--spotify_section-background-color);
-    padding: 9px 5px;
+    padding: 6px 1px;
     text-align: center;
 }
 
