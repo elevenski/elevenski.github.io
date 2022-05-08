@@ -322,7 +322,7 @@ a:hover {
 	fill: black
 }
 
-#statusContent, #date, #cat {
+#statusContent, #cat, #weather {
     cursor: default
 }
 
@@ -391,7 +391,7 @@ a:hover {
     border-radius: 999%;
 }
 
-.navbar-brand-text, .switch-mode-btn, .head-name, .head-description, #statusContent, .projects-title, .project-title, .githubs-title, .contacts-title, .contact-title, .github-title, .footer-text, #modal_shift_key, #modal_k_key, #modal_github_btn, .modal_tech_names, .command-palette-btn, #date, #cat {
+.navbar-brand-text, .switch-mode-btn, .head-name, .head-description, #statusContent, .projects-title, .project-title, .githubs-title, .contacts-title, .contact-title, .github-title, .footer-text, #modal_shift_key, #modal_k_key, #modal_github_btn, .modal_tech_names, .command-palette-btn, #cat, #weather {
     color: var(--primary-text-color)
 }
 
