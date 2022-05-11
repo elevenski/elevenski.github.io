@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 var minifyHTML = require('express-minify-html');
-router.use(minifyHTML({
+app.use(minifyHTML({
     override:      true,
     exception_url: false,
     htmlMinifier: {
