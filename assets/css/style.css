@@ -115,6 +115,15 @@ a:hover {
         /*border: 1px solid rgba(0, 0, 0, 0.8);*/
         text-align: left;
     }
+    .head-status-card-right {
+        padding-left: 1em;
+    }
+    .head-status {
+        padding-bottom: 2%
+    }
+    .head-status-card-right-details, .head-status-card-right-state {
+        width: 30em;
+    }
 }
 
 @media only screen and (max-width: 640px) {
@@ -135,6 +144,15 @@ a:hover {
     .footer-in {
         padding-top: 1rem;
         padding-bottom: 1rem
+    }
+    .head-status-card-right {
+        padding-left: 1em;
+    }
+    .head-status {
+        padding-bottom: 2rem
+    }
+    .head-status-card-right-details, .head-status-card-right-state {
+        width: 14em;
     }
 }
 
@@ -476,4 +494,39 @@ a:hover {
 
 #buttons, .navbar-btns {
     display: inline-block
+}
+
+.head-status-card {
+    display: flex;
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid var(--secondary-backround-color);
+    border-radius: 5px;
+    color: var(--primary-text-color)
+}
+
+.head-status-card-left {
+    float: left;
+}
+
+.head-status-card-right {
+    float: right;
+}
+
+.head-status-card-left-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+}
+
+.head-status-card-right-title {
+    font-weight: 700;
+    font-size: 15px
+}
+
+.head-status-card-right-details, .head-status-card-right-state {
+    font-size: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }

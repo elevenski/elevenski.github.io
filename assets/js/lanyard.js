@@ -1,6 +1,7 @@
 var statusIcon = document.getElementById("statusIcon");
 var statusContent = document.getElementById("statusContent");
 var spotifyListening = document.getElementById("spotifyListening");
+var headStatus = document.getElementById("headStatus");
 
 const lanyard = new WebSocket("wss://api.lanyard.rest/socket");
 
@@ -41,6 +42,31 @@ function update_presence() {
   if (statusIcon != null) {
     update_status(api.d.discord_status);
   }
+
+  var vsCodeAppID = "383226320970055681"
+  var vsCodeAvtivity = api.d.activities.find(activity => activity.application_id == vsCodeAppID)
+
+  setInterval(function () {
+  
+  if (vsCodeAvtivity) {
+    console.log(vsCodeAvtivity)
+    headStatus.innerHTML = `
+<div class="head-status-in">
+    <div class="head-status-card p-3">
+        <div class="head-status-card-left"><img class="head-status-card-left-img" draggable="false" src="/assets/img/vscode.svg" alt="VsCode"></div>
+        <div class="head-status-card-right">
+            <p class="head-status-card-right-title text-uppercase">Visual Studio Code</p>
+            <p class="head-status-card-right-details">${vsCodeAvtivity.details}</p>
+            <p class="head-status-card-right-state">${vsCodeAvtivity.state}</p>
+        </div>
+    </div>
+</div>`;
+  } else {
+    headStatus.innerHTML = ``;
+    document.getElementById("headStatus").style.display = "none";
+  }
+
+}, 1000);
 
   setInterval(function () {
 
