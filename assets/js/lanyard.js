@@ -2,6 +2,7 @@ var statusIcon = document.getElementById("statusIcon");
 var statusContent = document.getElementById("statusContent");
 var spotifyListening = document.getElementById("spotifyListening");
 var headStatus = document.getElementById("headStatus");
+var headStatus2 = document.getElementById("headStatus2");
 
 const lanyard = new WebSocket("wss://api.lanyard.rest/socket");
 
@@ -65,6 +66,31 @@ function update_presence() {
     headStatus.innerHTML = ``;
     document.getElementById("headStatus").style.display = "none";
   }
+
+}, 1000);
+
+var netflixAppID = "926541425682829352"
+var netflixAvtivity = api.d.activities.find(activity => activity.application_id == netflixAppID)
+
+setInterval(function () {
+
+if (netflixAvtivity) {
+  console.log(netflixAvtivity)
+  headStatus2.innerHTML = `
+<div class="head-status-in">
+  <div class="head-status-card p-3">
+      <div class="head-status-card-left"><img class="head-status-card-left-img" draggable="false" src="/assets/img/netflix.png" alt="Netflix"></div>
+      <div class="head-status-card-right">
+          <p class="head-status-card-right-title text-uppercase">Netflix</p>
+          <p class="head-status-card-right-details">${netflixAvtivity.details}</p>
+          <p class="head-status-card-right-state">${netflixAvtivity.state || " "}</p>
+      </div>
+  </div>
+</div>`;
+} else {
+  headStatus.innerHTML = ``;
+  document.getElementById("headStatus2").style.display = "none";
+}
 
 }, 1000);
 
