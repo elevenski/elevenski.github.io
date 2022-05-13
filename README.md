@@ -6,7 +6,7 @@
 ![1366x768 Screenshot of Website](https://cdn.discordapp.com/attachments/955108810672975883/974678949684736000/unknown.png "1366x768 Screenshot of Website")
 
 ## Description
-⚡ Source code of my personal website, Everything is included.
+⚡ [eleven.js.org] Easy & Simple Personal website for developers. Using HTML & CSS & JS (beta)
 
 ## Programming Languages
 `HTML`, `CSS` & `JavaScript`
