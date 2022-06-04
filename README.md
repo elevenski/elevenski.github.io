@@ -18,4 +18,4 @@ Thanks for contributions: `john-smilga`
 not needed
 
 ## Discord Server
-<a href="https://discord.gg/HWjPAAs9d3"><img src="http://invidget.switchblade.xyz/HWjPAAs9d3"/></a>
+<a href="https://discord.gg/uhwjhWryND"><img src="http://invidget.switchblade.xyz/uhwjhWryND"/></a>
