@@ -426,25 +426,22 @@ a:hover {
 }
 
 .modal {
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px)
 }
 
 .modal-dialog {
-    overflow-y: initial !important
+    overflow-y: initial !important;
 }
 
 .modal-body {
-    height: 80vh;
+    height: 65vh;
     overflow-y: auto;
 }
 
 .modal-content {
     background-color: var(--background-color);
     border: none;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
+    border: 2px solid var(--secondary-backround-color);
 }
 
 .modal-body-in-header {

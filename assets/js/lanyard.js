@@ -50,15 +50,14 @@ function update_presence() {
   setInterval(function () {
   
   if (vsCodeAvtivity) {
-    console.log(vsCodeAvtivity)
     headStatus.innerHTML = `
 <div class="head-status-in">
     <div class="head-status-card p-3">
         <div class="head-status-card-left"><img class="head-status-card-left-img" draggable="false" src="/assets/img/vscode.svg" alt="VsCode"></div>
         <div class="head-status-card-right">
             <p class="head-status-card-right-title text-uppercase">Visual Studio Code</p>
-            <p class="head-status-card-right-details">${vsCodeAvtivity.details}</p>
-            <p class="head-status-card-right-state">${vsCodeAvtivity.state}</p>
+            <p class="head-status-card-right-details">${vsCodeAvtivity.details | " "}</p>
+            <p class="head-status-card-right-state">${vsCodeAvtivity.state || " "}</p>
         </div>
     </div>
 </div>`;
@@ -75,14 +74,13 @@ var netflixAvtivity = api.d.activities.find(activity => activity.application_id 
 setInterval(function () {
 
 if (netflixAvtivity) {
-  console.log(netflixAvtivity)
   headStatus2.innerHTML = `
 <div class="head-status-in">
   <div class="head-status-card p-3">
       <div class="head-status-card-left"><img class="head-status-card-left-img" draggable="false" src="/assets/img/netflix.png" alt="Netflix"></div>
       <div class="head-status-card-right">
           <p class="head-status-card-right-title text-uppercase">Netflix</p>
-          <p class="head-status-card-right-details">${netflixAvtivity.details}</p>
+          <p class="head-status-card-right-details">${netflixAvtivity.details || " "}</p>
           <p class="head-status-card-right-state">${netflixAvtivity.state || " "}</p>
       </div>
   </div>
