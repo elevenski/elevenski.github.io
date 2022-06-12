@@ -409,7 +409,7 @@ a:hover {
     border-radius: 999%;
 }
 
-.navbar-brand-text, .switch-mode-btn, .head-name, .head-description, #statusContent, .projects-title, .project-title, .githubs-title, .contacts-title, .contact-title, .github-title, .footer-text, #modal_shift_key, #modal_k_key, #modal_github_btn, .modal_tech_names, .command-palette-btn, #cat, #weather {
+.navbar-brand-text, .switch-mode-btn, .head-name, .head-description, #statusContent, .projects-title, .project-title, .githubs-title, .contacts-title, .contact-title, .github-title, .footer-text, #modal_shift_key, #modal_k_key, #modal_github_btn, .modal_tech_names, .about-panel-btn, #cat, #weather {
     color: var(--primary-text-color)
 }
 
@@ -434,7 +434,7 @@ a:hover {
 }
 
 .modal-body {
-    height: 65vh;
+    height: auto; /*normal 65vh*/
     overflow-y: auto;
 }
 

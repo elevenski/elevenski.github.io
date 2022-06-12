@@ -1,19 +1,19 @@
 document.addEventListener("keydown", function (zEvent) {
-    const modal = document.getElementById("commandPalette");
+    const modal = document.getElementById("aboutPanel");
     if (zEvent.shiftKey && zEvent.key === "K") {
         if(modal.classList.contains("show") === true) {
-            $('#commandPalette').modal('hide');
+            $('#aboutPanel').modal('hide');
             console.log("modal kapatıldı")
         } else {
-            $("#commandPalette").modal();
+            $("#aboutPanel").modal();
             console.log("modal açıldı")
         }
     }
 });
 
-const btn_c = document.querySelector('.command-palette-btn');
+const btn_c = document.querySelector('.about-panel-btn');
 
 btn_c.addEventListener('click', () => {
-    $("#commandPalette").modal();
+    $("#aboutPanel").modal();
     console.log("modal açıldı")
 });

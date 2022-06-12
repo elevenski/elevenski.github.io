@@ -21,28 +21,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel='stylesheet' href="/assets/css/style.css">
     <link rel="manifest" href="manifest.json">
-    <style type="text/css">
-        .js div#preloader {
-            position: fixed;
-            left: 0;
-            top: 0;
-            z-index: 999;
-            width: 100%;
-            height: 100%;
-            overflow: visible;
-            background: transparent url('/assets/img/paint_grayscale.png') no-repeat center center;
-        }
-    </style>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script type="text/javascript">
-        jQuery(document).ready(function ($) {
-
-            $(window).load(function () {
-                $('#preloader').fadeOut('slow', function () { $(this).remove(); });
-            });
-
-        });
-    </script>
 </head>
 
 <body class="animate__animated animate__fadeIn js">
@@ -60,9 +38,9 @@
                 <button id="switch-mode-btn" class="navbar-btns switch-mode-btn transition-shadow hover:shadow-md mr-1">
                     <i class='fa-solid fa-sun-bright'></i>
                 </button>
-                <button id="command-palette-btn"
-                    class="navbar-btns command-palette-btn transition-shadow hover:shadow-md">
-                    <i class="fa-solid fa-bars-staggered"></i>
+                <button id="about-panel-btn"
+                    class="navbar-btns about-panel-btn transition-shadow hover:shadow-md">
+                    <i class="fa-regular fa-user"></i>
                 </button>
             </div>
         </div>
@@ -76,14 +54,13 @@
             This page not found. <a href="/"
                 class="head-description-btn decoration_yh">Return Home</a>
         </p>
-</p>
     </div>
 
     <button onclick="topFunction()" id="goTop" class="transition-shadow hover:shadow-md">
         <i class="fa-regular fa-chevron-up"></i>
     </button>
 
-    <div class="modal fade" id="commandPalette" tabindex="-1" role="dialog">
+    <div class="modal fade" id="aboutPanel" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content rounded-lg">
                 <div class="modal-body">
@@ -105,8 +82,8 @@
                                 </div>
                                 <div id="modal-item" class="modal-item mt-3">
                                     <p class="modal_title text-uppercase">Working on</p>
-                                    <p id="modal_description" class="mt-1"><a href="https://orcsan.github.io"
-                                            target="_blank" class="decoration_yh">Orcsan, Ltd.</a></p>
+                                    <p id="modal_description" class="mt-1"><a href="https://www.orcsan.eu.org"
+                                            target="_blank" class="decoration_yh">Orcsan</a></p>
                                 </div>
                                 <div id="modal-item" class="modal-item mt-3">
                                     <p class="modal_title text-uppercase">Donate</p>
