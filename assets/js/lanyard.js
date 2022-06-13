@@ -74,10 +74,14 @@ var netflixAvtivity = api.d.activities.find(activity => activity.application_id 
 setInterval(function () {
 
 if (netflixAvtivity) {
+  var netflixImage = netflixAvtivity.assets.large_image
+  var netflixImageLink = netflixImage.substring(netflixImage.indexOf("https/"));
+  var netflixImageLinkRevised = netflixImageLink.replace('https/','https://');
+
   headStatus2.innerHTML = `
 <div class="head-status-in">
   <div class="head-status-card p-3">
-      <div class="head-status-card-left"><img class="head-status-card-left-img" draggable="false" src="/assets/img/netflix.png" alt="Netflix"></div>
+      <div class="head-status-card-left"><img class="head-status-card-left-img" draggable="false" src="${netflixImageLinkRevised || "assets/img/netflix.png"}" onerror="this.onerror=null;this.src='assets/img/netflix.png'" alt="Netflix"></div>
       <div class="head-status-card-right">
           <p class="head-status-card-right-title text-uppercase">Netflix</p>
           <p class="head-status-card-right-details">${netflixAvtivity.details || " "}</p>

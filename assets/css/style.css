@@ -514,6 +514,7 @@ a:hover {
     width: 70px;
     height: 70px;
     border-radius: 5px;
+    object-fit: cover
 }
 
 .head-status-card-right-title {
