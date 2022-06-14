@@ -124,6 +124,9 @@ a:hover {
     .head-status-card-right-details, .head-status-card-right-state {
         width: 30em;
     }
+    #phone_modal_close_btn {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 640px) {
@@ -409,7 +412,7 @@ a:hover {
     border-radius: 999%;
 }
 
-.navbar-brand-text, .switch-mode-btn, .head-name, .head-description, #statusContent, .projects-title, .project-title, .githubs-title, .contacts-title, .contact-title, .github-title, .footer-text, #modal_shift_key, #modal_k_key, #modal_github_btn, .modal_tech_names, .about-panel-btn, #cat, #weather {
+.navbar-brand-text, .switch-mode-btn, .head-name, .head-description, #statusContent, .projects-title, .project-title, .githubs-title, .contacts-title, .contact-title, .github-title, .footer-text, #modal_shift_key, #modal_k_key, #modal_github_btn, .modal_tech_names, .about-panel-btn, #cat, #weather, #phone_modal_close_btn {
     color: var(--primary-text-color)
 }
 
@@ -527,4 +530,9 @@ a:hover {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+}
+
+#phone_modal_close_btn {
+    text-align: center;
+    opacity: 30%;
 }
