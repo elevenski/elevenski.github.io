@@ -46,8 +46,6 @@ function update_presence() {
 
   var vsCodeAppID = "383226320970055681"
   var vsCodeAvtivity = api.d.activities.find(activity => activity.application_id == vsCodeAppID)
-
-  setInterval(function () {
   
   if (vsCodeAvtivity) {
     headStatus.innerHTML = `
@@ -56,7 +54,7 @@ function update_presence() {
         <div class="head-status-card-left"><img class="head-status-card-left-img" draggable="false" src="/assets/img/vscode.svg" alt="VsCode"></div>
         <div class="head-status-card-right">
             <p class="head-status-card-right-title text-uppercase">Visual Studio Code</p>
-            <p class="head-status-card-right-details">${vsCodeAvtivity.details | " "}</p>
+            <p class="head-status-card-right-details">${vsCodeAvtivity.details || " "}</p>
             <p class="head-status-card-right-state">${vsCodeAvtivity.state || " "}</p>
         </div>
     </div>
@@ -66,12 +64,8 @@ function update_presence() {
     document.getElementById("headStatus").style.display = "none";
   }
 
-}, 1000);
-
 var netflixAppID = "926541425682829352"
 var netflixAvtivity = api.d.activities.find(activity => activity.application_id == netflixAppID)
-
-setInterval(function () {
 
 if (netflixAvtivity) {
   var netflixImage = netflixAvtivity.assets.large_image
@@ -90,11 +84,9 @@ if (netflixAvtivity) {
   </div>
 </div>`;
 } else {
-  headStatus.innerHTML = ``;
+  headStatus2.innerHTML = ``;
   document.getElementById("headStatus2").style.display = "none";
 }
-
-}, 1000);
 
   setInterval(function () {
 
