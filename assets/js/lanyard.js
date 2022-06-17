@@ -3,6 +3,7 @@ var statusContent = document.getElementById("statusContent");
 var spotifyListening = document.getElementById("spotifyListening");
 var headStatus = document.getElementById("headStatus");
 var headStatus2 = document.getElementById("headStatus2");
+var headStatus3 = document.getElementById("headStatus3");
 
 const lanyard = new WebSocket("wss://api.lanyard.rest/socket");
 
@@ -45,17 +46,17 @@ function update_presence() {
   }
 
   var vsCodeAppID = "383226320970055681"
-  var vsCodeAvtivity = api.d.activities.find(activity => activity.application_id == vsCodeAppID)
+  var vsCodeActivity = api.d.activities.find(activity => activity.application_id == vsCodeAppID)
   
-  if (vsCodeAvtivity) {
+  if (vsCodeActivity) {
     headStatus.innerHTML = `
 <div class="head-status-in">
     <div class="head-status-card p-3">
         <div class="head-status-card-left"><img class="head-status-card-left-img" draggable="false" src="/assets/img/vscode.svg" alt="VsCode"></div>
         <div class="head-status-card-right">
             <p class="head-status-card-right-title text-uppercase">Visual Studio Code</p>
-            <p class="head-status-card-right-details">${vsCodeAvtivity.details || " "}</p>
-            <p class="head-status-card-right-state">${vsCodeAvtivity.state || " "}</p>
+            <p class="head-status-card-right-details">${vsCodeActivity.details || " "}</p>
+            <p class="head-status-card-right-state">${vsCodeActivity.state || " "}</p>
         </div>
     </div>
 </div>`;
@@ -65,9 +66,9 @@ function update_presence() {
   }
 
 var netflixAppID = "926541425682829352"
-var netflixAvtivity = api.d.activities.find(activity => activity.application_id == netflixAppID)
+var netflixActivity = api.d.activities.find(activity => activity.application_id == netflixAppID)
 
-if (netflixAvtivity) {
+if (netflixActivity) {
   var netflixImage = netflixAvtivity.assets.large_image
   var netflixImageLink = netflixImage.substring(netflixImage.indexOf("https/"));
   var netflixImageLinkRevised = netflixImageLink.replace('https/','https://');
@@ -78,14 +79,34 @@ if (netflixAvtivity) {
       <div class="head-status-card-left"><img class="head-status-card-left-img" draggable="false" src="${netflixImageLinkRevised || "assets/img/netflix.png"}" onerror="this.onerror=null;this.src='assets/img/netflix.png'" alt="Netflix"></div>
       <div class="head-status-card-right">
           <p class="head-status-card-right-title text-uppercase">Netflix</p>
-          <p class="head-status-card-right-details">${netflixAvtivity.details || " "}</p>
-          <p class="head-status-card-right-state">${netflixAvtivity.state || " "}</p>
+          <p class="head-status-card-right-details">${netflixActivity.details || " "}</p>
+          <p class="head-status-card-right-state">${netflixActivity.state || " "}</p>
       </div>
   </div>
 </div>`;
 } else {
   headStatus2.innerHTML = ``;
   document.getElementById("headStatus2").style.display = "none";
+}
+
+var disneyPlusAppID = "630236276829716483"
+var disneyPlusActivity = api.d.activities.find(activity => activity.application_id == disneyPlusAppID)
+
+if (disneyPlusActivity) {
+  headStatus3.innerHTML = `
+<div class="head-status-in">
+  <div class="head-status-card p-3">
+      <div class="head-status-card-left"><img class="head-status-card-left-img" draggable="false" src="assets/img/disneyplus.png" alt="Disney+"></div>
+      <div class="head-status-card-right">
+          <p class="head-status-card-right-title text-uppercase">Disney+</p>
+          <p class="head-status-card-right-details">${disneyPlusActivity.details || " "}</p>
+          <p class="head-status-card-right-state">${disneyPlusActivity.state || " "}</p>
+      </div>
+  </div>
+</div>`;
+} else {
+  headStatus3.innerHTML = ``;
+  document.getElementById("headStatus3").style.display = "none";
 }
 
   setInterval(function () {
