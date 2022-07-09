@@ -69,7 +69,7 @@ var netflixAppID = "926541425682829352"
 var netflixActivity = api.d.activities.find(activity => activity.application_id == netflixAppID)
 
 if (netflixActivity) {
-  var netflixImage = netflixAvtivity.assets.large_image
+  var netflixImage = netflixActivity.assets.large_image
   var netflixImageLink = netflixImage.substring(netflixImage.indexOf("https/"));
   var netflixImageLinkRevised = netflixImageLink.replace('https/','https://');
 
