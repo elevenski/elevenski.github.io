@@ -1,9 +1,9 @@
 var statusIcon = document.getElementById("statusIcon");
 var statusContent = document.getElementById("statusContent");
 var spotifyListening = document.getElementById("spotifyListening");
-var headStatus = document.getElementById("headStatus");
-var headStatus2 = document.getElementById("headStatus2");
-var headStatus3 = document.getElementById("headStatus3");
+var visualStudioCodePlaying = document.getElementById("visualStudioCodePlaying");
+var netflixWatching = document.getElementById("netflixWatching");
+var disneyPlusWatching = document.getElementById("disneyPlusWatching");
 
 const lanyard = new WebSocket("wss://api.lanyard.rest/socket");
 
@@ -49,20 +49,21 @@ function update_presence() {
   var vsCodeActivity = api.d.activities.find(activity => activity.application_id == vsCodeAppID)
   
   if (vsCodeActivity) {
-    headStatus.innerHTML = `
-<div class="head-status-in">
-    <div class="head-status-card p-3">
-        <div class="head-status-card-left"><img class="head-status-card-left-img" draggable="false" src="/assets/img/vscode.svg" alt="VsCode"></div>
-        <div class="head-status-card-right">
-            <p class="head-status-card-right-title text-uppercase">Visual Studio Code</p>
-            <p class="head-status-card-right-details">${vsCodeActivity.details || " "}</p>
-            <p class="head-status-card-right-state">${vsCodeActivity.state || " "}</p>
-        </div>
-    </div>
+    visualStudioCodePlaying.innerHTML = `
+<div class="oal-comps-l-card rounded-cxl mt-3">
+<div class=" rounded-cxl">
+<div class="oal-comps-l-card-left">
+<img draggable="false" src="/assets/img/vscode.svg" alt="IMG" class="img-65 rounded-cxl" width="65" height="65">
+</div>
+<div class="oal-comps-l-card-right ml-2 p-1">
+<p class="section-regular-text-b">Visual Studio Code</p>
+<p class="section-regular-text opacity-80 oal-state">${vsCodeActivity.details || " "}</p>
+</div>
+</div>
 </div>`;
   } else {
-    headStatus.innerHTML = ``;
-    document.getElementById("headStatus").style.display = "none";
+    visualStudioCodePlaying.innerHTML = ``;
+    document.getElementById("visualStudioCodePlaying").style.display = "none";
   }
 
 var netflixAppID = "926541425682829352"
@@ -73,40 +74,42 @@ if (netflixActivity) {
   var netflixImageLink = netflixImage.substring(netflixImage.indexOf("https/"));
   var netflixImageLinkRevised = netflixImageLink.replace('https/','https://');
 
-  headStatus2.innerHTML = `
-<div class="head-status-in">
-  <div class="head-status-card p-3">
-      <div class="head-status-card-left"><img class="head-status-card-left-img" draggable="false" src="${netflixImageLinkRevised || "assets/img/netflix.png"}" onerror="this.onerror=null;this.src='assets/img/netflix.png'" alt="Netflix"></div>
-      <div class="head-status-card-right">
-          <p class="head-status-card-right-title text-uppercase">Netflix</p>
-          <p class="head-status-card-right-details">${netflixActivity.details || " "}</p>
-          <p class="head-status-card-right-state">${netflixActivity.state || " "}</p>
-      </div>
-  </div>
+  netflixWatching.innerHTML = `
+<div class="oal-comps-l-card rounded-cxl mt-3">
+<div class=" rounded-cxl">
+<div class="oal-comps-l-card-left">
+<img draggable="false" src="${netflixImageLinkRevised || "assets/img/netflix.png"}" onerror="this.onerror=null;this.src='assets/img/netflix.png'" alt="IMG" class="img-65 rounded-cxl" width="65" height="65">
+</div>
+<div class="oal-comps-l-card-right ml-2 p-1">
+<p class="section-regular-text-b">Netflix</p>
+<p class="section-regular-text opacity-80 oal-state">${netflixActivity.details || " "}</p>
+</div>
+</div>
 </div>`;
 } else {
-  headStatus2.innerHTML = ``;
-  document.getElementById("headStatus2").style.display = "none";
+    netflixWatching.innerHTML = ``;
+  document.getElementById("netflixWatching").style.display = "none";
 }
 
 var disneyPlusAppID = "630236276829716483"
 var disneyPlusActivity = api.d.activities.find(activity => activity.application_id == disneyPlusAppID)
 
 if (disneyPlusActivity) {
-  headStatus3.innerHTML = `
-<div class="head-status-in">
-  <div class="head-status-card p-3">
-      <div class="head-status-card-left"><img class="head-status-card-left-img" draggable="false" src="assets/img/disneyplus.png" alt="Disney+"></div>
-      <div class="head-status-card-right">
-          <p class="head-status-card-right-title text-uppercase">Disney+</p>
-          <p class="head-status-card-right-details">${disneyPlusActivity.details || " "}</p>
-          <p class="head-status-card-right-state">${disneyPlusActivity.state || " "}</p>
-      </div>
-  </div>
+    disneyPlusWatching.innerHTML = `
+<div class="oal-comps-l-card rounded-cxl mt-3">
+<div class=" rounded-cxl">
+<div class="oal-comps-l-card-left">
+<img draggable="false" src="assets/img/disneyplus.png" alt="IMG" class="img-65 rounded-cxl" width="65" height="65">
+</div>
+<div class="oal-comps-l-card-right ml-2 p-1">
+<p class="section-regular-text-b">Disney+</p>
+<p class="section-regular-text opacity-80 oal-state">${disneyPlusActivity.details || " "}</p>
+</div>
+</div>
 </div>`;
 } else {
-  headStatus3.innerHTML = ``;
-  document.getElementById("headStatus3").style.display = "none";
+    disneyPlusWatching.innerHTML = ``;
+  document.getElementById("disneyPlusWatching").style.display = "none";
 }
 
   setInterval(function () {
@@ -126,7 +129,20 @@ if (disneyPlusActivity) {
       var song = `${
         api.d.spotify.song.split("(")[0]
       }`;
-      spotifyListening.innerHTML = `<div class="spotify_section text-white"><i class="fa-brands fa-spotify text-white mr-2"></i>Listening to <a href="https://open.spotify.com/track/${api.d.spotify.track_id}" target="_blank" class="text-white decoration_yh">${song}</a> <span class="ml-1 mr-1" style="color:#b5ffce">—</span> <span class="text-white"> left ${spotify_time || "0m 0s"}</span></div>`;
+      spotifyListening.innerHTML = `
+      <a href="https://open.spotify.com/track/${api.d.spotify.track_id}" target="_blank">
+      <div class="oal-comps-l-card rounded-cxl mt-3">
+      <div class=" rounded-cxl">
+      <div class="oal-comps-l-card-left">
+      <img draggable="false" src="assets/img/spotify.png" alt="IMG" class="img-65 rounded-cxl" width="65" height="65">
+      </div>
+      <div class="oal-comps-l-card-right ml-2 p-1">
+      <p class="section-regular-text-b">Spotify</p>
+      <p class="section-regular-text opacity-80 oal-state">${song || " "} (${spotify_time || "0m 0s"})</p>
+      </div>
+      </div>
+      </div>
+      </a>`;
     } else {
       spotifyListening.innerHTML = ``;
       document.getElementById("spotifyListening").style.display = "none";
