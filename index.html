@@ -8,8 +8,7 @@
     <title>Home - Eleven's Personal Website | eleven.js.org</title>
     <meta name="theme-color" content="#111827">
     <meta property="og:site_name" content="eleven.js.org">
-    <link rel='icon' type='image/png'
-        href='https://raw.githubusercontent.com/elevenvac/elevenvac/master/Eleven_icon_higer_florence.png'>
+    <link rel='icon' type='image/png' href='/assets/img/icon_florence.png'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css"
@@ -21,185 +20,170 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel='stylesheet' href="/assets/css/style.css">
     <link rel="manifest" href="manifest.json">
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function () {
+            twemoji.parse(document.body,
+                { folder: 'svg', ext: '.svg' }
+            );
+        }
+    </script>
+    <style>
+        img.emoji {
+            width: 1em;
+            pointer-events: none;
+            display: inline-block;
+        }
+    </style>
 </head>
 
 <body class="animate__animated animate__fadeIn js">
 
-    <div class="animate__animated animate__flash" id="spotifyListening">
-    </div>
-
-    <div class="navbar padding mt-3">
-        <a href="/" class="navbar-brand navbar-brand-text hover:opacity-80"><b>Eleven</b>.js.org</a>
+    <div class="navbar padding mt-1 rounded-xl">
+        <a href="/" class="navbar-brand navbar-brand-text"><img draggable="false" src="/assets/img/icon_florence.png"
+                alt="IMG" width="40"></a>
         <div class="navbar-nav">
         </div>
         <div class="navbar-nav ms-auto">
             <div id="buttons">
-                <button id="switch-mode-btn" class="navbar-btns switch-mode-btn transition-shadow hover:shadow-md mr-1">
+                <button id="switch-mode-btn"
+                    class="navbar-btns switch-mode-btn section-regular-text transition-shadow mr-1">
                     <i class='fa-solid fa-sun-bright'></i>
                 </button>
-                <button id="about-panel-btn"
-                    class="navbar-btns about-panel-btn transition-shadow hover:shadow-md">
-                    <i class="fa-regular fa-user"></i>
+                <button id="about-panel-btn" class="navbar-btns about-panel-btn section-regular-text transition-shadow">
+                    <i class='fa-solid fa-ellipsis'></i>
                 </button>
             </div>
         </div>
     </div>
 
-    <div class="head padding section">
-        <div class="head-status" id="headStatus">
+    <section id="head">
+        <div class="head section padding mt-3">
+            <div class="section-grid">
+                <div class="section-grid-item">
+                    <p id="day-message" class="section-black-text">Hey, I’m Eleven.</p>
+                    <p class="section-regular-text mt-2">I’m currently working as a full-stack web developer for Apptime
+                        in
+                        organization of Orcsan . I’m a 16 years old Self taught Full-stack web developer, I usually make
+                        and
+                        share open-source projects. Also share all my open-source projects on GitHub.</p>
+                    <div class="head-comps mt-2">
+                        <p class="section-regular-text mt-2"><span id="cat"><i
+                                    class="fa-regular fa-spinner-third animate-spin text-gray-500 inline-flex ml-1 mr-2"></i>Loading</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="section-grid-item section-grid-item-right">
+                    <img draggable="false" id="avatar" src="/assets/img/avatar.gif" alt="IMG"
+                        class="img-200 rounded-cxl" width="200" height="200">
+                </div>
+            </div>
         </div>
-        <div class="head-status" id="headStatus2">
+    </section>
+
+    <section id="oal">
+        <div class="oal section padding">
+            <div class="section-grid">
+                <div class="section-grid-item">
+                    <p class="section-bold-text-l text-uppercase oal-comps-title">Repositories&nbsp;&nbsp;&nbsp;
+                    </p>
+                    <div class="oal-hr">&nbsp;</div>
+                    <div class="oal-comps">
+                        <div class="github-card" data-repo="elevenvac/elevenvac.github.io">
+                            <p class="mt-3 section-regular-text"><i
+                                    class="fa-regular fa-spinner-third animate-spin text-gray-500 inline-flex ml-1 mr-2"></i>Loading
+                            </p>
+                        </div>
+                        <div class="github-card" data-repo="elevenvac/apptime"></div>
+                        <div class="github-card" data-repo="elevenvac/apptime-desktop"></div>
+                        <div class="github-card" data-repo="elevenvac/elbase"></div>
+                        <div class="github-card" data-repo="elevenvac/asuna-bot"></div>
+                        <div class="github-card" data-repo="elevenvac/countdown"></div>
+                    </div>
+                </div>
+                <div class="section-grid-item section-grid-item-right">
+                    <div class="oal-comps">
+                        <p class="section-bold-text-l text-uppercase oal-comps-title">Activity&nbsp;&nbsp;&nbsp;
+                        </p>
+                        <div class="oal-hr">&nbsp;</div>
+                        <div class="oal-comps">
+                            <div class="oal-comps-l-card rounded-cxl mt-4">
+                                <div class=" rounded-cxl">
+                                    <div class="oal-comps-l-card-left">
+                                        <img draggable="false"
+                                            src="https://cdn.discordapp.com/avatars/354343248698802187/a_af30b7a680067caa1a5c1ff214d33d01.gif?size=4096"
+                                            alt="IMG" class="img-65 rounded-cxl" width="65" height="65">
+                                    </div>
+                                    <div class="oal-comps-l-card-right ml-2 p-1">
+                                        <p class="section-regular-text-b">Eleven<span class="opacity-80">#1983</span>
+                                        </p>
+                                        <p class="section-regular-text opacity-80 oal-state"><span id="statusContent"><i
+                                                    class="fa-regular fa-spinner-third animate-spin text-gray-500 inline-flex ml-1 mr-2"></i>Loading</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="spotifyListening"></div>
+                            <div id="visualStudioCodePlaying"></div>
+                            <div id="netflixWatching"></div>
+                            <div id="disneyPlusWatching"></div>
+                        </div>
+                    </div>
+                    <div class="oal-comps mt-3 sm:mt-4">
+                        <p class="section-bold-text-l text-uppercase oal-comps-title">Projects&nbsp;&nbsp;&nbsp;</p>
+                        <div class="oal-hr">&nbsp;</div>
+                        <div class="oal-comps">
+                            <a href="https://www.apptime.eu.org" target="_blank">
+                                <div class="oal-comps-l-card rounded-cxl mt-4">
+                                    <div class=" rounded-cxl">
+                                        <div class="oal-comps-l-card-left">
+                                            <img draggable="false" src="/assets/img/apptime.png" alt="IMG"
+                                                class="img-65 rounded-cxl" width="65" height="65">
+                                        </div>
+                                        <div class="oal-comps-l-card-right ml-2 p-1">
+                                            <p class="section-regular-text-b">Apptime</p>
+                                            <p class="section-regular-text opacity-80 oal-state">Founder <span
+                                                    class="ml-1 mr-1">•</span> 2019-Present</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://www.orcsan.eu.org" target="_blank">
+                                <div class="oal-comps-l-card rounded-cxl mt-3">
+                                    <div class=" rounded-cxl">
+                                        <div class="oal-comps-l-card-left">
+                                            <img draggable="false" src="/assets/img/orcsan.png" alt="IMG"
+                                                class="img-65 rounded-cxl" width="65" height="65">
+                                        </div>
+                                        <div class="oal-comps-l-card-right ml-2 p-1">
+                                            <p class="section-regular-text-b">Orcsan</p>
+                                            <p class="section-regular-text opacity-80 oal-state">Founder <span
+                                                    class="ml-1 mr-1">•</span> 2019-Present</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="head-status" id="headStatus3">
+    </section>
+
+    <section id="footer">
+        <div class="footer section padding">
+            <div class="footer-left">
+                <span class="section-regular-text square_bg rounded-cxl mr-1">v4</span>
+                <span class="section-regular-text-b">Eleven</span>
+            </div>
+            <div class="footer-right mt-1 sm:mt-0">
+                <p class="section-light-text"><a href="https://github.com/elevenvac/elevenvac.github.io" target="_blank"
+                        class="decoration">Open Source</a></p>
+            </div>
         </div>
-        <p id="day-message" class="head-name">
-            Hi, I’m Eleven.
-        </p>
-        <p class="head-description">
-            I’m currently working as a full-stack web developer for <a href="https://www.apptime.eu.org" target="_blank"
-                class="head-description-btn decoration_yh">Apptime</a> in organization of <a
-                href="https://www.orcsan.eu.org" target="_blank" class="head-description-btn decoration_yh">Orcsan
-                </a>. I’m a 16 years old Self taught Full-stack web developer, I usually make and
-            share open-source projects. Also share all my open-source projects on GitHub.
-        </p>
-        <p class="mt-2 animate__animated animate__flash"><span id="statusContent"><span
-                    class="w-3 h-3 bg-gray-500 rounded-full inline-flex ml-1 mr-2"></span>Loading</span></p>
-        <p class="mt-2 animate__animated animate__flash"><span id="cat"><i
-                    class="fa-regular fa-spinner-third animate-spin text-gray-500 inline-flex ml-1 mr-2"></i>Loading</span>
-        </p>
-        <p class="mt-2 animate__animated animate__flash"><span id="weather"><i
-                    class="fa-regular fa-spinner-third animate-spin text-gray-500 inline-flex ml-1 mr-2"></i>Loading</span>
-        </p>
-    </div>
+    </section>
 
-    <div class="projects padding section">
-        <p class="projects-title">Current Works</p>
-        <a href="https://www.apptime.eu.org" target="_blank">
-            <div class="project mt-2 p-3 rounded-lg">
-                <div class="project-left">
-                    <div class="project-title">
-                        Apptime
-                    </div>
-                    <div class="project-sdescription mt-1">
-                        Founder & Developer <span class="ml-1 mr-1">•</span> 2019-Present
-                    </div>
-                    <div class="project-description mt-1">
-                        Simple monitoring for Uptime & SSL.
-                    </div>
-                </div>
-                <div class="project-right">
-                    <img draggable="false" class="project-right-img" width="50" src="assets/img/apptime_grayscale.png"
-                        alt="Apptime">
-                </div>
-            </div>
-        </a>
-        <a href="https://www.orcsan.eu.org" target="_blank">
-            <div class="project mt-2 p-3 rounded-lg">
-                <div class="project-left">
-                    <div class="project-title">
-                        Orcsan
-                    </div>
-                    <div class="project-sdescription mt-1">
-                        BC Member <span class="ml-1 mr-1">•</span> 2019-Present
-                    </div>
-                    <div class="project-description mt-1">
-                        Let’s create our own world together.
-                    </div>
-                </div>
-                <div class="project-right">
-                    <img draggable="false" style="opacity: 0.3" class="project-right-img" width="50"
-                        src="assets/img/orcsan_radius50px.png" alt="Orcsan">
-                </div>
-            </div>
-        </a>
-    </div>
-
-    <div class="githubs padding section">
-        <p class="githubs-title">Pinned Repositories</p>
-        <div class="github-card" data-repo="elevenvac/elevenvac.github.io"></div>
-        <div class="github-card" data-repo="elevenvac/apptime"></div>
-        <div class="github-card" data-repo="elevenvac/apptime-desktop"></div>
-        <div class="github-card" data-repo="elevenvac/elbase"></div>
-        <div class="github-card" data-repo="elevenvac/asuna-bot"></div>
-        <div class="github-card" data-repo="elevenvac/countdown"></div>
-    </div>
-
-    <div class="contacts padding section">
-        <p class="contacts-title">Find me</p>
-        <a href="https://twitter.com/elevenvac" target="_blank">
-            <div class="contact mt-2 p-3 rounded-lg">
-                <div class="contact-left">
-                    <div class="contact-title">
-                        Twitter
-                    </div>
-                    <div class="contact-sdescription mt-1">
-                        500+ Followers <span class="ml-1 mr-1">•</span> Follow my updates.
-                    </div>
-                </div>
-                <div class="contact-right">
-                    <img draggable="false" class="contact-right-img" width="50" src="assets/img/twitter_grayscale.png"
-                        alt="Twitter">
-                </div>
-            </div>
-        </a>
-        <a href="https://github.com/elevenvac" target="_blank">
-            <div class="contact mt-2 p-3 rounded-lg">
-                <div class="contact-left">
-                    <div class="contact-title">
-                        GitHub
-                    </div>
-                    <div class="contact-sdescription mt-1">
-                        150+ Followers <span class="ml-1 mr-1">•</span> See my Repositories.
-                    </div>
-                </div>
-                <div class="contact-right">
-                    <img draggable="false" class="contact-right-img" width="50" src="assets/img/github_grayscale.png"
-                        alt="GitHub">
-                </div>
-            </div>
-        </a>
-        <a href="https://discord.com/invite/uhwjhWryND" target="_blank">
-            <div class="contact mt-2 p-3 rounded-lg">
-                <div class="contact-left">
-                    <div class="contact-title">
-                        Discord
-                    </div>
-                    <div class="contact-sdescription mt-1">
-                        0+ Members <span class="ml-1 mr-1">•</span> Join my Discord server.
-                    </div>
-                </div>
-                <div class="contact-right">
-                    <img draggable="false" class="contact-right-img" width="50" src="assets/img/discord_grayscale.png"
-                        alt="Discord">
-                </div>
-            </div>
-        </a>
-        <a href="mailto:elevenvac@pm.me">
-            <div class="contact mt-2 p-3 rounded-lg">
-                <div class="contact-left">
-                    <div class="contact-title">
-                        Mail
-                    </div>
-                    <div class="contact-sdescription mt-1">
-                        Send mail if you need help.
-                    </div>
-                </div>
-                <div class="contact-right">
-                    <img draggable="false" class="contact-right-img" width="50" src="assets/img/mail_grayscale.png"
-                        alt="Mail">
-                </div>
-            </div>
-        </a>
-    </div>
-
-    <div class="footer">
-        <div class="footer-in padding">
-            <p class="footer-text"><a href="https://github.com/elevenvac/elevenvac.github.io" target="_blank"
-                    class="decoration_yh">Open source of this website</a></p>
-        </div>
-    </div>
-
-    <button onclick="topFunction()" id="goTop" class="transition-shadow hover:shadow-md">
+    <button onclick="topFunction()" id="goTop" class="section-regular-text transition-shadow">
         <i class="fa-regular fa-chevron-up"></i>
     </button>
 
@@ -207,42 +191,39 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content rounded-lg">
                 <div class="modal-body">
-                    <p id="phone_modal_close_btn" class="decoration_yh" data-dismiss="modal">Close this modal</p>
+                    <p id="phone_modal_close_btn" class="decoration" data-dismiss="modal">Close this modal</p>
                     <div id="modal-body-in" class="modal-body-in p-3">
                         <div class="modal-body-in-content mt-1">
                             <div id="modal-content" class="">
-                                <p class="modal_title text-uppercase">More about me</p>
-                                <p id="modal_description" class="mt-1">Lorem ipsum dolor sit amet, consectetur
+                                <p class="section-bold-text-l text-uppercase">More about me</p>
+                                <p id="modal_description" class="section-regular-text mt-1">Lorem ipsum dolor sit amet,
+                                    consectetur
                                     adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                                     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
                                     esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             </div>
-                            <div class="modal-container">
-                                <div id="modal-item" class="modal-item mt-3">
-                                    <p class="modal_title text-uppercase">Based in</p>
-                                    <p id="modal_description" class="mt-1">Istanbul, Turkey</p>
+                            <div class="modal-grid">
+                                <div id="modal-grid-item" class="modal-grid-item mt-3">
+                                    <p class="section-bold-text-l text-uppercase">Based in</p>
+                                    <p id="modal_description" class="section-regular-text mt-1">Istanbul, Turkey</p>
                                 </div>
-                                <div id="modal-item" class="modal-item mt-3">
-                                    <p class="modal_title text-uppercase">Working on</p>
+                                <div id="modal-grid-item" class="modal-grid-item mt-3">
+                                    <p class="section-bold-text-l text-uppercase">Working on</p>
                                     <p id="modal_description" class="mt-1"><a href="https://www.orcsan.eu.org"
-                                            target="_blank" class="decoration_yh">Orcsan</a></p>
+                                            target="_blank" class="section-regular-text decoration">Orcsan</a></p>
                                 </div>
-                                <div id="modal-item" class="modal-item mt-3">
-                                    <p class="modal_title text-uppercase">Donate</p>
-                                    <p id="modal_description" class="mt-1"><a href="https://repeatpay.ga/eleven"
-                                            target="_blank" class="decoration_yh">Repeatpay.ga</a></p>
-                                </div>
-                                <div id="modal-item" class="modal-item mt-3">
-                                    <p class="modal_title text-uppercase">Most Played Track</p>
-                                    <p id="modal_description" class="mt-1"><a
-                                            href="https://www.youtube.com/watch?v=EO7P8JCYdJg" target="_blank"
-                                            class="decoration_yh">1XBET Reklam Müziği 1 Saatlik</a></p>
+                                <div id="modal-grid-item" class="modal-grid-item mt-3">
+                                    <p class="section-bold-text-l text-uppercase">Weather</p>
+                                    <p id="modal_description" class="mt-1"><span id="weather"
+                                            class="section-regular-text"><i
+                                                class="fa-regular fa-spinner-third animate-spin text-gray-500 inline-flex ml-1 mr-2"></i>Loading</span>
+                                    </p>
                                 </div>
                             </div>
                             <div id="modal-content" class="mt-3">
-                                <p class="modal_title text-uppercase">Technologies</p>
+                                <p class="section-bold-text-l text-uppercase">Technologies</p>
                                 <p id="modal_description" class="mt-1">
                                 <div class="grid grid-cols-2 gap-3 sm:gird-cols-3 md:grid-cols-5">
                                     <div class="h-full">
@@ -252,7 +233,7 @@
                                                 <path
                                                     d="M64 32l34.94 403.21L255.77 480 413 435.15 448 32zm308 132H188l4 51h176l-13.51 151.39L256 394.48l-98.68-28-6.78-77.48h48.26l3.42 39.29L256 343.07l53.42-14.92L315 264H148l-12.59-149.59H376.2z" />
                                             </svg>
-                                            <p class="modal_tech_names">HTML5</p>
+                                            <p class="section-regular-text">HTML5</p>
                                         </div>
                                     </div>
                                     <div class="h-full">
@@ -272,7 +253,7 @@
                                                 <path fill="#EBEBEB"
                                                     d="M64.048 23.435v13.831000000000001h-33.407999999999994l-.277-3.108-.63-7.012-.331-3.711h34.646zM64.001 51.431v13.831000000000001h-15.209l-.277-3.108-.631-7.012-.33-3.711h16.447z" />
                                             </svg>
-                                            <p class="modal_tech_names">CSS3</p>
+                                            <p class="section-regular-text">CSS3</p>
                                         </div>
                                     </div>
                                     <div class="h-full">
@@ -282,7 +263,7 @@
                                                 <path
                                                     d="M0 0v512h512V0H0zm274.286 397.714c0 49.84-29.44 74.137-72.057 74.137-38.492 0-60.835-19.931-72.172-43.988l39.177-23.714c7.555 13.405 13.292 24.742 29.783 24.742 13.714 0 24.983-6.182 24.983-30.24V237.714h50.286v160zm113.543 72.995c-44.675 0-73.543-20.16-87.635-48L339.429 400c10.285 16.846 23.714 28.069 47.428 28.069 19.932 0 31.509-8.823 31.509-22.572 0-16.491-11.92-22.331-33.92-32l-12.023-5.166c-34.72-14.765-57.737-33.325-57.737-72.514 0-36.08 27.485-62.434 70.445-62.434 30.595 0 52.572 9.508 68.4 37.348L416 294.857c-8.251-14.777-17.143-20.571-30.926-20.571-14.091 0-23.028 8.937-23.028 20.571 0 14.434 8.937 20.274 29.554 29.212l12.023 5.154c40.903 17.531 63.931 35.428 63.931 75.611.012 43.315-34.011 65.875-79.725 65.875z" />
                                             </svg>
-                                            <p class="modal_tech_names">JavaScript</p>
+                                            <p class="section-regular-text">JavaScript</p>
                                         </div>
                                     </div>
                                     <div class="h-full">
@@ -294,7 +275,7 @@
                                                 <path
                                                     d="M307.88 318.05c-37.29 0-45.24-10.42-47.6-27.24a8.43 8.43 0 00-8.22-7.32h-19.8a8.44 8.44 0 00-8.26 8.58c0 14.58 5.12 62.17 83.92 62.17 24.38 0 44.66-5.7 58.63-16.49S388 311.26 388 292.55c0-37.55-24.5-47.83-72.75-54.55-49.05-6.82-49.05-10.29-49.05-17.89 0-5.47 0-18.28 35.46-18.28 25.23 0 38.74 3.19 43.06 20a8.35 8.35 0 008.06 6.67h19.87a8.24 8.24 0 006.16-2.86 8.91 8.91 0 002.12-6.44c-2.57-35.55-28.56-53.58-79.24-53.58-46.06 0-73.55 20.75-73.55 55.5 0 38.1 28.49 48.87 71.29 53.33 50 5.17 50 12.71 50 19.37.03 10.38-4.28 24.23-41.55 24.23z" />
                                             </svg>
-                                            <p class="modal_tech_names">Node.js</p>
+                                            <p class="section-regular-text">Node.js</p>
                                         </div>
                                     </div>
                                     <div class="h-full">
@@ -304,7 +285,7 @@
                                                 <path
                                                     d="m7.827 5.156c-.6-.127-1.288-.2-1.994-.2-.752 0-1.486.083-2.191.24l.067-.012c-1.056.208-1.935.838-2.471 1.702l-.009.016c-.289.486-.46 1.071-.46 1.696 0 .176.014.349.04.518l-.002-.019c.14.968.462 1.837.931 2.608l-.017-.03c.032.05.073.091.121.121l.002.001c.047.026.103.041.162.041h.016-.001c.081-.003.154-.039.205-.095.057-.051.093-.123.095-.204 0-.002 0-.003 0-.005 0-.032-.005-.063-.014-.092l.001.002c-.008-.02-.013-.043-.014-.068-.41-.657-.707-1.429-.841-2.255l-.005-.036c-.023-.137-.037-.295-.037-.456 0-.514.136-.996.374-1.412l-.007.014c.494-.75 1.269-1.28 2.172-1.443l.02-.003c.56-.122 1.202-.192 1.861-.192s1.302.07 1.921.203l-.06-.011h.004c.014 0 .027.005.037.014l.014.014h.006c.089 0 .168-.036.226-.095.059-.058.095-.139.095-.228 0-.002 0-.003 0-.004 0-.005 0-.011 0-.017 0-.076-.026-.146-.069-.202l.001.001c-.045-.053-.106-.091-.175-.108h-.002zm-4.473 8.727c.683.719 1.404 1.383 2.166 1.999l.042.033c.726.587 1.536 1.15 2.386 1.653l.094.052c.983.57 2.135 1.112 3.335 1.557l.159.052c.946.362 2.061.661 3.214.846l.099.013c.491.083 1.056.13 1.632.13.44 0 .873-.028 1.298-.081l-.051.005c.83-.095 1.579-.372 2.229-.79l-.021.012c.036-.036.067-.076.094-.12l.002-.003c.026-.042.041-.093.041-.147 0-.001 0-.002 0-.002 0-.001 0-.003 0-.004 0-.089-.036-.17-.095-.228-.058-.059-.139-.095-.228-.095-.002 0-.003 0-.004 0-.03.004-.057.013-.081.028l.001-.001c-.031.015-.057.033-.08.055-.585.373-1.283.622-2.032.694l-.019.001c-.319.037-.689.058-1.063.058-.578 0-1.145-.05-1.695-.146l.059.008c-1.181-.198-2.226-.482-3.227-.857l.118.039c-1.251-.457-2.321-.977-3.329-1.588l.084.047c-.952-.547-1.767-1.102-2.537-1.712l.042.032c-.784-.62-1.484-1.268-2.13-1.966l-.011-.012c-.034-.034-.075-.061-.12-.079l-.002-.001c-.036-.016-.078-.026-.122-.027h-.001c-.001 0-.003 0-.004 0-.089 0-.17.036-.228.095-.059.058-.095.139-.095.228v.004c0 .04.01.077.028.11l-.001-.001zm15.792-.409c.902-.98 1.602-2.16 2.027-3.465l.019-.067c.13-.365.205-.787.205-1.226 0-.655-.167-1.271-.46-1.808l.01.02c-.384-.649-.956-1.151-1.641-1.437l-.023-.008c-.773-.328-1.672-.518-2.615-.518-.011 0-.022 0-.032 0h.002c-.003 0-.007 0-.011 0-.083 0-.157.037-.207.095-.05.059-.08.137-.08.221v.012-.001.011c0 .084.03.161.081.221v-.001c.05.059.124.095.207.095h.012-.001c.05-.002.11-.002.169-.002.784 0 1.533.156 2.215.439l-.038-.014c.594.246 1.079.656 1.411 1.174l.007.012c.221.432.351.943.351 1.483 0 .407-.074.797-.208 1.158l.007-.023c-.414 1.247-1.053 2.32-1.874 3.223l.006-.007-.054.109c-.017.032-.027.069-.027.109v.004c0 .089.036.17.095.228.058.059.139.095.228.095h.004.008c.048 0 .092-.015.129-.041h-.001c.032-.024.067-.047.105-.066l.004-.002zm-5.264-8.208c-1.193.283-2.213.615-3.194 1.019l.14-.051c-1.082.44-1.988.893-2.854 1.405l.1-.055c-1.192.689-2.223 1.424-3.176 2.245l.027-.022c-.876.747-1.654 1.56-2.345 2.443l-.028.037c-.573.725-1.056 1.558-1.409 2.456l-.023.066c-.214.519-.339 1.123-.339 1.755 0 .209.014.415.04.616l-.003-.024c.019.075.057.14.109.191.053.05.124.08.203.08h.017-.001.006c.089 0 .169-.036.227-.094.059-.058.095-.139.095-.228 0-.002 0-.003 0-.004v-.054c-.016-.139-.025-.301-.025-.465 0-.595.121-1.162.341-1.677l-.011.028c.357-.897.815-1.672 1.373-2.363l-.013.017c.695-.868 1.446-1.636 2.266-2.325l.025-.02c.899-.762 1.897-1.469 2.955-2.086l.099-.054c.714-.43 1.556-.855 2.429-1.22l.131-.048c.782-.333 1.728-.646 2.702-.886l.134-.028c.115-.022.216-.07.3-.139l-.001.001c.05-.053.08-.124.08-.203 0-.006 0-.011 0-.017v.001c-.003-.081-.039-.154-.095-.205-.051-.057-.123-.093-.204-.095h-.08zm-7.609 13.876c.461 1.38 1.169 2.567 2.08 3.567l-.007-.008c.668.769 1.637 1.262 2.722 1.295h.006c.783-.008 1.504-.273 2.081-.715l-.008.006c.708-.537 1.292-1.198 1.729-1.954l.017-.032c.014-.026.028-.058.039-.09l.002-.005c.009-.027.014-.058.014-.09 0-.002 0-.004 0-.006 0-.001 0-.003 0-.004 0-.089-.036-.17-.095-.228-.058-.059-.139-.095-.228-.095-.001 0-.003 0-.004 0-.001 0-.001 0-.002 0-.054 0-.105.015-.149.042l.001-.001c-.05.032-.091.073-.121.121l-.001.002c-.405.704-.92 1.297-1.528 1.777l-.013.01c-.473.374-1.075.603-1.73.614h-.002c-.941-.046-1.77-.49-2.328-1.167l-.004-.006c-.802-.908-1.431-1.991-1.822-3.181l-.018-.065c-.039-.057-.084-.106-.135-.149l-.001-.001c-.05-.042-.115-.068-.186-.068-.002 0-.004 0-.005 0-.081.003-.154.039-.205.095-.059.058-.095.139-.095.228v.004.109zm9.818-.572c.252-.779.471-1.718.615-2.681l.012-.1c.139-.9.218-1.938.218-2.994 0-.012 0-.023 0-.035v.002-.16c0-.023 0-.049 0-.076 0-1.318-.119-2.608-.347-3.859l.02.131c-.218-1.244-.54-2.347-.967-3.396l.04.11c-.381-.959-.863-1.787-1.448-2.53l.016.021c-.476-.623-1.084-1.122-1.784-1.46l-.029-.013c-.017-.017-.04-.027-.066-.027-.001 0-.002 0-.002 0h-.068c-.003 0-.007 0-.011 0-.084 0-.161.03-.221.081h.001c-.059.05-.095.125-.095.207v.012-.001.008c0 .068.02.132.055.185l-.001-.001c.032.05.079.088.134.108l.002.001c.667.328 1.221.795 1.642 1.365l.009.012c.516.68.956 1.458 1.286 2.293l.023.066c.362.89.665 1.938.858 3.023l.014.097c.2 1.072.314 2.305.314 3.565v.08-.004.16.02c0 1.033-.079 2.047-.232 3.036l.014-.11c-.163 1.074-.391 2.021-.69 2.936l.036-.127.027-.08v.027.004c0 .089.036.17.095.228.058.059.139.095.228.095h.004.005c.071 0 .136-.026.187-.068.048-.037.085-.086.108-.142l.001-.002zm6.055-.328c0-.006 0-.013 0-.02 0-.415-.172-.79-.449-1.058-.273-.278-.652-.45-1.072-.45-.012 0-.023 0-.035 0h.002c-.006 0-.012 0-.019 0-.416 0-.791.173-1.058.45-.277.268-.45.643-.45 1.058v.021-.001.032c0 .42.172.8.45 1.072.268.278.643.451 1.059.451h.02-.001.033c.42 0 .799-.172 1.072-.45.277-.273.449-.652.449-1.071 0-.012 0-.025 0-.037v.002zm-.655 0v.02c0 .243-.099.462-.259.62-.158.16-.377.259-.62.259-.007 0-.014 0-.021 0h.001c-.001 0-.002 0-.003 0-.244 0-.464-.099-.624-.259-.168-.156-.273-.377-.273-.624 0-.006 0-.012 0-.017v.001c.001-.247.105-.47.272-.627.157-.168.38-.272.627-.273h.016c.246 0 .468.105.623.272l.001.001c.16.16.259.381.259.625v.002zm-19.937 1.559h.019c.415 0 .79-.172 1.058-.449.278-.273.451-.653.451-1.073 0-.011 0-.023 0-.034v.002c0-.006 0-.012 0-.019 0-.416-.173-.791-.45-1.058-.268-.277-.643-.45-1.058-.45-.007 0-.014 0-.021 0h.001c-.01 0-.021 0-.032 0-.42 0-.8.172-1.072.45-.277.268-.45.643-.45 1.058v.021-.001.032c0 .42.172.8.45 1.072.273.277.652.449 1.071.449h.035zm0-.655c-.006 0-.013 0-.02 0-.243 0-.462-.099-.62-.259-.16-.158-.259-.377-.259-.62 0-.007 0-.014 0-.021v.001c0-.001 0-.002 0-.003 0-.244.099-.464.259-.624.156-.168.377-.273.624-.273h.017-.001c.247.001.47.105.627.272.168.157.272.38.273.627v.016c0 .246-.105.468-.272.623l-.001.001c-.16.158-.379.255-.621.255-.002 0-.004 0-.006 0zm9.52-16.064h.033c.42 0 .799-.172 1.072-.45.278-.268.451-.643.451-1.059 0-.007 0-.013 0-.02v.001c0-.01 0-.021 0-.033 0-.42-.172-.799-.45-1.072-.273-.278-.652-.45-1.072-.45-.012 0-.023 0-.035 0h.002c-.006 0-.012 0-.019 0-.416 0-.791.173-1.058.45-.278.273-.45.652-.45 1.072v.035-.002.019c0 .416.173.791.45 1.058.268.277.643.45 1.058.45h.017-.001zm0-.654c-.002 0-.005 0-.007 0-.238 0-.453-.099-.606-.259-.16-.153-.259-.368-.259-.606 0-.003 0-.005 0-.008 0-.006 0-.013 0-.02 0-.243.099-.462.259-.62.153-.16.368-.259.606-.259h.008.02c.243 0 .462.099.62.259.16.158.259.377.259.62v.021-.001.007c0 .238-.099.453-.259.606-.158.161-.378.26-.621.26-.007 0-.014 0-.02 0h.001zm.246 11.264c-.035.017-.075.027-.118.027-.001 0-.003 0-.004 0h-.125c-.005 0-.011 0-.018 0-.303 0-.577-.125-.773-.327-.202-.196-.327-.47-.327-.774 0-.006 0-.012 0-.019v.001c0-.007 0-.015 0-.023 0-.298.126-.566.327-.754l.001-.001c.198-.194.47-.314.77-.314h.022-.001.021c.262 0 .502.093.69.247l-.002-.001c.188.148.323.355.38.593l.001.007v.011c0 .044.005.087.014.129l-.001-.004c.009.033.014.07.014.109v.021c0 .262-.093.502-.247.69l.001-.002c-.155.192-.371.33-.619.382l-.007.001z" />
                                             </svg>
-                                            <p class="modal_tech_names">Electron.js</p>
+                                            <p class="section-regular-text">Electron.js</p>
                                         </div>
                                     </div>
                                     <div class="h-full">
@@ -322,7 +303,7 @@
                                                     </linearGradient>
                                                 </defs>
                                             </svg>
-                                            <p class="modal_tech_names">TailwindCSS</p>
+                                            <p class="section-regular-text">TailwindCSS</p>
                                         </div>
                                     </div>
                                     <div class="h-full">
@@ -343,7 +324,7 @@
                                                 <path fill="#58AA50"
                                                     d="M11.58,21.054c0,0-5.252-3.584-4.94-9.896c0.296-6.312,4.005-9.413,4.722-9.974C11.83,0.686,11.845,0.499,11.876,0c0.327,0.701,0.265,10.488,0.312,11.641C12.328,16.083,11.939,20.213,11.58,21.054z" />
                                             </svg>
-                                            <p class="modal_tech_names">MongoDB</p>
+                                            <p class="section-regular-text">MongoDB</p>
                                         </div>
                                     </div>
                                     <div class="h-full">
@@ -357,7 +338,7 @@
                                                     d="M45.8171,106.5815A20.7182,20.7182,0,0,1,23.58,98.3389a19.1739,19.1739,0,0,1-3.2766-14.5025,18.1886,18.1886,0,0,1,.6233-2.4357l.4912-1.4978,1.3363.9815a33.6443,33.6443,0,0,0,10.203,5.0978l.9694.2941-.0893.9675a5.8474,5.8474,0,0,0,1.052,3.8781,6.2389,6.2389,0,0,0,6.6952,2.485,5.7449,5.7449,0,0,0,1.6021-.7041L69.27,76.281a5.4306,5.4306,0,0,0,2.4506-3.631,5.7948,5.7948,0,0,0-.9875-4.3712,6.2436,6.2436,0,0,0-6.6978-2.4864,5.7427,5.7427,0,0,0-1.6.7036l-9.9532,6.3449a19.0329,19.0329,0,0,1-5.2965,2.3259,20.7181,20.7181,0,0,1-22.2368-8.2427,19.1725,19.1725,0,0,1-3.2766-14.5024,17.9885,17.9885,0,0,1,8.13-12.0513L55.8833,23.7472a19.0038,19.0038,0,0,1,5.3-2.3287A20.7182,20.7182,0,0,1,83.42,29.6611a19.1739,19.1739,0,0,1,3.2766,14.5025,18.4,18.4,0,0,1-.6233,2.4357l-.4912,1.4978-1.3356-.98a33.6175,33.6175,0,0,0-10.2037-5.1l-.9694-.2942.0893-.9675a5.8588,5.8588,0,0,0-1.052-3.878,6.2389,6.2389,0,0,0-6.6952-2.485,5.7449,5.7449,0,0,0-1.6021.7041L37.73,51.719a5.4218,5.4218,0,0,0-2.4487,3.63,5.7862,5.7862,0,0,0,.9856,4.3717,6.2437,6.2437,0,0,0,6.6978,2.4864,5.7652,5.7652,0,0,0,1.602-.7041l9.9519-6.3425a18.978,18.978,0,0,1,5.2959-2.3278,20.7181,20.7181,0,0,1,22.2368,8.2427,19.1725,19.1725,0,0,1,3.2766,14.5024,17.9977,17.9977,0,0,1-8.13,12.0532L51.1167,104.2528a19.0038,19.0038,0,0,1-5.3,2.3287"
                                                     style="fill:#fff" />
                                             </svg>
-                                            <p class="modal_tech_names">Svelte</p>
+                                            <p class="section-regular-text">Svelte</p>
                                         </div>
                                     </div>
                                     <div class="h-full">
@@ -376,7 +357,7 @@
                                                 <path fill="#1ABCFE"
                                                     d="M20,12c0,2.208-1.792,4-4,4s-4-1.792-4-4s1.792-4,4-4S20,9.792,20,12z" />
                                             </svg>
-                                            <p class="modal_tech_names">Figma</p>
+                                            <p class="section-regular-text">Figma</p>
                                         </div>
                                     </div>
                                     <div class="h-full">
@@ -390,7 +371,7 @@
                                                     d="M409.4 47.92L256 313.61 102.6 47.92H15.74L256 464.08 496.26 47.92H409.4z"
                                                     fill="#41B883" />
                                             </svg>
-                                            <p class="modal_tech_names">Vue.js</p>
+                                            <p class="section-regular-text">Vue.js</p>
                                         </div>
                                     </div>
                                     <div class="h-full">
@@ -402,7 +383,7 @@
                                                     d="M1.5,63.91v62.5h125V1.41H1.5Zm100.73-5a15.56,15.56,0,0,1,7.82,4.5,20.58,20.58,0,0,1,3,4c0,.16-5.4,3.81-8.69,5.85-.12.08-.6-.44-1.13-1.23a7.09,7.09,0,0,0-5.87-3.53c-3.79-.26-6.23,1.73-6.21,5a4.58,4.58,0,0,0,.54,2.34c.83,1.73,2.38,2.76,7.24,4.86,8.95,3.85,12.78,6.39,15.16,10,2.66,4,3.25,10.46,1.45,15.24-2,5.2-6.9,8.73-13.83,9.9a38.32,38.32,0,0,1-9.52-.1,23,23,0,0,1-12.72-6.63c-1.15-1.27-3.39-4.58-3.25-4.82a9.34,9.34,0,0,1,1.15-.73L82,101l3.59-2.08.75,1.11a16.78,16.78,0,0,0,4.74,4.54c4,2.1,9.46,1.81,12.16-.62a5.43,5.43,0,0,0,.69-6.92c-1-1.39-3-2.56-8.59-5-6.45-2.78-9.23-4.5-11.77-7.24a16.48,16.48,0,0,1-3.43-6.25,25,25,0,0,1-.22-8c1.33-6.23,6-10.58,12.82-11.87A31.66,31.66,0,0,1,102.23,58.93ZM72.89,64.15l0,5.12H56.66V115.5H45.15V69.26H28.88v-5A49.19,49.19,0,0,1,29,59.09C29.08,59,39,59,51,59L72.83,59Z"
                                                     data-name="original" />
                                             </svg>
-                                            <p class="modal_tech_names">TypeScript</p>
+                                            <p class="section-regular-text">TypeScript</p>
                                         </div>
                                     </div>
                                     <div class="h-full">
@@ -416,7 +397,7 @@
                                                     d="M78.0002 40.3997C80.6668 35.8668 87.3332 35.8668 89.9998 40.3997L119.061 89.801C121.728 94.3339 118.395 100 113.062 100H54.9383C49.6052 100 46.2719 94.3339 48.9385 89.801L78.0002 40.3997Z"
                                                     fill="#00DC82" />
                                             </svg>
-                                            <p class="modal_tech_names">Nuxt.js</p>
+                                            <p class="section-regular-text">Nuxt.js</p>
                                         </div>
                                     </div>
                                 </div>
@@ -424,7 +405,7 @@
                             </div>
                         </div>
                     </div>
-                    <p id="phone_modal_close_btn" class="decoration_yh mt-1" data-dismiss="modal">Close this modal</p>
+                    <p id="phone_modal_close_btn" class="decoration mt-1" data-dismiss="modal">Close this modal</p>
                 </div>
             </div>
         </div>
