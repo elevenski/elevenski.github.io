@@ -1,0 +1,411 @@
+@import"https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap";
+
+:root {
+    --primary-background-color: #e5e5e5;
+    --secondary-background-color: rgba(255, 255, 255, 0.40);
+    --backround-image: radial-gradient(at 0% 0%, hsla(240, 100%, 97%, 1) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(200, 80%, 70%, 1) 0, transparent 50%);
+    --outline-color: rgba(30, 41, 59, 0.40);
+    --border-color: rgba(255, 255, 255, 0.40);
+    --text-color: #000000;
+    --image-invert: 100%;
+    --colored-text: #74b4d4;
+    color-scheme: light
+}
+
+.dark-theme {
+    --primary-background-color: #0f0e13;
+    --secondary-background-color: rgba(255, 255, 255, 0.05);
+    --backround-image: radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(200, 80%, 30%, 1) 0, transparent 50%);
+    --outline-color: rgba(229, 231, 235, 0.40);
+    --border-color: rgba(255, 255, 255, 0.18);
+    --text-color: #ffffff;
+    --image-invert: 0%;
+    --colored-text: #86D7FF;
+    color-scheme: dark
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    font-family: "Roboto";
+    transition: all 0.1s linear;
+    background-color: var(--primary-background-color);
+    background-image: var(--backround-image)
+}
+
+img {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+a:hover {
+    text-decoration: none;
+    color: unset !important
+}
+
+.naturalLink:hover {
+    outline: 2px dashed var(--outline-color);
+    outline-offset: 0.30rem
+}
+
+.naturalLink:focus {
+    outline: 2px dashed var(--outline-color);
+    outline-offset: 0.30rem
+}
+
+@media only screen and (min-width: 640px) {
+    .padding {
+        padding-left: 15%;
+        padding-right: 15%
+    }
+
+    #head {
+        padding-top: 4.5em
+    }
+
+    .section {
+        padding-top: 5%;
+        padding-bottom: 5%
+    }
+
+    .sectionGrid {
+        display: grid;
+        grid-template-columns: auto auto
+    }
+
+    .sectionGridItemRight {
+        padding-left: 3em;
+    }
+
+    .blackText {
+        font-size: 55px;
+    }
+
+    .footerLeft {
+        float: left
+    }
+
+    .footerRight {
+        float: right;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .padding {
+        padding-left: 3%;
+        padding-right: 3%
+    }
+
+    .section {
+        padding-top: 4rem;
+        padding-bottom: 4rem
+    }
+
+    .sectionGridItemRight {
+        padding-top: 1em
+    }
+
+    .blackText {
+        font-size: 40px;
+        float: center;
+        text-align: center
+    }
+
+    .footer {
+        text-align: center;
+        float: center
+    }
+
+    #centeredButton {
+        text-align: center
+    }
+
+    #headAvatar {
+        margin-top: 1rem
+    }
+}
+
+.tippy-box[data-theme~=ws] {
+    color: var(--text-color);
+    background: var(--secondary-background-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid var(--border-color)
+}
+
+.tippy-box[data-theme~=ws][data-placement^=top]>.tippy-arrow:before {
+    border-top-color: 1px solid var(--border-color);
+}
+
+.tippy-box[data-theme~=ws][data-placement^=bottom]>.tippy-arrow:before {
+    border-bottom-color: 1px solid var(--border-color);
+}
+
+.tippy-box[data-theme~=ws][data-placement^=left]>.tippy-arrow:before {
+    border-left-color: 1px solid var(--border-color);
+}
+
+.tippy-box[data-theme~=ws][data-placement^=right]>.tippy-arrow:before {
+    border-right-color: 1px solid var(--border-color);
+}
+
+.tippy-box[data-theme~=ws]>.tippy-backdrop {
+    background-color: var(--secondary-background-color);
+}
+
+.tippy-box[data-theme~=ws]>.tippy-svg-arrow {
+    background-color: var(--secondary-background-color);
+    ;
+    fill: var(--secondary-background-color);
+}
+
+.blackText {
+    color: var(--text-color);
+    font-weight: 600;
+    line-height: 1.3em;
+}
+
+.boldText {
+    color: var(--text-color);
+    font-size: 30px;
+    font-weight: 500
+}
+
+.normalText {
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: normal
+}
+
+.smallText {
+    color: var(--text-color);
+    font-size: 17px;
+    font-weight: normal
+}
+
+.thinText {
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: normal
+}
+
+.coloredText {
+    color: var(--colored-text)
+}
+
+#goTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    outline: none;
+    cursor: pointer;
+    border-radius: 999%;
+    font-size: 18px;
+    transform: scale(1);
+    width: 45px;
+    height: 45px;
+    color: var(--text-color);
+    background: var(--secondary-background-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid var(--border-color)
+}
+
+#goTop:hover {
+    outline: 2px dashed var(--outline-color);
+    outline-offset: 0.30rem
+}
+
+#goTop:focus {
+    outline: 2px dashed var(--outline-color);
+    outline-offset: 0.30rem
+}
+
+#navbarImage {
+    filter: invert(var(--image-invert))
+}
+
+.navbarButton {
+    width: 45px;
+    height: 45px;
+    background: var(--secondary-background-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 999%;
+    border: 1px solid rgba(255, 255, 255, 0.18)
+}
+
+.navbarButton:hover {
+    outline: 2px dashed var(--outline-color);
+    outline-offset: 0.30rem
+}
+
+.navbarButton:focus {
+    outline: 2px dashed var(--outline-color);
+    outline-offset: 0.30rem
+}
+
+.bigButton {
+    background: var(--secondary-background-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid var(--border-color);
+    padding: 15px
+}
+
+.bigButton:hover {
+    outline: 2px dashed var(--outline-color);
+    outline-offset: 0.30rem;
+    color: var(--text-color) !important
+}
+
+.bigButton:focus {
+    outline: 2px dashed var(--outline-color);
+    outline-offset: 0.30rem
+}
+
+.card {
+    background: var(--secondary-background-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid var(--border-color);
+    position: relative
+}
+
+.card:hover {
+    outline: 2px dashed var(--outline-color);
+    outline-offset: 0.30rem;
+    color: var(--text-color) !important
+}
+
+.card:focus {
+    outline: 2px dashed var(--outline-color);
+    outline-offset: 0.30rem
+}
+
+.sectionTopRightText {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid var(--border-color);
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top: none;
+    border-right: none
+}
+
+.cardNoMT {
+    margin-top: -15px
+}
+
+.githubCard {
+    cursor: pointer
+}
+
+.textCard {
+    background: var(--secondary-background-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid var(--border-color);
+    padding: 7px 13px
+}
+
+.modal-dialog {
+    overflow-y: initial !important
+}
+
+.modal-body {
+    height: auto;
+    overflow-y: auto;
+    position: relative
+}
+
+.modal-content {
+    background-color: var(--primary-background-color);
+    border: 1px solid var(--border-color)
+}
+
+#headAvatar {
+    width: 160px;
+    height: 160px;
+    object-fit: cover
+}
+
+#aboutMeModalAvatarContainer {
+    position: relative;
+    width: 140px;
+    height: 140px;
+}
+
+#aboutMeModalAvatar {
+    width: 140px;
+    height: 140px;
+    object-fit: cover
+}
+
+.discordStatusOnline {
+    width: 31px;
+    height: 31px;
+    border-radius: 999%;
+    background-color: #3ba55d;
+    border: 5px solid var(--primary-background-color);
+    bottom: 0;
+    right: 0;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    position: absolute
+}
+
+.discordStatusDnd {
+    width: 31px;
+    height: 31px;
+    border-radius: 999%;
+    background-color: #ed4245;
+    border: 5px solid var(--primary-background-color);
+    bottom: 0;
+    right: 0;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    position: absolute
+}
+
+.discordStatusIdle {
+    width: 31px;
+    height: 31px;
+    border-radius: 999%;
+    background-color: #faa81a;
+    border: 5px solid var(--primary-background-color);
+    bottom: 0;
+    right: 0;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    position: absolute
+}
+
+.discordStatusOffline {
+    width: 31px;
+    height: 31px;
+    border-radius: 999%;
+    background-color: #747f8d;
+    border: 5px solid var(--primary-background-color);
+    bottom: 0;
+    right: 0;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    position: absolute
+}
+
+.svgInvert {
+    fill: var(--text-color)
+}
