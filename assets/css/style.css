@@ -1,23 +1,27 @@
 @import"https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap";
 
 :root {
-    --primary-background-color: #f0f0ff;
-    --secondary-backround-color: #e1e1fd;
-    --tertiary-background-color: #d1d1ff;
-    --primary-text-color: #000;
-    --glassmorphism-background-color: rgba(255, 255, 255, 0.35);
-    --glassmorphism-hover-background-color: rgba(255, 255, 255, 0.55);
-    --glassmorphism-border-color: rgba(255, 255, 255, 0.50)
+    --primary-background-color: #e5e5e5;
+    --secondary-background-color: rgba(255, 255, 255, 0.40);
+    --backround-image: radial-gradient(at 0% 0%, hsla(240, 100%, 97%, 1) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(200, 80%, 70%, 1) 0, transparent 50%);
+    --outline-color: rgba(30, 41, 59, 0.40);
+    --border-color: rgba(255, 255, 255, 0.40);
+    --text-color: #000000;
+    --image-invert: 100%;
+    --colored-text: #74b4d4;
+    color-scheme: light
 }
 
 .dark-theme {
-    --primary-background-color: #111112;
-    --secondary-backround-color: #1b1b20;
-    --tertiary-background-color: #212133;
-    --primary-text-color: #fff;
-    --glassmorphism-background-color: rgba(255, 255, 255, 0.03);
-    --glassmorphism-hover-background-color: rgba(255, 255, 255, 0.07);
-    --glassmorphism-border-color: rgba(255, 255, 255, 0.08)
+    --primary-background-color: #0f0e13;
+    --secondary-background-color: rgba(255, 255, 255, 0.05);
+    --backround-image: radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(200, 80%, 30%, 1) 0, transparent 50%);
+    --outline-color: rgba(229, 231, 235, 0.40);
+    --border-color: rgba(255, 255, 255, 0.18);
+    --text-color: #ffffff;
+    --image-invert: 0%;
+    --colored-text: #86D7FF;
+    color-scheme: dark
 }
 
 *,
@@ -31,7 +35,8 @@
 body {
     font-family: "Roboto";
     transition: all 0.1s linear;
-    background-color: var(--primary-background-color) /*background-image: linear-gradient(to bottom right, var(--primary-background-color), var(--secondary-backround-color));*/
+    background-color: var(--primary-background-color);
+    background-image: var(--backround-image)
 }
 
 img {
@@ -42,61 +47,52 @@ img {
 
 a:hover {
     text-decoration: none;
-    color: unset;
-    transition: all 0.1s linear
+    color: unset !important
 }
 
-.decoration {
-    color: var(--link-text-color)
+.naturalLink:hover {
+    outline: 2px dashed var(--outline-color);
+    outline-offset: 0.30rem
 }
 
-.decoration:hover {
-    color: var(--primary-text-color);
-    text-decoration: underline;
-    transition: all 0.1s linear
+.naturalLink:focus {
+    outline: 2px dashed var(--outline-color);
+    outline-offset: 0.30rem
 }
 
 @media only screen and (min-width: 640px) {
     .padding {
-        padding-left: 18%;
-        padding-right: 18%
+        padding-left: 15%;
+        padding-right: 15%
+    }
+
+    #head {
+        padding-top: 4.5em
     }
 
     .section {
-        padding-top: 2.5%;
-        padding-bottom: 2.5%
+        padding-top: 5%;
+        padding-bottom: 5%
     }
 
-    .section-black-text {
-        font-size: 40px
-    }
-
-    .section-grid {
+    .sectionGrid {
         display: grid;
         grid-template-columns: auto auto
     }
 
-    .section-grid-item-right {
+    .sectionGridItemRight {
         padding-left: 3em;
     }
 
-    .oal-state {
-        width: 12em
+    .blackText {
+        font-size: 55px;
     }
-    #phone_modal_close_btn {
-        display: none;
-    }
-    .modal-grid {
-        display: grid;
-        grid-template-columns: auto auto auto;
-    }
-    .modal-grid-item {
-        text-align: left
-    }
-    .footer-left {
+
+    .footerLeft {
         float: left
     }
-    .footer-right {
+
+    .footerRight {
         float: right;
     }
 }
@@ -108,25 +104,100 @@ a:hover {
     }
 
     .section {
-        padding-top: 3rem;
-        padding-bottom: 3rem
+        padding-top: 4rem;
+        padding-bottom: 4rem
     }
 
-    .section-black-text {
-        font-size: 30px
-    }
-
-    .section-grid-item-right {
+    .sectionGridItemRight {
         padding-top: 1em
     }
 
-    .oal-state {
-        width: 13em
+    .blackText {
+        font-size: 40px;
+        float: center;
+        text-align: center
     }
+
     .footer {
         text-align: center;
         float: center
     }
+
+    #centeredButton {
+        text-align: center
+    }
+
+    #headAvatar {
+        margin-top: 1rem
+    }
+}
+
+.tippy-box[data-theme~=ws] {
+    color: var(--text-color);
+    background: var(--secondary-background-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid var(--border-color)
+}
+
+.tippy-box[data-theme~=ws][data-placement^=top]>.tippy-arrow:before {
+    border-top-color: 1px solid var(--border-color);
+}
+
+.tippy-box[data-theme~=ws][data-placement^=bottom]>.tippy-arrow:before {
+    border-bottom-color: 1px solid var(--border-color);
+}
+
+.tippy-box[data-theme~=ws][data-placement^=left]>.tippy-arrow:before {
+    border-left-color: 1px solid var(--border-color);
+}
+
+.tippy-box[data-theme~=ws][data-placement^=right]>.tippy-arrow:before {
+    border-right-color: 1px solid var(--border-color);
+}
+
+.tippy-box[data-theme~=ws]>.tippy-backdrop {
+    background-color: var(--secondary-background-color);
+}
+
+.tippy-box[data-theme~=ws]>.tippy-svg-arrow {
+    background-color: var(--secondary-background-color);
+    ;
+    fill: var(--secondary-background-color);
+}
+
+.blackText {
+    color: var(--text-color);
+    font-weight: 600;
+    line-height: 1.3em;
+}
+
+.boldText {
+    color: var(--text-color);
+    font-size: 30px;
+    font-weight: 500
+}
+
+.normalText {
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: normal
+}
+
+.smallText {
+    color: var(--text-color);
+    font-size: 17px;
+    font-weight: normal
+}
+
+.thinText {
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: normal
+}
+
+.coloredText {
+    color: var(--colored-text)
 }
 
 #goTop {
@@ -135,187 +206,119 @@ a:hover {
     bottom: 20px;
     right: 30px;
     z-index: 99;
-	border: none; 
-	outline: none;
-	cursor: pointer;
-	border-radius: 999%;
-	font-size: 18px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 999%;
+    font-size: 18px;
     transform: scale(1);
-    width: 40px;
-    height: 40px;
-    color: var(--primary-text-color);
-    background: var(--glassmorphism-background-color);
-    backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(0px);
-    border: 1px solid var(--glassmorphism-border-color);
-    transition: all 0.1s linear
+    width: 45px;
+    height: 45px;
+    color: var(--text-color);
+    background: var(--secondary-background-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid var(--border-color)
 }
 
 #goTop:hover {
-    background: var(--glassmorphism-hover-background-color);
-    transition: all 0.1s linear
+    outline: 2px dashed var(--outline-color);
+    outline-offset: 0.30rem
 }
 
-.tippy-box[data-theme~=ws] {
-	color: white;
-	box-shadow: var(--primary-box-shadow);
-	background-color: black;
-    font-weight: 500;
+#goTop:focus {
+    outline: 2px dashed var(--outline-color);
+    outline-offset: 0.30rem
 }
 
-.tippy-box[data-theme~=ws][data-placement^=top]>.tippy-arrow:before {
-	border-top-color: black
+#navbarImage {
+    filter: invert(var(--image-invert))
 }
 
-.tippy-box[data-theme~=ws][data-placement^=bottom]>.tippy-arrow:before {
-	border-bottom-color: black
+.navbarButton {
+    width: 45px;
+    height: 45px;
+    background: var(--secondary-background-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 999%;
+    border: 1px solid rgba(255, 255, 255, 0.18)
 }
 
-.tippy-box[data-theme~=ws][data-placement^=left]>.tippy-arrow:before {
-	border-left-color: black
+.navbarButton:hover {
+    outline: 2px dashed var(--outline-color);
+    outline-offset: 0.30rem
 }
 
-.tippy-box[data-theme~=ws][data-placement^=right]>.tippy-arrow:before {
-	border-right-color: black
+.navbarButton:focus {
+    outline: 2px dashed var(--outline-color);
+    outline-offset: 0.30rem
 }
 
-.tippy-box[data-theme~=ws]>.tippy-backdrop {
-	background-color: black
+.bigButton {
+    background: var(--secondary-background-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid var(--border-color);
+    padding: 15px
 }
 
-.tippy-box[data-theme~=ws]>.tippy-svg-arrow {
-	background-color: black;
-	fill: black
+.bigButton:hover {
+    outline: 2px dashed var(--outline-color);
+    outline-offset: 0.30rem;
+    color: var(--text-color) !important
 }
 
-.section-black-text {
-    font-weight: 900;
-    color: var(--primary-text-color)
+.bigButton:focus {
+    outline: 2px dashed var(--outline-color);
+    outline-offset: 0.30rem
 }
 
-.section-bold-text {
-    font-weight: 600;
-    color: var(--primary-text-color);
-    font-size: 25px
+.card {
+    background: var(--secondary-background-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid var(--border-color);
+    position: relative
 }
 
-.section-bold-text-l {
-    font-weight: 600;
-    color: var(--primary-text-color);
-    font-size: 18px
+.card:hover {
+    outline: 2px dashed var(--outline-color);
+    outline-offset: 0.30rem;
+    color: var(--text-color) !important
 }
 
-.section-regular-text {
-    font-weight: normal;
-    color: var(--primary-text-color);
-    font-size: 17.5px
+.card:focus {
+    outline: 2px dashed var(--outline-color);
+    outline-offset: 0.30rem
 }
 
-.section-regular-text-b {
-    font-weight: 500;
-    color: var(--primary-text-color);
-    font-size: 17.5px
+.sectionTopRightText {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid var(--border-color);
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top: none;
+    border-right: none
 }
 
-.section-light-text {
-    font-weight: normal;
-    color: var(--primary-text-color);
-    font-size: 14px
+.cardNoMT {
+    margin-top: -15px
 }
 
-.rounded-cxl {
-    border-radius: 7px
-}
-
-.img-bg {
-    background-color: var(--secondary-backround-color);
-}
-
-.img-65 {
-    width: 65px;
-    height: 65px;
-    object-fit: cover
-}
-
-.img-200 {
-    width: 200px;
-    height: 200px;
-    object-fit: cover
-}
-
-.navbar-btns {
-    width: 40px;
-    height: 40px;
-    background: var(--glassmorphism-background-color);
-    backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(0px);
-    border-radius: 999px;
-    border: 1px solid var(--glassmorphism-border-color);
-    transition: all 0.1s linear
-}
-
-.navbar-btns:hover {
-    background: var(--glassmorphism-hover-background-color);
-    transition: all 0.1s linear;
-}
-
-.navbar-btns:focus {
-    outline: none
-}
-
-.oal-hr {
-    background: var(--secondary-backround-color);
-    position: relative;
-    margin-top: -17px;
-    height: 2px;
-    z-index: -1
-}
-
-.oal-comps-title {
-    background: var(--primary-background-color);
-    display: inline
-}
-
-.oal-comps-xl-card {
-    transition: all 0.1s linear;
-    border: 1px solid transparent;
-    width: 100%;
+.githubCard {
     cursor: pointer
 }
 
-.oal-comps-xl-card:hover .oal-comps-xl-card-link {
-    text-decoration: underline;
-    transition: all 0.1s linear;
-    cursor: pointer
-}
-
-.oal-comps-l-card {
-    display: flex;
-    border: 1px solid transparent
-}
-
-.oal-comps-l-card:hover {
-    background: var(--glassmorphism-hover-background-color);
-    backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(0px);
-    border: 1px solid var(--glassmorphism-border-color);
-    transition: all 0.1s linear;
-    cursor: pointer
-}
-
-.oal-comps-l-card-left {
-    float: left;
-    display: flex
-}
-
-.oal-comps-l-card-right {
-    float: right
-}
-
-.oal-state {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden
+.textCard {
+    background: var(--secondary-background-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid var(--border-color);
+    padding: 7px 13px
 }
 
 .modal-dialog {
@@ -324,24 +327,85 @@ a:hover {
 
 .modal-body {
     height: auto;
-    overflow-y: auto
+    overflow-y: auto;
+    position: relative
 }
 
 .modal-content {
     background-color: var(--primary-background-color);
-    border: 2px solid var(--glassmorphism-border-color)
+    border: 1px solid var(--border-color)
 }
 
-#phone_modal_close_btn {
-    text-align: center;
-    opacity: 30%;
-    color: var(--primary-text-color)
+#headAvatar {
+    width: 160px;
+    height: 160px;
+    object-fit: cover
 }
 
-.square_bg {
-    background: var(--glassmorphism-background-color);
-    backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(0px);
-    border: 1px solid var(--glassmorphism-border-color);
-    padding: 3px 10px
+#aboutMeModalAvatarContainer {
+    position: relative;
+    width: 140px;
+    height: 140px;
+}
+
+#aboutMeModalAvatar {
+    width: 140px;
+    height: 140px;
+    object-fit: cover
+}
+
+.discordStatusOnline {
+    width: 31px;
+    height: 31px;
+    border-radius: 999%;
+    background-color: #3ba55d;
+    border: 5px solid var(--primary-background-color);
+    bottom: 0;
+    right: 0;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    position: absolute
+}
+
+.discordStatusDnd {
+    width: 31px;
+    height: 31px;
+    border-radius: 999%;
+    background-color: #ed4245;
+    border: 5px solid var(--primary-background-color);
+    bottom: 0;
+    right: 0;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    position: absolute
+}
+
+.discordStatusIdle {
+    width: 31px;
+    height: 31px;
+    border-radius: 999%;
+    background-color: #faa81a;
+    border: 5px solid var(--primary-background-color);
+    bottom: 0;
+    right: 0;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    position: absolute
+}
+
+.discordStatusOffline {
+    width: 31px;
+    height: 31px;
+    border-radius: 999%;
+    background-color: #747f8d;
+    border: 5px solid var(--primary-background-color);
+    bottom: 0;
+    right: 0;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    position: absolute
+}
+
+.svgInvert {
+    fill: var(--text-color)
 }

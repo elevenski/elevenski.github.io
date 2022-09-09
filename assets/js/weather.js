@@ -2,6 +2,8 @@
 
  Open source repository on GitHub: https://github.com/mervebilgin/WeatherApp
 
+ Güncelleme: bu kod şuanda sayfalar içerisinde renderlanmıyor, nereye koyacağımı bulamadım. Umarım bulurumda kaldırmak zorunda kalmam :).
+
 */
 
 const url = 'https://api.openweathermap.org/data/2.5/'
