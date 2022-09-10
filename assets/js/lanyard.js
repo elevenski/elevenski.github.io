@@ -50,8 +50,8 @@ function update_presence() {
   var vsCodeActivity = api.d.activities.find(activity => activity.application_id == vsCodeAppID)
 
   if (vsCodeActivity) {
-    var vsCodeDetails = vsCodeActivity.details.replace('Editing ', '')
-    var vsCodeState = vsCodeActivity.state.replace('Workspace: ', '')
+    var vsCodeDetails = vsCodeActivity.details
+    var vsCodeState = vsCodeActivity.state
 
     visualStudioCodePlaying.innerHTML = `
     <a href="javascript:void(0)">
