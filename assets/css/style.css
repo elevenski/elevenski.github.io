@@ -409,3 +409,13 @@ a:hover {
 .svgInvert {
     fill: var(--text-color)
 }
+
+.leftFloat {
+    float: left;
+    text-align: left
+}
+
+.rightFloat {
+    float: right;
+    text-align: right
+}

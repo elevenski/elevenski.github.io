@@ -165,7 +165,7 @@ function update_presence() {
 
   setInterval(function () {
     if (api.d.listening_to_spotify == false && api.d.activities.find(activity => activity.application_id == disneyPlusAppID) == undefined && api.d.activities.find(activity => activity.application_id == netflixAppID) == undefined && api.d.activities.find(activity => activity.application_id == vsCodeAppID) == undefined) {
-      activitiesStatus.innerHTML = `<i class="smallText opacity-80">No data</i>`;
+      activitiesStatus.innerHTML = `<i class="smallText opacity-80">There are currently no activity</i>`;
     } else {
       activitiesStatus.innerHTML = ``;
       document.getElementById("activitiesStatus").style.display = "none";
