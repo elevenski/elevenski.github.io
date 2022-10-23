@@ -1,5 +1,5 @@
 tippy('#headAvatar', {
-    content: '<p class="smallText opacity-80 ml-1 mr-1">Made by <b>AKP Government</b></p>',
+    content: '<p class="smallText opacity-80 ml-1 mr-1">Powered by <b>AKP Government</b></p>',
     animation: 'scale',
     placement: 'bottom',
     theme: 'ws',

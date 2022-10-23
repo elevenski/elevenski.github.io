@@ -6,6 +6,7 @@
     --backround-image: radial-gradient(at 0% 0%, hsla(240, 100%, 97%, 1) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(200, 80%, 70%, 1) 0, transparent 50%);
     --outline-color: rgba(30, 41, 59, 0.40);
     --border-color: rgba(255, 255, 255, 0.40);
+    --theme-box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
     --text-color: #000000;
     --image-invert: 100%;
     --colored-text: #74b4d4;
@@ -18,6 +19,7 @@
     --backround-image: radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(200, 80%, 30%, 1) 0, transparent 50%);
     --outline-color: rgba(229, 231, 235, 0.40);
     --border-color: rgba(255, 255, 255, 0.18);
+    --theme-box-shadow: none;
     --text-color: #ffffff;
     --image-invert: 0%;
     --colored-text: #86D7FF;
@@ -337,9 +339,10 @@ a:hover {
 }
 
 #headAvatar {
-    width: 160px;
-    height: 160px;
-    object-fit: cover
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
 #aboutMeModalAvatarContainer {
@@ -418,4 +421,8 @@ a:hover {
 .rightFloat {
     float: right;
     text-align: right
+}
+
+.bigButton, .card, button, .textCard {
+    box-shadow: var(--theme-box-shadow)
 }
