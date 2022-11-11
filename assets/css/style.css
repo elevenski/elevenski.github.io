@@ -9,7 +9,7 @@
     --theme-box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
     --text-color: #000000;
     --image-invert: 100%;
-    --colored-text: #74b4d4;
+    --colored-text: #67b2d8;
     color-scheme: light
 }
 
@@ -200,6 +200,29 @@ a:hover {
 
 .coloredText {
     color: var(--colored-text)
+}
+
+.coloredTextAnimation {
+    background-image: linear-gradient(to right, #00ffff, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: coloredTextAnimation 5s ease infinite;
+    height: 100vh;
+    background-size: 400% 400%;
+}
+
+@keyframes coloredTextAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 #goTop {
@@ -423,6 +446,9 @@ a:hover {
     text-align: right
 }
 
-.bigButton, .card, button, .textCard {
+.bigButton,
+.card,
+button,
+.textCard {
     box-shadow: var(--theme-box-shadow)
 }
