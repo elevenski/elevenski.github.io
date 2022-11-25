@@ -9,5 +9,7 @@ const key = '739ef515e3ade2c79525a82f51f458a5'
 const cityName = 'Istanbul'
 
 $.getJSON(`${url}weather?q=${cityName}&appid=${key}&units=metric&lang=en`, function(data) {
-    $("#weather").html(`<span class="text-capitalize">${data.weather[0].description}</span> of ${data.main.temp}°C in ${data.name}, ${data.sys.country}`);
+    const temp = data.main.temp
+    const tempFixed = temp.toString().substring(0, 2);
+    $("#weather").html(`<span class="text-capitalize">${data.weather[0].description}</span> of ${tempFixed}°C in ${data.name}, ${data.sys.country}`);
 });
