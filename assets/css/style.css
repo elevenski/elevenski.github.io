@@ -139,33 +139,8 @@ a:hover {
     background: var(--secondary-background-color);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
+    box-shadow: var(--theme-box-shadow);
     border: 1px solid var(--border-color)
-}
-
-.tippy-box[data-theme~=ws][data-placement^=top]>.tippy-arrow:before {
-    border-top-color: 1px solid var(--border-color);
-}
-
-.tippy-box[data-theme~=ws][data-placement^=bottom]>.tippy-arrow:before {
-    border-bottom-color: 1px solid var(--border-color);
-}
-
-.tippy-box[data-theme~=ws][data-placement^=left]>.tippy-arrow:before {
-    border-left-color: 1px solid var(--border-color);
-}
-
-.tippy-box[data-theme~=ws][data-placement^=right]>.tippy-arrow:before {
-    border-right-color: 1px solid var(--border-color);
-}
-
-.tippy-box[data-theme~=ws]>.tippy-backdrop {
-    background-color: var(--secondary-background-color);
-}
-
-.tippy-box[data-theme~=ws]>.tippy-svg-arrow {
-    background-color: var(--secondary-background-color);
-    ;
-    fill: var(--secondary-background-color);
 }
 
 .blackText {
