@@ -1,4 +1,5 @@
 @import"https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap";
+@import"https://fonts.googleapis.com/css2?family=Staatliches:wght@100;200;300;400;500;600;700;800;900&display=swap";
 
 :root {
     --primary-background-color: #e5e5e5;
@@ -120,6 +121,11 @@ a:hover {
         text-align: center
     }
 
+    #weatherText {
+        float: center;
+        text-align: center
+    }
+
     .footer {
         text-align: center;
         float: center
@@ -141,6 +147,12 @@ a:hover {
     -webkit-backdrop-filter: blur(4px);
     box-shadow: var(--theme-box-shadow);
     border: 1px solid var(--border-color)
+}
+
+.logoFontText {
+    color: var(--text-color);
+    font-family: "Staatliches";
+    font-size: 50px
 }
 
 .blackText {

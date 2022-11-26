@@ -57,7 +57,7 @@ function update_presence() {
     <a href="javascript:void(0)">
     <div class="card rounded-xl h-full">
         <div class="p-3 flex space-x-2 items-center overflow-hidden">
-            <img src="/assets/img/visualStudioCode.svg" alt="IMG" class="rounded-xl"
+            <img draggable="false" src="/assets/img/visualStudioCode.svg" alt="IMG" class="rounded-xl"
                 width="50" height="50">
             <p class="normalText ml-3 opacity-90">VS Code<br><span class="smallText opacity-80">${vsCodeState || "<i>No data</i>"}</span></p>
             <p class="thinText sectionTopRightText rounded-xl p-2 opacity-80">${vsCodeDetails || "<i>No data</i>"}</p>
@@ -81,7 +81,7 @@ function update_presence() {
   <a href="javascript:void(0)">
   <div class="card rounded-xl h-full">
       <div class="p-3 flex space-x-2 items-center overflow-hidden">
-          <img src="/assets/img/netflix.png" alt="IMG" class="rounded-xl"
+          <img draggable="false" src="/assets/img/netflix.png" alt="IMG" class="rounded-xl"
               width="50" height="50">
           <p class="normalText ml-3 opacity-90">Netflix<br><span class="smallText opacity-80">${netflixActivity.details || "<i>No data</i>"}</span></p>
           <p class="thinText sectionTopRightText rounded-xl p-2 opacity-80">${netflixActivity.state || "<i>No data</i>"}</p>
@@ -101,7 +101,7 @@ function update_presence() {
     <a href="javascript:void(0)">
     <div class="card rounded-xl h-full">
         <div class="p-3 flex space-x-2 items-center overflow-hidden">
-            <img src="/assets/img/disneyPlus.png" alt="IMG" class="rounded-xl"
+            <img draggable="false" src="/assets/img/disneyPlus.png" alt="IMG" class="rounded-xl"
                 width="50" height="50">
             <p class="normalText ml-3 opacity-90">Disney+<br><span class="smallText opacity-80">${disneyPlusActivity.details || "<i>No data</i>"}</span></p>
             <p class="thinText sectionTopRightText rounded-xl p-2 opacity-80">${disneyPlusActivity.state || "<i>No data</i>"}</p>
@@ -132,7 +132,7 @@ function update_presence() {
       <a href="https://open.spotify.com/track/${api.d.spotify.track_id}" target="_blank">
       <div class="card rounded-xl h-full">
           <div class="p-3 flex space-x-2 items-center overflow-hidden">
-              <img src="/assets/img/spotify.png" alt="IMG" class="rounded-xl"
+              <img draggable="false" src="/assets/img/spotify.png" alt="IMG" class="rounded-xl"
                   width="50" height="50">
               <p class="normalText ml-3 opacity-90">Spotify<br><span class="smallText opacity-80">${song || "<i>No data</i>"}</span></p>
               <p class="thinText sectionTopRightText rounded-xl p-2 opacity-80">left ${spotify_time || "0m 0s"}</p>
