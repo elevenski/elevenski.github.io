@@ -53,15 +53,13 @@ function update_presence() {
     var netflixImageLinkRevised = netflixImageLink.replace('https/', 'https://');
 
     netflix.innerHTML = `
-  <a href="javascript:void(0)">
-  <div class="card rounded-xl h-full">
+  <div class="card rounded-xl h-full mb-3">
       <div class="p-3 flex space-x-2 items-center overflow-hidden">
           <img draggable="false" src="assets/img/netflix.png" alt="IMG" class="rounded-xl"
               width="50" height="50">
           <p class="normalText ml-3">Netflix'den <span class="normalText"><b>${netflixActivity.details || "<i>İçerik Bulunamadı</i>"}</b></span> izleniyor...</p>
       </div>
-  </div>
-  </a>`;
+  </div>`;
   } else {
     netflix.innerHTML = ``;
     document.getElementById("netflix").style.display = "none";
@@ -72,15 +70,13 @@ function update_presence() {
 
   if (disneyPlusActivity) {
     disneyPlus.innerHTML = `
-    <a href="javascript:void(0)">
-    <div class="card rounded-xl h-full">
+    <div class="card rounded-xl h-full mb-3">
         <div class="p-3 flex space-x-2 items-center overflow-hidden">
             <img draggable="false" src="assets/img/disneyPlus.png" alt="IMG" class="rounded-xl"
                 width="50" height="50">
             <p class="normalText ml-3">Disney+'dan <span class="normalText"><b>${disneyPlusActivity.details || "<i>İçerik Bulunamadı</i>"}</b></span> izleniyor...</p>
         </div>
-    </div>
-    </a>`;
+    </div>`;
   } else {
     disneyPlus.innerHTML = ``;
     document.getElementById("disneyPlus").style.display = "none";
@@ -103,7 +99,7 @@ function update_presence() {
         }`;
       spotify.innerHTML = `
       <a href="https://open.spotify.com/track/${api.d.spotify.track_id}" target="_blank">
-      <div class="card rounded-xl h-full">
+      <div class="card rounded-xl h-full mb-3">
           <div class="p-3 flex space-x-2 items-center overflow-hidden">
               <img draggable="false" src="${api.d.spotify.album_art_url}" alt="IMG" class="rounded-xl"
                   width="50" height="50">
