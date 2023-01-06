@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alper</title>
+    <link rel='icon' type='image/png' href='/assets/img/istanbulBeyefendisiRounded.png'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css"
+        ntegrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel='stylesheet' href="/assets/css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function () {
+            twemoji.parse(document.body,
+                { folder: 'svg', ext: '.svg' }
+            );
+        }
+    </script>
+    <style>
+        img.emoji {
+            width: 1em;
+            pointer-events: none;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="padding section">
+
+        <div class="activities">
+            <div class="spotify" id="spotify"></div>
+            <div class="netflix" id="netflix"></div>
+            <div class="disneyPlus" id="disneyPlus"></div>
+        </div>
+
+        <div class="head mt-5">
+            <center><img class="headAvatar" src="/assets/img/istanbulBeyefendisiRounded.png" draggable="false" alt="Alper" width="200"></center>
+            <p class="headName mt-4">Alper</p>
+            <p class="headStatus mt-1" id="discordStatus"">Durum getiriliyor...</p>
+        </div>
+
+        <div class="social mt-5">
+                <a href="https://www.instagram.com/alperinnce" target="_blank">
+                    <div class="cardOp rounded-xl h-full">
+                        <div class="p-3 flex space-x-2 items-center overflow-hidden">
+                            <img draggable="false" src="/assets/img/Instagram.webp" alt="IMG" class="rounded-xl" width="50"
+                                height="50">
+                            <p class="normalText ml-3">Instagram'da <span class="normalText"><b>@alperinnce</b></span></p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://open.spotify.com/user/yo55g26ffwx83q0smizx52yuf" target="_blank">
+                    <div class="cardOp rounded-xl h-full mt-3">
+                        <div class="p-3 flex space-x-2 items-center overflow-hidden">
+                            <img draggable="false" src="/assets/img/spotify.png" alt="IMG" class="rounded-xl" width="50"
+                                height="50">
+                            <p class="normalText ml-3">Spotify'da <span class="normalText"><b>Alper</b></span></p>
+                        </div>
+                    </div>
+                </a>
+        </div>
+
+        <br><br>
+
+        <div class="footer mt-5"><p class="smallText opacity-80">Tüm haklarım 2315’e aittir.<br>Geliştirilmeye tamamen açıktır.</p></div>
+
+    </section>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="/assets/js/lanyard.js"></script>
+
+</html>
