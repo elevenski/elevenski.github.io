@@ -56,7 +56,7 @@ function update_presence() {
   <a href="javascript:void(0)">
   <div class="card rounded-xl h-full">
       <div class="p-3 flex space-x-2 items-center overflow-hidden">
-          <img draggable="false" src="/assets/img/netflix.png" alt="IMG" class="rounded-xl"
+          <img draggable="false" src="assets/img/netflix.png" alt="IMG" class="rounded-xl"
               width="50" height="50">
           <p class="normalText ml-3">Netflix'den <span class="normalText"><b>${netflixActivity.details || "<i>İçerik Bulunamadı</i>"}</b></span> izleniyor...</p>
       </div>
@@ -75,7 +75,7 @@ function update_presence() {
     <a href="javascript:void(0)">
     <div class="card rounded-xl h-full">
         <div class="p-3 flex space-x-2 items-center overflow-hidden">
-            <img draggable="false" src="/assets/img/disneyPlus.png" alt="IMG" class="rounded-xl"
+            <img draggable="false" src="assets/img/disneyPlus.png" alt="IMG" class="rounded-xl"
                 width="50" height="50">
             <p class="normalText ml-3">Disney+'dan <span class="normalText"><b>${disneyPlusActivity.details || "<i>İçerik Bulunamadı</i>"}</b></span> izleniyor...</p>
         </div>
