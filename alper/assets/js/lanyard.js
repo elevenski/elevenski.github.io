@@ -3,6 +3,7 @@ var discordStatus = document.getElementById("discordStatus");
 var spotify = document.getElementById("spotify");
 var netflix = document.getElementById("netflix");
 var disneyPlus = document.getElementById("disneyPlus");
+var csgo = document.getElementById("csgo");
 
 const lanyard = new WebSocket("wss://api.lanyard.rest/socket");
 
@@ -42,6 +43,24 @@ lanyard.onmessage = function (event) {
 function update_presence() {
   if (statusIcon != null) {
     update_status(api.d.discord_status);
+  }
+
+  var csgoAppID = "356875057940791296"
+  var csgoActivity = api.d.activities.find(activity => activity.application_id == csgoAppID)
+
+  if (csgoActivity) {
+
+    csgo.innerHTML = `
+  <div class="card rounded-xl h-full mb-3">
+      <div class="p-3 flex space-x-2 items-center overflow-hidden">
+          <img draggable="false" src="assets/img/csgo.jpeg" alt="IMG" class="rounded-xl"
+              width="50" height="50">
+          <p class="normalText ml-3">Steam'den <span class="normalText"><b>${csgoActivity.name || "<i>İsim Bulunamadı</i>"}</b></span> Oynanıyor...</p>
+      </div>
+  </div>`;
+  } else {
+    csgo.innerHTML = ``;
+    document.getElementById("csgo").style.display = "none";
   }
 
   var netflixAppID = "926541425682829352"
