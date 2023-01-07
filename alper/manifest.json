@@ -3,7 +3,7 @@
     "lang": "tr",
      "theme_color": "#000",
      "background_color": "#000",
-     "display": "fullscreen",
+     "display": "standalone",
      "orientation": "portrait",
      "scope": "/",
      "start_url": "/alper",
