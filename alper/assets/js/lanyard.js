@@ -55,7 +55,7 @@ function update_presence() {
       <div class="p-3 flex space-x-2 items-center overflow-hidden">
           <img draggable="false" src="assets/img/csgo.jpeg" alt="IMG" class="rounded-xl"
               width="50" height="50">
-          <p class="normalText ml-3">Steam'den <span class="normalText"><b>${csgoActivity.name || "<i>İsim Bulunamadı</i>"}</b></span> Oynanıyor...</p>
+          <p class="normalText ml-3">Steam'de <span class="normalText"><b>${csgoActivity.name || "<i>İsim Bulunamadı</i>"}</b></span> Oynuyor...</p>
       </div>
   </div>`;
   } else {
