@@ -18,7 +18,7 @@ body {
     font-family: "Open Sans";
     transition: all 0.1s linear;
     background-color: var(--primary-background-color);
-    background-image: url("http://127.0.0.1:5500/assets/img/bgRepeat.png");
+    background-image: url("https://i.ibb.co/dj0nr5j/bgRepeat.png");
     background-repeat: repeat;
     color: var(--text-color)
 }
