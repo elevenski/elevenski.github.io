@@ -1,8 +1,8 @@
 @import"https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap";
 
 :root {
-    --primary-background-color: #151617;
-    --secondary-background-color: #252829;
+    --primary-background-color: #14161c;
+    --secondary-background-color: #20242d;
     --text-color: #ffffff
 }
 
@@ -18,6 +18,8 @@ body {
     font-family: "Open Sans";
     transition: all 0.1s linear;
     background-color: var(--primary-background-color);
+    background-image: url("http://127.0.0.1:5500/assets/img/bgRepeat.png");
+    background-repeat: repeat;
     color: var(--text-color)
 }
 
@@ -65,7 +67,16 @@ a:hover {
 .headAvatar {
     width: 200px;
     height: 200px;
-    object-fit: cover
+    object-fit: cover;
+    border-radius: 100%;
+    outline: 5px solid var(--secondary-background-color);
+    outline-offset: 8px;
+    transition: all 0.2s linear
+}
+
+.headAvatar:hover {
+    transform: rotate(-7deg);
+    transition: all 0.2s linear
 }
 
 .headName {
@@ -84,21 +95,19 @@ a:hover {
     background-color: var(--secondary-background-color);
     border: none;
     outline: none;
-    transition: all 0.1s linear;
+    transition: all 0.1s linear
 }
 
 .cardOp {
     background: var(--secondary-background-color);
-    backdrop-filter: blur(7px);
-    -webkit-backdrop-filter: blur(7px);
     border: none;
     outline: none;
-    transition: all 0.1s linear;
+    transition: all 0.1s linear
 }
 
 .cardOp:hover {
     transform: scale(1.02);
-    transition: all 0.1s linear;
+    transition: all 0.1s linear
 }
 
 .smallText {
