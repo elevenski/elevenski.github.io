@@ -1,4 +1,4 @@
-@import"https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap";
+@import"https://fonts.googleapis.com/css2?family=Asap:wght@100;200;300;400;500;600;700;800;900&display=swap";
 @import"https://fonts.googleapis.com/css2?family=Staatliches:wght@100;200;300;400;500;600;700;800;900&display=swap";
 
 :root {
@@ -35,8 +35,12 @@
     box-sizing: border-box
 }
 
+button:focus {
+    outline: none
+}
+
 body {
-    font-family: "Roboto";
+    font-family: "Asap";
     transition: all 0.1s linear;
     background-color: var(--primary-background-color);
     background-image: var(--backround-image)
@@ -54,19 +58,18 @@ a:hover {
 }
 
 .naturalLink:hover {
-    outline: 2px dashed var(--outline-color);
-    outline-offset: 0.30rem
+    text-decoration: underline
 }
 
-.naturalLink:focus {
+/*.naturalLink:focus {
     outline: 2px dashed var(--outline-color);
     outline-offset: 0.30rem
-}
+}*/
 
 @media only screen and (min-width: 640px) {
     .padding {
-        padding-left: 15%;
-        padding-right: 15%
+        padding-left: 15.5%;
+        padding-right: 15.5%
     }
 
     #head {
@@ -146,7 +149,7 @@ a:hover {
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     box-shadow: var(--theme-box-shadow);
-    border: 1px solid var(--border-color)
+    /*border: 1px solid var(--border-color)*/
 }
 
 .logoFontText {
@@ -190,7 +193,7 @@ a:hover {
 }
 
 .coloredTextAnimation {
-    background-image: linear-gradient(to right, #00ffff, #ff00ff);
+    background-image: linear-gradient(to right, #00ffff, #ff0054);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: coloredTextAnimation 5s ease infinite;
@@ -229,18 +232,18 @@ a:hover {
     background: var(--secondary-background-color);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    border: 1px solid var(--border-color)
+    /*border: 1px solid var(--border-color)*/
 }
 
 #goTop:hover {
-    outline: 2px dashed var(--outline-color);
-    outline-offset: 0.30rem
+    outline: 1px solid var(--colored-text);
+    outline-offset: 0rem
 }
 
-#goTop:focus {
+/*#goTop:focus {
     outline: 2px dashed var(--outline-color);
     outline-offset: 0.30rem
-}
+}*/
 
 #navbarImage {
     filter: invert(var(--image-invert))
@@ -253,56 +256,57 @@ a:hover {
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 999%;
-    border: 1px solid rgba(255, 255, 255, 0.18)
+    /*border: 1px solid rgba(255, 255, 255, 0.18)*/
 }
 
 .navbarButton:hover {
-    outline: 2px dashed var(--outline-color);
-    outline-offset: 0.30rem
+    outline: 1px solid var(--colored-text);
+    outline-offset: 0rem
 }
 
-.navbarButton:focus {
+/*.navbarButton:focus {
     outline: 2px dashed var(--outline-color);
     outline-offset: 0.30rem
-}
+}*/
 
 .bigButton {
     background: var(--secondary-background-color);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    border: 1px solid var(--border-color);
+    /*border: 1px solid var(--border-color);*/
     padding: 15px
 }
 
 .bigButton:hover {
-    outline: 2px dashed var(--outline-color);
-    outline-offset: 0.30rem;
+    outline: 1px solid var(--colored-text);
+    outline-offset: 0rem;
     color: var(--text-color) !important
 }
 
-.bigButton:focus {
+/*.bigButton:focus {
     outline: 2px dashed var(--outline-color);
     outline-offset: 0.30rem
-}
+}*/
 
 .card {
     background: var(--secondary-background-color);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    border: 1px solid var(--border-color);
+    /*border: 1px solid var(--border-color);*/
+    border: none;
     position: relative
 }
 
 .card:hover {
-    outline: 2px dashed var(--outline-color);
-    outline-offset: 0.30rem;
+    outline: 1px solid var(--colored-text);
+    outline-offset: 0rem;
     color: var(--text-color) !important
 }
 
-.card:focus {
+/*.card:focus {
     outline: 2px dashed var(--outline-color);
     outline-offset: 0.30rem
-}
+}*/
 
 .sectionTopRightText {
     position: absolute;
@@ -310,11 +314,15 @@ a:hover {
     right: 0px;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    border: 1px solid var(--border-color);
+    /*border: 1px solid var(--border-color);*/
     border-top-left-radius: 0px;
     border-bottom-right-radius: 0px;
     border-top: none;
     border-right: none
+}
+
+.sectionTopRightTextModal {
+    background-color: var(--secondary-background-color)
 }
 
 .cardNoMT {
@@ -329,7 +337,7 @@ a:hover {
     background: var(--secondary-background-color);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    border: 1px solid var(--border-color);
+    /*border: 1px solid var(--border-color);*/
     padding: 7px 13px
 }
 
@@ -345,7 +353,7 @@ a:hover {
 
 .modal-content {
     background-color: var(--primary-background-color);
-    border: 1px solid var(--border-color)
+    /*border: 1px solid var(--border-color)*/
 }
 
 #headAvatar {
