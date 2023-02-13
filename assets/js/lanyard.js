@@ -1,4 +1,4 @@
-var statusIcon = document.getElementById("statusIcon");
+//var statusIcon = document.getElementById("statusIcon");
 var discordStatus = document.getElementById("discordStatus");
 var spotifyListening = document.getElementById("spotifyListening");
 var visualStudioCodePlaying = document.getElementById("visualStudioCodePlaying");
@@ -42,9 +42,9 @@ lanyard.onmessage = function (event) {
 };
 
 function update_presence() {
-  if (statusIcon != null) {
+  /*if (statusIcon != null) {
     update_status(api.d.discord_status);
-  }
+  }*/
 
   var vsCodeAppID = "383226320970055681"
   var vsCodeActivity = api.d.activities.find(activity => activity.application_id == vsCodeAppID)

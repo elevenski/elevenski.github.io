@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eleven – Full-stack web developer</title>
-    <meta name="theme-color" content="#111827">
+    <meta name="theme-color" content="#e5e5e5">
     <meta property="og:site_name" content="eleven.js.org">
-    <link rel='icon' type='image/png' href='/assets/img/iconFlorence.png'>
+    <link rel='icon' type='image/png' href='/assets/img/iconLebensraum.png'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css"
@@ -36,24 +36,28 @@
     </style>
 </head>
 
-<body class="animate__animated animate__fadeIn js">
+<body class="container max-w-7xl mx-auto animate__animated animate__fadeIn js">
 
-    <div class="navbar padding mt-1 rounded-xl">
-        <a href="/" class="navbar-brand navbar-brand-text"><img id="navbarImage" draggable="false"
-                src="/assets/img/iconWhite.png" alt="IMG" width="45"></a>
-        <div class="navbar-nav">
-        </div>
-        <div class="navbar-nav ms-auto">
-            <div id="navbarButtons">
-                <button id="switchModeButton" class="navbarButton switchModeButton normalText mr-3">
-                    <i class='fa-solid fa-sun-bright'></i>
-                </button>
+    <section id="nav">
+        <div class="mt-3">
+            <div class="navGrid">
+                <div class="navGridItem">
+                    <a href="/" class="navbar-brand navbar-brand-text"><img id="navbarImage" draggable="false"
+                            src="/assets/img/iconWhite.png" alt="IMG" width="45"></a>
+                </div>
+                <div class="navGridItem navGridItemRight">
+                    <button id="switchModeButton" class="navbarButton switchModeButton normalText">
+                        <i class='fa-solid fa-sun-bright'></i>
+                    </button>
+                </div>
+            </div>
+            <div>
             </div>
         </div>
-    </div>
+    </section>
 
     <section id="head">
-        <div class="padding section">
+        <div class="section">
             <div class="sectionGrid">
                 <div class="sectionGridItem">
                     <p class="blackText">I’m <span class="coloredTextAnimation">Eleven</span>. I’m a full-stack web
@@ -69,8 +73,7 @@
                 </div>
                 <div class="sectionGridItem sectionGridItemRight">
                     <center>
-                        <!-- this is a joke?!!1 -->
-                        <img draggable="false" id="headAvatar" src="/assets/img/iconLebensraum.png" alt="IMG"
+                        <img draggable="false" id="headAvatar" src="/assets/img/lebensraum.png" alt="IMG"
                             class="rounded-full">
                     </center>
                 </div>
@@ -81,7 +84,7 @@
     </section>
 
     <section id="activities">
-        <div class="padding section">
+        <div class="section">
             <p class="boldText opacity-90">Activities</p>
             <div id="activitiesGrid" class="mt-3">
                 <p id="activitiesStatus" class="smallText opacity-80"><i
@@ -97,7 +100,7 @@
     </section>
 
     <section id="works">
-        <div class="padding section">
+        <div class="section">
             <p class="boldText opacity-90">Works</p>
             <div id="worksGrid" class="mt-3">
                 <div class="grid grid-cols-1 gap-3 sm:gird-cols-1 md:grid-cols-2">
@@ -110,7 +113,7 @@
                                 <p class="thinText sectionTopRightText rounded-xl p-2 opacity-80">Founder &nbsp;•&nbsp;
                                     2019</p>
                             </div>
-                            <div class="smallText p-3 cardNoMT opacity-80">%100 Free Uptime & SSL check monitoring.
+                            <div class="smallText p-3 cardNoMT opacity-80">Better Uptime & SSL monitoring service with 1-minute checks for free.
                             </div>
                         </div>
                     </a>
@@ -132,7 +135,7 @@
     </section>
 
     <section id="repositories">
-        <div class="padding section">
+        <div class="section">
             <p class="boldText opacity-90">Repositories</p>
             <div id="repositoriesGrid" class="mt-3">
                 <div class="grid grid-cols-1 gap-3 sm:gird-cols-1 md:grid-cols-2">
@@ -152,7 +155,7 @@
     </section>
 
     <section id="skills">
-        <div class="padding section">
+        <div class="section">
             <p class="boldText opacity-90">Skills</p>
             <div id="skillsGrid" class="mt-3">
                 <div class="grid grid-cols-2 gap-3 sm:gird-cols-2 md:grid-cols-4">
@@ -440,12 +443,12 @@
     </section>
 
     <section id="footer">
-        <div class="footer section padding">
+        <div class="footer section">
             <div class="footerLeft">
-                <span class="normalText textCard rounded-xl mr-1 opacity-80">v5</span>
+                <span class="normalText textCard rounded-xl mr-1 opacity-80">v5R</span>
                 <span class="normalText opacity-80">Eleven</span>
             </div>
-            <div class="footerRight mt-2 sm:mt-0">
+            <div class="footerRight mt-3 sm:mt-0">
                 <p class="smallText opacity-80"><a href="https://github.com/elevenvac/elevenvac.github.io"
                         target="_blank" class="naturalLink">Open Source</a></p>
             </div>
@@ -461,7 +464,8 @@
             <div class="modal-content rounded-xl">
                 <div class="modal-body">
                     <a href="javascript:closeModal(aboutMeModal)" data-dismiss="modal">
-                        <p class="thinText sectionTopRightText sectionTopRightTextModal rounded-xl p-2 opacity-80">Close Modal</p>
+                        <p class="thinText sectionTopRightText sectionTopRightTextModal rounded-xl p-2 opacity-80">Close
+                            Modal</p>
                     </a>
                     <div id="inModal" class="p-3 mt-1 mb-1 space-x-2">
                         <center>
@@ -496,13 +500,13 @@
                         <p class="normalText opacity-80 mt-4">And last but not least, please don't hesitate to contact
                             me!
                         </p>
-                        <p class="normalText opacity-80 mt-4"><a href="https://twitter.com/elevenvac" target="_blank"><i
-                                    class="fa-brands fa-twitter"></i></a> <span class="ml-2 mr-2"></span> <a
-                                href="https://github.com/elevenvac" target="_blank"><i
+                        <p class="normalText opacity-80 mt-4"><a href="https://github.com/elevenvac" target="_blank"><i
                                     class="fa-brands fa-github"></i></a> <span class="ml-2 mr-2"></span> <a
-                                href="https://youtube.com/@Elevenvac" target="_blank"><i
-                                    class="fa-brands fa-youtube"></i></a> <span class="ml-2 mr-2"></span> <a
-                                href="mailto:elevenvac@pm.me" target="_blank"><i class="fa-solid fa-mailbox"></i></a>
+                                href="https://twitter.com/elevenvac" target="_blank"><i
+                                    class="fa-brands fa-twitter"></i></a> <span class="ml-2 mr-2"></span> <a
+                                href="mailto:elevenvac@pm.me" target="_blank"><i
+                                    class="fa-solid fa-mailbox"></i></a> <span class="ml-2 mr-2"></span> <a
+                                href="https://youtube.com/@Elevenvac" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                             <span class="ml-2 mr-2"></span> <a href="https://discord.gg/uhwjhWryND" target="_blank"><i
                                     class="fa-brands fa-discord"></i></a>
                         </p>

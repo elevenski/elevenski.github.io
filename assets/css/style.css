@@ -5,8 +5,6 @@
     --primary-background-color: #e5e5e5;
     --secondary-background-color: rgba(255, 255, 255, 0.40);
     --backround-image: radial-gradient(at 0% 0%, hsla(240, 100%, 97%, 1) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(200, 80%, 70%, 1) 0, transparent 50%);
-    --outline-color: rgba(123, 153, 201, 0.40);
-    --border-color: rgba(255, 255, 255, 0.40);
     --theme-box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
     --text-color: #000000;
     --image-invert: 100%;
@@ -17,9 +15,7 @@
 .dark-theme {
     --primary-background-color: #0f0e13;
     --secondary-background-color: rgba(255, 255, 255, 0.05);
-    --backround-image: radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(200, 80%, 30%, 1) 0, transparent 50%);
-    --outline-color: rgba(229, 231, 235, 0.40);
-    --border-color: rgba(255, 255, 255, 0.18);
+    --backround-image: radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%), radial-gradient(at 100% 0%, rgb(15, 97, 138) 0, transparent 50%);
     --theme-box-shadow: none;
     --text-color: #ffffff;
     --image-invert: 0%;
@@ -37,6 +33,10 @@
 
 button:focus {
     outline: none
+}
+
+html {
+    scroll-behavior: smooth
 }
 
 body {
@@ -61,24 +61,14 @@ a:hover {
     text-decoration: underline
 }
 
-/*.naturalLink:focus {
-    outline: 2px dashed var(--outline-color);
-    outline-offset: 0.30rem
-}*/
-
 @media only screen and (min-width: 640px) {
-    .padding {
-        padding-left: 15.5%;
-        padding-right: 15.5%
-    }
-
     #head {
-        padding-top: 4.5em
+        padding-top: 5em
     }
 
     .section {
-        padding-top: 5%;
-        padding-bottom: 5%
+        padding-top: 5em;
+        padding-bottom: 5em
     }
 
     .sectionGrid {
@@ -87,7 +77,7 @@ a:hover {
     }
 
     .sectionGridItemRight {
-        padding-left: 3em;
+        justify-self: end
     }
 
     .blackText {
@@ -104,14 +94,13 @@ a:hover {
 }
 
 @media only screen and (max-width: 640px) {
-    .padding {
-        padding-left: 3%;
-        padding-right: 3%
+    #head {
+        padding-top: 4em
     }
 
     .section {
-        padding-top: 4rem;
-        padding-bottom: 4rem
+        padding-top: 4em;
+        padding-bottom: 4em
     }
 
     .sectionGridItemRight {
@@ -148,8 +137,7 @@ a:hover {
     background: var(--secondary-background-color);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    box-shadow: var(--theme-box-shadow);
-    /*border: 1px solid var(--border-color)*/
+    box-shadow: var(--theme-box-shadow)
 }
 
 .logoFontText {
@@ -231,8 +219,7 @@ a:hover {
     color: var(--text-color);
     background: var(--secondary-background-color);
     backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    /*border: 1px solid var(--border-color)*/
+    -webkit-backdrop-filter: blur(4px)
 }
 
 #goTop:hover {
@@ -240,10 +227,14 @@ a:hover {
     outline-offset: 0rem
 }
 
-/*#goTop:focus {
-    outline: 2px dashed var(--outline-color);
-    outline-offset: 0.30rem
-}*/
+.navGrid {
+    display: grid;
+    grid-template-columns: auto auto
+}
+
+.navGridItemRight {
+    justify-self: end
+}
 
 #navbarImage {
     filter: invert(var(--image-invert))
@@ -255,8 +246,7 @@ a:hover {
     background: var(--secondary-background-color);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    border-radius: 999%;
-    /*border: 1px solid rgba(255, 255, 255, 0.18)*/
+    border-radius: 999%
 }
 
 .navbarButton:hover {
@@ -264,16 +254,10 @@ a:hover {
     outline-offset: 0rem
 }
 
-/*.navbarButton:focus {
-    outline: 2px dashed var(--outline-color);
-    outline-offset: 0.30rem
-}*/
-
 .bigButton {
     background: var(--secondary-background-color);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    /*border: 1px solid var(--border-color);*/
     padding: 15px
 }
 
@@ -283,16 +267,10 @@ a:hover {
     color: var(--text-color) !important
 }
 
-/*.bigButton:focus {
-    outline: 2px dashed var(--outline-color);
-    outline-offset: 0.30rem
-}*/
-
 .card {
     background: var(--secondary-background-color);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    /*border: 1px solid var(--border-color);*/
     border: none;
     position: relative
 }
@@ -303,18 +281,12 @@ a:hover {
     color: var(--text-color) !important
 }
 
-/*.card:focus {
-    outline: 2px dashed var(--outline-color);
-    outline-offset: 0.30rem
-}*/
-
 .sectionTopRightText {
     position: absolute;
     top: 0px;
     right: 0px;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    /*border: 1px solid var(--border-color);*/
     border-top-left-radius: 0px;
     border-bottom-right-radius: 0px;
     border-top: none;
@@ -337,7 +309,6 @@ a:hover {
     background: var(--secondary-background-color);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    /*border: 1px solid var(--border-color);*/
     padding: 7px 13px
 }
 
@@ -352,8 +323,7 @@ a:hover {
 }
 
 .modal-content {
-    background-color: var(--primary-background-color);
-    /*border: 1px solid var(--border-color)*/
+    background-color: var(--primary-background-color)
 }
 
 #headAvatar {
