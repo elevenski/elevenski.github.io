@@ -129,7 +129,7 @@ function update_presence() {
       var song = `${api.d.spotify.song.split("(")[0]
         }`;
       spotifyListening.innerHTML = `
-      <a href="https://open.spotify.com/track/${api.d.spotify.track_id}" target="_blank">
+      <a href="https://open.spotify.com/track/${api.d.spotify.track_id}?si=155eeb7c98204d8e&utm_source=eleven.js.org" target="_blank">
       <div class="card rounded-xl h-full">
           <div class="p-3 flex space-x-2 items-center overflow-hidden">
               <img draggable="false" src="${api.d.spotify.album_art_url}" alt="IMG" class="rounded-xl"
