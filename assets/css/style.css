@@ -4,7 +4,7 @@
 :root {
     --primary-background-color: #e5e5e5;
     --secondary-background-color: rgba(255, 255, 255, 0.40);
-    --backround-image: radial-gradient(at 0% 0%, hsla(240, 100%, 97%, 1) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(200, 80%, 70%, 1) 0, transparent 50%);
+    --backround-image: url("/assets/img/bgDark.png");
     --theme-box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
     --text-color: #000000;
     --image-invert: 100%;
@@ -15,7 +15,7 @@
 .dark-theme {
     --primary-background-color: #0f0e13;
     --secondary-background-color: rgba(255, 255, 255, 0.05);
-    --backround-image: radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%), radial-gradient(at 100% 0%, rgb(15, 97, 138) 0, transparent 50%);
+    --backround-image: url("/assets/img/bgWhite.png");
     --theme-box-shadow: none;
     --text-color: #ffffff;
     --image-invert: 0%;
@@ -43,7 +43,8 @@ body {
     font-family: "Asap";
     transition: all 0.1s linear;
     background-color: var(--primary-background-color);
-    background-image: var(--backround-image)
+    background-image: var(--backround-image);
+    background-repeat: repeat;
 }
 
 img {
