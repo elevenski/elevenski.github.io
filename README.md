@@ -6,7 +6,7 @@
 `HTML`, `CSS` & `JavaScript`
 
 ## Contributors
-Thanks for contributions: `john-smilga`
+Thanks for contributions: `john-smilga`, `ademcertell`
 
 ## Discord Server
 <a href="https://discord.gg/uhwjhWryND"><img src="http://invidget.switchblade.xyz/uhwjhWryND"/></a>
