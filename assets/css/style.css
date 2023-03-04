@@ -346,6 +346,13 @@ a:hover {
     object-fit: cover
 }
 
+#aboutMeModalAvatarInitials  {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    background-color: var(--secondary-background-color)
+}
+
 .discordStatusOnline {
     width: 31px;
     height: 31px;
