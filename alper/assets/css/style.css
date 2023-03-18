@@ -1,4 +1,5 @@
 @import"https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap";
+@import"https://fonts.googleapis.com/css2?family=Staatliches:wght@100;200;300;400;500;600;700;800;900&display=swap";
 
 :root {
     --primary-background-color: #14161c;
@@ -35,11 +36,6 @@ a:hover {
 }
 
 @media only screen and (min-width: 640px) {
-    .padding {
-        padding-left: 25%;
-        padding-right: 25%
-    }
-
     .section {
         padding-top: 2%;
         padding-bottom: 2%
@@ -47,11 +43,6 @@ a:hover {
 }
 
 @media only screen and (max-width: 640px) {
-    .padding {
-        padding-left: 3%;
-        padding-right: 3%
-    }
-
     .section {
         padding-top: 1rem;
         padding-bottom: 1rem
@@ -62,6 +53,18 @@ a:hover {
     color: var(--text-color);
     font-size: 18px;
     font-weight: normal
+}
+
+.logoFontText {
+    color: var(--text-color);
+    font-family: "Staatliches";
+    font-size: 30px
+}
+
+.smallText {
+    font-size: 15px;
+    font-weight: normal;
+    text-align: center
 }
 
 .headAvatar {
@@ -108,10 +111,4 @@ a:hover {
 .cardOp:hover {
     transform: scale(1.02);
     transition: all 0.1s linear
-}
-
-.smallText {
-    font-size: 15px;
-    font-weight: normal;
-    text-align: center
 }
