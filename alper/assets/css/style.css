@@ -1,9 +1,9 @@
-@import"https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap";
+@import"https://fonts.googleapis.com/css2?family=Asap:wght@100;200;300;400;500;600;700;800;900&display=swap";
 @import"https://fonts.googleapis.com/css2?family=Staatliches:wght@100;200;300;400;500;600;700;800;900&display=swap";
 
 :root {
-    --primary-background-color: #14161c;
-    --secondary-background-color: #20242d;
+    --primary-background-color: #0f0e13;
+    --secondary-background-color: rgba(255, 255, 255, 0.05);
     --text-color: #ffffff
 }
 
@@ -16,7 +16,7 @@
 }
 
 body {
-    font-family: "Open Sans";
+    font-family: "Asap";
     transition: all 0.1s linear;
     background-color: var(--primary-background-color);
     background-image: url("https://i.ibb.co/dj0nr5j/bgRepeat.png");

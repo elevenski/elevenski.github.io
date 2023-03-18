@@ -1,8 +1,8 @@
 {
     "name": "Alper",
     "lang": "tr",
-     "theme_color": "#14161c",
-     "background_color": "#14161c",
+     "theme_color": "#0f0e13",
+     "background_color": "#0f0e13",
      "display": "standalone",
      "orientation": "portrait",
      "scope": "/",

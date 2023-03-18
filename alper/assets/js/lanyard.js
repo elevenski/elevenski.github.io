@@ -55,7 +55,7 @@ function update_presence() {
       <div class="p-3 flex space-x-2 items-center overflow-hidden">
           <img draggable="false" src="assets/img/csgo.jpeg" alt="IMG" class="rounded-xl"
               width="50" height="50">
-          <p class="normalText ml-3"><span class="normalText"><b>${csgoActivity.name || "<i>İsim Bulunamadı</i>"}</b></span> Oynuyor...</p>
+          <p class="normalText ml-3"><span class="normalText opacity-90"><b>${csgoActivity.name || "<i>İsim Bulunamadı</i>"}</b></span> Oynuyor...</p>
       </div>
   </div>`;
   } else {
@@ -76,7 +76,7 @@ function update_presence() {
       <div class="p-3 flex space-x-2 items-center overflow-hidden">
           <img draggable="false" src="assets/img/netflix.png" alt="IMG" class="rounded-xl"
               width="50" height="50">
-          <p class="normalText ml-3"><span class="normalText"><b>${netflixActivity.details || "<i>İçerik Bulunamadı</i>"}</b></span> izliyor...</p>
+          <p class="normalText ml-3"><span class="normalText opacity-90"><b>${netflixActivity.details || "<i>İçerik Bulunamadı</i>"}</b></span> izliyor...</p>
       </div>
   </div>`;
   } else {
@@ -93,7 +93,7 @@ function update_presence() {
         <div class="p-3 flex space-x-2 items-center overflow-hidden">
             <img draggable="false" src="assets/img/disneyPlus.png" alt="IMG" class="rounded-xl"
                 width="50" height="50">
-            <p class="normalText ml-3"><span class="normalText"><b>${disneyPlusActivity.details || "<i>İçerik Bulunamadı</i>"}</b></span> izliyor...</p>
+            <p class="normalText ml-3"><span class="normalText opacity-90"><b>${disneyPlusActivity.details || "<i>İçerik Bulunamadı</i>"}</b></span> izliyor...</p>
         </div>
     </div>`;
   } else {
@@ -117,13 +117,13 @@ function update_presence() {
       var song = `${api.d.spotify.song.split("(")[0]
         }`;
       spotify.innerHTML = `
-      <a href="https://open.spotify.com/track/${api.d.spotify.track_id}" target="_blank">
+      <a href="https://open.spotify.com/track/${api.d.spotify.track_id}?si=155eeb7c98204d8e" target="_blank">
       <div class="card rounded-xl h-full mb-3">
           <div class="p-3 flex space-x-2 items-center overflow-hidden">
               <img draggable="false" src="${api.d.spotify.album_art_url}" alt="IMG" class="rounded-xl"
                   width="50" height="50">
-              <p class="normalText ml-3"><span class="normalText"><b>${song || "<i>Müzik Bulunamadı</i>"}</b></span> dinliyor...</p>
-              <span class="normalText p-2">${spotify_time || "0d 0s"}</span>
+              <p class="normalText opacity-90 ml-3"><span class="normalText"><b>${song || "<i>Müzik Bulunamadı</i>"}</b></span> dinliyor...</p>
+              <span class="normalText opacity-90 p-2">${spotify_time || "0d 0s"}</span>
           </div>
       </div>
       </a>`;
