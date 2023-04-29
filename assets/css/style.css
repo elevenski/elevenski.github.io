@@ -1,25 +1,22 @@
-@import"https://fonts.googleapis.com/css2?family=Asap:wght@100;200;300;400;500;600;700;800;900&display=swap";
-@import"https://fonts.googleapis.com/css2?family=Staatliches:wght@100;200;300;400;500;600;700;800;900&display=swap";
+@import"https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap";
 
 :root {
-    --primary-background-color: #e5e5e5;
-    --secondary-background-color: rgba(255, 255, 255, 0.40);
-    --backround-image: url("/assets/img/bgDark.png");
-    --theme-box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
-    --text-color: #000000;
+    --primary-background-color: #f9fafb;
+    --secondary-background-color: #f8f8f9;
+    --tertiary-background-color: #f1f2f3;
+    --fff-background-color: #e5e5e5;
+    --text-color: #181919;
     --image-invert: 100%;
-    --colored-text: #67b2d8;
     color-scheme: light
 }
 
 .dark-theme {
-    --primary-background-color: #0f0e13;
-    --secondary-background-color: rgba(255, 255, 255, 0.05);
-    --backround-image: url("/assets/img/bgWhite.png");
-    --theme-box-shadow: none;
-    --text-color: #ffffff;
+    --primary-background-color: #151519;
+    --secondary-background-color: #19191d;
+    --tertiary-background-color: #1c1c21;
+    --fff-background-color: #222228;
+    --text-color: #e4e4e4;
     --image-invert: 0%;
-    --colored-text: #86D7FF;
     color-scheme: dark
 }
 
@@ -40,11 +37,9 @@ html {
 }
 
 body {
-    font-family: "Asap";
+    font-family: "Inter";
     transition: all 0.1s linear;
-    background-color: var(--primary-background-color);
-    background-image: var(--backround-image);
-    background-repeat: repeat;
+    background-color: var(--primary-background-color)
 }
 
 img {
@@ -136,15 +131,7 @@ a:hover {
 .tippy-box[data-theme~=ws] {
     color: var(--text-color);
     background: var(--secondary-background-color);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    box-shadow: var(--theme-box-shadow)
-}
-
-.logoFontText {
-    color: var(--text-color);
-    font-family: "Staatliches";
-    font-size: 50px
+    border: 1px solid var(--fff-background-color)
 }
 
 .blackText {
@@ -155,53 +142,33 @@ a:hover {
 
 .boldText {
     color: var(--text-color);
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 500
 }
 
 .normalText {
     color: var(--text-color);
-    font-size: 20px;
+    font-size: 17px;
     font-weight: normal
 }
 
 .smallText {
     color: var(--text-color);
-    font-size: 17px;
+    font-size: 15.5px;
     font-weight: normal
 }
 
 .thinText {
     color: var(--text-color);
-    font-size: 15px;
+    font-size: 13px;
     font-weight: normal
 }
 
 .coloredText {
-    color: var(--colored-text)
-}
-
-.coloredTextAnimation {
-    background-image: linear-gradient(to right, #00ffff, #ff0054);
+    background-image: linear-gradient(to right, #00b47e, #00a2ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: coloredTextAnimation 5s ease infinite;
-    height: 100vh;
-    background-size: 400% 400%;
-}
-
-@keyframes coloredTextAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
+    height: 100vh
 }
 
 #goTop {
@@ -219,13 +186,11 @@ a:hover {
     height: 45px;
     color: var(--text-color);
     background: var(--secondary-background-color);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px)
+    border: 1px solid var(--fff-background-color)
 }
 
 #goTop:hover {
-    outline: 1px solid var(--colored-text);
-    outline-offset: 0rem
+    background: var(--tertiary-background-color)
 }
 
 .navGrid {
@@ -245,40 +210,32 @@ a:hover {
     width: 45px;
     height: 45px;
     background: var(--secondary-background-color);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid var(--fff-background-color);
     border-radius: 999%
 }
 
 .navbarButton:hover {
-    outline: 1px solid var(--colored-text);
-    outline-offset: 0rem
+    background: var(--tertiary-background-color)
 }
 
 .bigButton {
     background: var(--secondary-background-color);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    padding: 15px
+    border: 1px solid var(--fff-background-color);
+    padding: 10px
 }
 
 .bigButton:hover {
-    outline: 1px solid var(--colored-text);
-    outline-offset: 0rem;
+    background: var(--tertiary-background-color);
     color: var(--text-color) !important
 }
 
 .card {
     background: var(--secondary-background-color);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border: none;
-    position: relative
+    border: 1px solid var(--fff-background-color)
 }
 
 .card:hover {
-    outline: 1px solid var(--colored-text);
-    outline-offset: 0rem;
+    background: var(--tertiary-background-color);
     color: var(--text-color) !important
 }
 
@@ -286,16 +243,11 @@ a:hover {
     position: absolute;
     top: 0px;
     right: 0px;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
     border-top-left-radius: 0px;
     border-bottom-right-radius: 0px;
     border-top: none;
-    border-right: none
-}
-
-.sectionTopRightTextModal {
-    background-color: var(--secondary-background-color)
+    border-right: none;
+    background-color: var(--fff-background-color)
 }
 
 .cardNoMT {
@@ -308,49 +260,23 @@ a:hover {
 
 .textCard {
     background: var(--secondary-background-color);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid var(--fff-background-color);
     padding: 7px 13px
 }
 
-.modal-dialog {
-    overflow-y: initial !important
-}
-
-.modal-body {
-    height: auto;
-    overflow-y: auto;
-    position: relative
-}
-
-.modal-content {
-    background-color: var(--primary-background-color)
+#headAvatarContainer {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    text-align: center;
+    align-items: center;
+    justify-content: center
 }
 
 #headAvatar {
-    width: 170px;
-    height: 170px;
-    object-fit: cover;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px
-}
-
-#aboutMeModalAvatarContainer {
-    position: relative;
-    width: 140px;
-    height: 140px;
-}
-
-#aboutMeModalAvatar {
-    width: 140px;
-    height: 140px;
+    width: 160px;
+    height: 160px;
     object-fit: cover
-}
-
-#aboutMeModalAvatarInitials  {
-    width: 140px;
-    height: 140px;
-    object-fit: cover;
-    background-color: var(--secondary-background-color)
 }
 
 .discordStatusOnline {
@@ -361,9 +287,12 @@ a:hover {
     border: 5px solid var(--primary-background-color);
     bottom: 0;
     right: 0;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    position: absolute
+    margin-right: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    justify-content: center
 }
 
 .discordStatusDnd {
@@ -374,9 +303,12 @@ a:hover {
     border: 5px solid var(--primary-background-color);
     bottom: 0;
     right: 0;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    position: absolute
+    margin-right: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    justify-content: center
 }
 
 .discordStatusIdle {
@@ -387,9 +319,12 @@ a:hover {
     border: 5px solid var(--primary-background-color);
     bottom: 0;
     right: 0;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    position: absolute
+    margin-right: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    justify-content: center
 }
 
 .discordStatusOffline {
@@ -400,9 +335,12 @@ a:hover {
     border: 5px solid var(--primary-background-color);
     bottom: 0;
     right: 0;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    position: absolute
+    margin-right: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    justify-content: center
 }
 
 .svgInvert {
@@ -424,4 +362,13 @@ a:hover {
 button,
 .textCard {
     box-shadow: var(--theme-box-shadow)
+}
+
+.rounded-custom {
+    border-radius: 8px;
+}
+
+.rounded-custom-strt {
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px
 }

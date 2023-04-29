@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eleven – Full-stack web developer</title>
+    <title>Eleven – Self-taught web developer.</title>
     <meta name="theme-color" content="#e5e5e5">
     <meta property="og:site_name" content="eleven.js.org">
     <link rel='icon' type='image/png' href='/assets/img/iconLebensraum.png'>
@@ -36,7 +36,7 @@
     </style>
 </head>
 
-<body class="container max-w-7xl mx-auto animate__animated animate__fadeIn js">
+<body class="container max-w-6xl mx-auto animate__animated animate__fadeIn js">
 
     <section id="nav">
         <div class="mt-3">
@@ -60,21 +60,32 @@
         <div class="section">
             <div class="sectionGrid">
                 <div class="sectionGridItem">
-                    <p class="blackText">I’m <span class="coloredTextAnimation">Eleven</span>. I’m a full-stack web
-                        developer.</p>
-                    <p class="boldText opacity-90" id="weatherText"><span id="weather"><i>Checking weather...</i></span>
+                    <p class="smallText opacity-90" id="weatherText"><span id="weather"><i>Checking
+                                weather...</i></span>
                     </p>
+                    <p class="blackText mt-2">Self-taught <span class="coloredText">web developer</span>. 🇹🇷</p>
                     <br>
-                    <div id="centeredButton" class="mt-4">
-                        <a href="javascript:openModal(aboutMeModal)" data-toggle="modal" data-target="#aboutMeModal"
-                            class="bigButton normalText rounded-xl opacity-90"><span class="p-4">More
-                                about me</span></a>
+                    <div id="centeredButton" class="mt-1">
+                        <a href="https://github.com/elevenvac?utm_source=eleven.js.org" target="_blank"
+                            class="bigButton smallText rounded-custom opacity-90 mr-2"><span
+                                class="p-3">GitHub</span></a>
+                        <a href="mailto:elevenvac@pm.me"
+                            class="bigButton smallText rounded-custom opacity-90 mr-2"><span class="p-3">Send
+                                mail</span></a>
+                        <a href="https://discord.gg/uhwjhWryND?utm_source=eleven.js.org" target="_blank"
+                            class="bigButton smallText rounded-custom opacity-90"><span class="p-3"><i
+                                    class="fa-brands fa-discord"></i></span></a>
                     </div>
                 </div>
                 <div class="sectionGridItem sectionGridItemRight">
                     <center>
-                        <img draggable="false" id="headAvatar" src="/assets/img/lebensraum.png" alt="IMG"
-                            class="rounded-full">
+                        <div id="headAvatarContainer">
+                            <img draggable="false" id="headAvatar" src="/assets/img/lebensraum.png" alt="IMG"
+                                class="rounded-full">
+                            <div id="discordStatus">
+                                <div class="discordStatusOffline"></div>
+                            </div>
+                        </div>
                     </center>
                 </div>
             </div>
@@ -85,7 +96,7 @@
 
     <section id="activities">
         <div class="section">
-            <p class="boldText opacity-90">Activities</p>
+            <p class="smallText text-uppercase opacity-80">Activities</p>
             <div id="activitiesGrid" class="mt-3">
                 <p id="activitiesStatus" class="smallText opacity-80"><i
                         class="fa-light fa-spinner-third animate-spin inline-flex ml-1 mr-2"></i>Loading</p>
@@ -101,16 +112,17 @@
 
     <section id="works">
         <div class="section">
-            <p class="boldText opacity-90">Works</p>
+            <p class="smallText text-uppercase opacity-80">Works</p>
             <div id="worksGrid" class="mt-3">
                 <div class="grid grid-cols-1 gap-3 sm:gird-cols-1 md:grid-cols-2">
                     <a href="https://www.apptime.eu.org?utm_source=eleven.js.org" target="_blank">
-                        <div class="card rounded-xl h-full">
+                        <div class="card rounded-custom h-full">
                             <div class="p-3 flex space-x-2 items-center overflow-hidden">
-                                <img draggable="false" src="/assets/img/apptime.png" alt="IMG" class="rounded-xl"
+                                <img draggable="false" src="/assets/img/apptime.png" alt="IMG" class="rounded-custom"
                                     width="50" height="50">
                                 <p class="normalText ml-3 opacity-90">Apptime</p>
-                                <p class="thinText sectionTopRightText rounded-xl p-2 opacity-80">Founder &nbsp;•&nbsp;
+                                <p class="thinText sectionTopRightText rounded-custom-strt p-2 opacity-80">Founder
+                                    &nbsp;•&nbsp;
                                     2020</p>
                             </div>
                             <div class="smallText p-3 cardNoMT opacity-80">Better Uptime & SSL monitoring service with
@@ -119,12 +131,13 @@
                         </div>
                     </a>
                     <a href="https://www.orcsan.eu.org?utm_source=eleven.js.org" target="_blank">
-                        <div class="card rounded-xl h-full">
+                        <div class="card rounded-custom h-full">
                             <div class="p-3 flex space-x-2 items-center overflow-hidden">
-                                <img draggable="false" src="/assets/img/orcsan.png" alt="IMG" class="rounded-xl"
+                                <img draggable="false" src="/assets/img/orcsan.png" alt="IMG" class="rounded-custom"
                                     width="50" height="50">
                                 <p class="normalText ml-3 opacity-90">Orcsan</p>
-                                <p class="thinText sectionTopRightText rounded-xl p-2 opacity-80">Founder &nbsp;•&nbsp;
+                                <p class="thinText sectionTopRightText rounded-custom-strt p-2 opacity-80">Founder
+                                    &nbsp;•&nbsp;
                                     2019</p>
                             </div>
                             <div class="smallText p-3 cardNoMT opacity-80">Let’s create our own world together.</div>
@@ -137,7 +150,7 @@
 
     <section id="repositories">
         <div class="section">
-            <p class="boldText opacity-90">Repositories</p>
+            <p class="smallText text-uppercase opacity-80">Repositories</p>
             <div id="repositoriesGrid" class="mt-3">
                 <div class="grid grid-cols-1 gap-3 sm:gird-cols-1 md:grid-cols-2">
                     <div class="githubCard" data-repo="elevenvac/elevenvac.github.io">
@@ -157,25 +170,25 @@
 
     <section id="skills">
         <div class="section">
-            <p class="boldText opacity-90">Skills</p>
+            <p class="smallText text-uppercase opacity-80">Skills</p>
             <div id="skillsGrid" class="mt-3">
                 <div class="grid grid-cols-2 gap-3 sm:gird-cols-2 md:grid-cols-4">
                     <a href="https://html.com?utm_source=eleven.js.org" target="_blank">
-                        <div class="card rounded-xl h-full">
+                        <div class="card rounded-custom h-full">
                             <div class="p-3 flex space-x-2 items-center overflow-hidden">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#dd4b25"
-                                    class="flex-shrink-0 h-6 w-6">
+                                    class="flex-shrink-0 h-5 w-5 rounded-lg">
                                     <path
                                         d="M64 32l34.94 403.21L255.77 480 413 435.15 448 32zm308 132H188l4 51h176l-13.51 151.39L256 394.48l-98.68-28-6.78-77.48h48.26l3.42 39.29L256 343.07l53.42-14.92L315 264H148l-12.59-149.59H376.2z" />
                                 </svg>
-                                <p class="normalText ml-3 opacity-80">HTML</p>
+                                <p class="smallText ml-3 opacity-80">HTML</p>
                             </div>
                         </div>
                     </a>
                     <a href="https://www.w3.org/Style/CSS?utm_source=eleven.js.org" target="_blank">
-                        <div class="card rounded-xl h-full">
+                        <div class="card rounded-custom h-full">
                             <div class="p-3 flex space-x-2 items-center overflow-hidden">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon flex-shrink-0 h-6 w-6 rounded-lg"
+                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon flex-shrink-0 h-5 w-5 rounded-lg"
                                     viewBox="0 0 128 128">
                                     <path fill="#1572B6"
                                         d="M18.814 114.123l-10.054-112.771h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z" />
@@ -190,79 +203,79 @@
                                     <path fill="#EBEBEB"
                                         d="M64.048 23.435v13.831000000000001h-33.407999999999994l-.277-3.108-.63-7.012-.331-3.711h34.646zM64.001 51.431v13.831000000000001h-15.209l-.277-3.108-.631-7.012-.33-3.711h16.447z" />
                                 </svg>
-                                <p class="normalText ml-3 opacity-80">CSS</p>
+                                <p class="smallText ml-3 opacity-80">CSS</p>
                             </div>
                         </div>
                     </a>
                     <a href="https://javascript.com?utm_source=eleven.js.org" target="_blank">
-                        <div class="card rounded-xl h-full">
+                        <div class="card rounded-custom h-full">
                             <div class="p-3 flex space-x-2 items-center overflow-hidden">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#EFD81D"
-                                    class="flex-shrink-0 h-6 w-6 rounded-lg">
+                                    class="flex-shrink-0 h-5 w-5 rounded-lg">
                                     <path
                                         d="M0 0v512h512V0H0zm274.286 397.714c0 49.84-29.44 74.137-72.057 74.137-38.492 0-60.835-19.931-72.172-43.988l39.177-23.714c7.555 13.405 13.292 24.742 29.783 24.742 13.714 0 24.983-6.182 24.983-30.24V237.714h50.286v160zm113.543 72.995c-44.675 0-73.543-20.16-87.635-48L339.429 400c10.285 16.846 23.714 28.069 47.428 28.069 19.932 0 31.509-8.823 31.509-22.572 0-16.491-11.92-22.331-33.92-32l-12.023-5.166c-34.72-14.765-57.737-33.325-57.737-72.514 0-36.08 27.485-62.434 70.445-62.434 30.595 0 52.572 9.508 68.4 37.348L416 294.857c-8.251-14.777-17.143-20.571-30.926-20.571-14.091 0-23.028 8.937-23.028 20.571 0 14.434 8.937 20.274 29.554 29.212l12.023 5.154c40.903 17.531 63.931 35.428 63.931 75.611.012 43.315-34.011 65.875-79.725 65.875z" />
                                 </svg>
-                                <p class="normalText ml-3 opacity-80">JavaScript</p>
+                                <p class="smallText ml-3 opacity-80">JavaScript</p>
                             </div>
                         </div>
                     </a>
                     <a href="https://nodejs.org?utm_source=eleven.js.org" target="_blank">
-                        <div class="card rounded-xl h-full">
+                        <div class="card rounded-custom h-full">
                             <div class="p-3 flex space-x-2 items-center overflow-hidden">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="#6FA660" viewBox="0 0 512 512"
-                                    class="flex-shrink-0 h-6 w-6 rounded-lg">
+                                    class="flex-shrink-0 h-5 w-5 rounded-lg">
                                     <path
                                         d="M429.76 130.07L274.33 36.85a37 37 0 00-36.65 0L82.24 130.06A38.2 38.2 0 0064 162.83V349a38.26 38.26 0 0018.24 32.8L123 406.14l.23.13c20.58 10.53 28.46 10.53 37.59 10.53 32.14 0 52.11-20.8 52.11-54.29V182a8.51 8.51 0 00-8.42-8.58h-22.38a8.51 8.51 0 00-8.42 8.58v180.51a15 15 0 01-6.85 13.07c-5.9 3.6-14.47 2.84-24.14-2.15l-39.06-23.51a1.1 1.1 0 01-.48-.92V165.46a1.32 1.32 0 01.59-1.06l151.84-93a.82.82 0 01.73 0l151.93 93a1.34 1.34 0 01.55 1.1V349a1.28 1.28 0 01-.45 1l-152.06 90.65a1.22 1.22 0 01-.8 0l-38.83-23.06a7.8 7.8 0 00-7.83-.41l-.34.2c-10.72 6.35-13.6 8-23.54 11.62-1.62.59-5.43 2-5.76 5.77s3.29 6.45 6.51 8.32l51.9 31.87a35.67 35.67 0 0018.3 5.07h.58a35.87 35.87 0 0017.83-5.07l155.43-93.13A38.37 38.37 0 00448 349V162.83a38.21 38.21 0 00-18.24-32.76z" />
                                     <path
                                         d="M307.88 318.05c-37.29 0-45.24-10.42-47.6-27.24a8.43 8.43 0 00-8.22-7.32h-19.8a8.44 8.44 0 00-8.26 8.58c0 14.58 5.12 62.17 83.92 62.17 24.38 0 44.66-5.7 58.63-16.49S388 311.26 388 292.55c0-37.55-24.5-47.83-72.75-54.55-49.05-6.82-49.05-10.29-49.05-17.89 0-5.47 0-18.28 35.46-18.28 25.23 0 38.74 3.19 43.06 20a8.35 8.35 0 008.06 6.67h19.87a8.24 8.24 0 006.16-2.86 8.91 8.91 0 002.12-6.44c-2.57-35.55-28.56-53.58-79.24-53.58-46.06 0-73.55 20.75-73.55 55.5 0 38.1 28.49 48.87 71.29 53.33 50 5.17 50 12.71 50 19.37.03 10.38-4.28 24.23-41.55 24.23z" />
                                 </svg>
-                                <p class="normalText ml-3 opacity-80">Node.js</p>
+                                <p class="smallText ml-3 opacity-80">Node.js</p>
                             </div>
                         </div>
                     </a>
                     <a href="https://expressjs.com?utm_source=eleven.js.org" target="_blank">
-                        <div class="card rounded-xl h-full">
+                        <div class="card rounded-custom h-full">
                             <div class="p-3 flex space-x-2 items-center overflow-hidden">
-                                <svg class="h-6 w-6 rounded-lg svgInvert" xmlns="http://www.w3.org/2000/svg"
+                                <svg class="h-5 w-5 rounded-lg svgInvert" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 32 32">
                                     <path
                                         d="M32 24.795c-1.164.296-1.884.013-2.53-.957l-4.594-6.356-.664-.88-5.365 7.257c-.613.873-1.256 1.253-2.4.944l6.87-9.222-6.396-8.33c1.1-.214 1.86-.105 2.535.88l4.765 6.435 4.8-6.4c.615-.873 1.276-1.205 2.38-.883l-2.48 3.288-3.36 4.375c-.4.5-.345.842.023 1.325L32 24.795zM.008 15.427l.562-2.764C2.1 7.193 8.37 4.92 12.694 8.3c2.527 1.988 3.155 4.8 3.03 7.95H1.48c-.214 5.67 3.867 9.092 9.07 7.346 1.825-.613 2.9-2.042 3.438-3.83.273-.896.725-1.036 1.567-.78-.43 2.236-1.4 4.104-3.45 5.273-3.063 1.75-7.435 1.184-9.735-1.248C1 21.6.434 19.812.18 17.9c-.04-.316-.12-.617-.18-.92q.008-.776.008-1.552zm1.498-.38h12.872c-.084-4.1-2.637-7.012-6.126-7.037-3.83-.03-6.58 2.813-6.746 7.037z" />
                                 </svg>
-                                <p class="normalText ml-3 opacity-80">Express</p>
+                                <p class="smallText ml-3 opacity-80">Express</p>
                             </div>
                         </div>
                     </a>
                     <a href="https://getbootstrap.com?utm_source=eleven.js.org" target="_blank">
-                        <div class="card rounded-xl h-full">
+                        <div class="card rounded-custom h-full">
                             <div class="p-3 flex space-x-2 items-center overflow-hidden">
-                                <svg class="h-6 w-6 rounded-lg" xmlns="http://www.w3.org/2000/svg"
+                                <svg class="h-5 w-5 rounded-lg" xmlns="http://www.w3.org/2000/svg"
                                     preserveAspectRatio="xMinYMin meet" viewBox="0 0 256 256">
                                     <path fill="#563D7C"
                                         d="M0 222.991C0 241.223 14.779 256 33.009 256H222.99C241.223 256 256 241.221 256 222.991V33.01C256 14.777 241.221 0 222.991 0H33.01C14.777 0 0 14.779 0 33.009V222.99z" />
                                     <path fill="#FFF"
                                         d="M106.158 113.238V76.985h31.911c3.04 0 5.97.253 8.792.76 2.822.506 5.319 1.41 7.49 2.713 2.17 1.303 3.907 3.112 5.21 5.427 1.302 2.316 1.954 5.283 1.954 8.9 0 6.513-1.954 11.217-5.862 14.111-3.907 2.895-8.9 4.342-14.979 4.342h-34.516zM72.075 50.5v155h75.112c6.947 0 13.713-.868 20.298-2.605 6.585-1.737 12.446-4.414 17.584-8.032 5.137-3.618 9.226-8.286 12.265-14.002 3.04-5.717 4.559-12.483 4.559-20.298 0-9.697-2.352-17.982-7.055-24.856-4.704-6.875-11.832-11.687-21.384-14.437 6.947-3.328 12.194-7.598 15.74-12.808 3.545-5.21 5.318-11.722 5.318-19.538 0-7.236-1.194-13.314-3.582-18.235-2.388-4.92-5.753-8.864-10.095-11.831-4.341-2.967-9.551-5.102-15.63-6.404-6.078-1.303-12.808-1.954-20.189-1.954H72.075zm34.083 128.515v-42.549h37.121c7.381 0 13.315 1.7 17.802 5.102 4.486 3.401 6.73 9.081 6.73 17.041 0 4.053-.688 7.381-2.063 9.986-1.375 2.605-3.22 4.668-5.536 6.187-2.315 1.52-4.993 2.605-8.032 3.257-3.04.65-6.223.976-9.552.976h-36.47z" />
                                 </svg>
-                                <p class="normalText ml-3 opacity-80">Bootstrap</p>
+                                <p class="smallText ml-3 opacity-80">Bootstrap</p>
                             </div>
                         </div>
                     </a>
                     <a href="https://www.electronjs.org?utm_source=eleven.js.org" target="_blank">
-                        <div class="card rounded-xl h-full">
+                        <div class="card rounded-custom h-full">
                             <div class="p-3 flex space-x-2 items-center overflow-hidden">
                                 <svg fill="#9ce6f4" xmlns="http://www.w3.org/2000/svg"
-                                    class="flex-shrink-0 h-6 w-6 rounded-lg" viewBox="0 0 22 24">
+                                    class="flex-shrink-0 h-5 w-5 rounded-lg" viewBox="0 0 22 24">
                                     <path
                                         d="m7.827 5.156c-.6-.127-1.288-.2-1.994-.2-.752 0-1.486.083-2.191.24l.067-.012c-1.056.208-1.935.838-2.471 1.702l-.009.016c-.289.486-.46 1.071-.46 1.696 0 .176.014.349.04.518l-.002-.019c.14.968.462 1.837.931 2.608l-.017-.03c.032.05.073.091.121.121l.002.001c.047.026.103.041.162.041h.016-.001c.081-.003.154-.039.205-.095.057-.051.093-.123.095-.204 0-.002 0-.003 0-.005 0-.032-.005-.063-.014-.092l.001.002c-.008-.02-.013-.043-.014-.068-.41-.657-.707-1.429-.841-2.255l-.005-.036c-.023-.137-.037-.295-.037-.456 0-.514.136-.996.374-1.412l-.007.014c.494-.75 1.269-1.28 2.172-1.443l.02-.003c.56-.122 1.202-.192 1.861-.192s1.302.07 1.921.203l-.06-.011h.004c.014 0 .027.005.037.014l.014.014h.006c.089 0 .168-.036.226-.095.059-.058.095-.139.095-.228 0-.002 0-.003 0-.004 0-.005 0-.011 0-.017 0-.076-.026-.146-.069-.202l.001.001c-.045-.053-.106-.091-.175-.108h-.002zm-4.473 8.727c.683.719 1.404 1.383 2.166 1.999l.042.033c.726.587 1.536 1.15 2.386 1.653l.094.052c.983.57 2.135 1.112 3.335 1.557l.159.052c.946.362 2.061.661 3.214.846l.099.013c.491.083 1.056.13 1.632.13.44 0 .873-.028 1.298-.081l-.051.005c.83-.095 1.579-.372 2.229-.79l-.021.012c.036-.036.067-.076.094-.12l.002-.003c.026-.042.041-.093.041-.147 0-.001 0-.002 0-.002 0-.001 0-.003 0-.004 0-.089-.036-.17-.095-.228-.058-.059-.139-.095-.228-.095-.002 0-.003 0-.004 0-.03.004-.057.013-.081.028l.001-.001c-.031.015-.057.033-.08.055-.585.373-1.283.622-2.032.694l-.019.001c-.319.037-.689.058-1.063.058-.578 0-1.145-.05-1.695-.146l.059.008c-1.181-.198-2.226-.482-3.227-.857l.118.039c-1.251-.457-2.321-.977-3.329-1.588l.084.047c-.952-.547-1.767-1.102-2.537-1.712l.042.032c-.784-.62-1.484-1.268-2.13-1.966l-.011-.012c-.034-.034-.075-.061-.12-.079l-.002-.001c-.036-.016-.078-.026-.122-.027h-.001c-.001 0-.003 0-.004 0-.089 0-.17.036-.228.095-.059.058-.095.139-.095.228v.004c0 .04.01.077.028.11l-.001-.001zm15.792-.409c.902-.98 1.602-2.16 2.027-3.465l.019-.067c.13-.365.205-.787.205-1.226 0-.655-.167-1.271-.46-1.808l.01.02c-.384-.649-.956-1.151-1.641-1.437l-.023-.008c-.773-.328-1.672-.518-2.615-.518-.011 0-.022 0-.032 0h.002c-.003 0-.007 0-.011 0-.083 0-.157.037-.207.095-.05.059-.08.137-.08.221v.012-.001.011c0 .084.03.161.081.221v-.001c.05.059.124.095.207.095h.012-.001c.05-.002.11-.002.169-.002.784 0 1.533.156 2.215.439l-.038-.014c.594.246 1.079.656 1.411 1.174l.007.012c.221.432.351.943.351 1.483 0 .407-.074.797-.208 1.158l.007-.023c-.414 1.247-1.053 2.32-1.874 3.223l.006-.007-.054.109c-.017.032-.027.069-.027.109v.004c0 .089.036.17.095.228.058.059.139.095.228.095h.004.008c.048 0 .092-.015.129-.041h-.001c.032-.024.067-.047.105-.066l.004-.002zm-5.264-8.208c-1.193.283-2.213.615-3.194 1.019l.14-.051c-1.082.44-1.988.893-2.854 1.405l.1-.055c-1.192.689-2.223 1.424-3.176 2.245l.027-.022c-.876.747-1.654 1.56-2.345 2.443l-.028.037c-.573.725-1.056 1.558-1.409 2.456l-.023.066c-.214.519-.339 1.123-.339 1.755 0 .209.014.415.04.616l-.003-.024c.019.075.057.14.109.191.053.05.124.08.203.08h.017-.001.006c.089 0 .169-.036.227-.094.059-.058.095-.139.095-.228 0-.002 0-.003 0-.004v-.054c-.016-.139-.025-.301-.025-.465 0-.595.121-1.162.341-1.677l-.011.028c.357-.897.815-1.672 1.373-2.363l-.013.017c.695-.868 1.446-1.636 2.266-2.325l.025-.02c.899-.762 1.897-1.469 2.955-2.086l.099-.054c.714-.43 1.556-.855 2.429-1.22l.131-.048c.782-.333 1.728-.646 2.702-.886l.134-.028c.115-.022.216-.07.3-.139l-.001.001c.05-.053.08-.124.08-.203 0-.006 0-.011 0-.017v.001c-.003-.081-.039-.154-.095-.205-.051-.057-.123-.093-.204-.095h-.08zm-7.609 13.876c.461 1.38 1.169 2.567 2.08 3.567l-.007-.008c.668.769 1.637 1.262 2.722 1.295h.006c.783-.008 1.504-.273 2.081-.715l-.008.006c.708-.537 1.292-1.198 1.729-1.954l.017-.032c.014-.026.028-.058.039-.09l.002-.005c.009-.027.014-.058.014-.09 0-.002 0-.004 0-.006 0-.001 0-.003 0-.004 0-.089-.036-.17-.095-.228-.058-.059-.139-.095-.228-.095-.001 0-.003 0-.004 0-.001 0-.001 0-.002 0-.054 0-.105.015-.149.042l.001-.001c-.05.032-.091.073-.121.121l-.001.002c-.405.704-.92 1.297-1.528 1.777l-.013.01c-.473.374-1.075.603-1.73.614h-.002c-.941-.046-1.77-.49-2.328-1.167l-.004-.006c-.802-.908-1.431-1.991-1.822-3.181l-.018-.065c-.039-.057-.084-.106-.135-.149l-.001-.001c-.05-.042-.115-.068-.186-.068-.002 0-.004 0-.005 0-.081.003-.154.039-.205.095-.059.058-.095.139-.095.228v.004.109zm9.818-.572c.252-.779.471-1.718.615-2.681l.012-.1c.139-.9.218-1.938.218-2.994 0-.012 0-.023 0-.035v.002-.16c0-.023 0-.049 0-.076 0-1.318-.119-2.608-.347-3.859l.02.131c-.218-1.244-.54-2.347-.967-3.396l.04.11c-.381-.959-.863-1.787-1.448-2.53l.016.021c-.476-.623-1.084-1.122-1.784-1.46l-.029-.013c-.017-.017-.04-.027-.066-.027-.001 0-.002 0-.002 0h-.068c-.003 0-.007 0-.011 0-.084 0-.161.03-.221.081h.001c-.059.05-.095.125-.095.207v.012-.001.008c0 .068.02.132.055.185l-.001-.001c.032.05.079.088.134.108l.002.001c.667.328 1.221.795 1.642 1.365l.009.012c.516.68.956 1.458 1.286 2.293l.023.066c.362.89.665 1.938.858 3.023l.014.097c.2 1.072.314 2.305.314 3.565v.08-.004.16.02c0 1.033-.079 2.047-.232 3.036l.014-.11c-.163 1.074-.391 2.021-.69 2.936l.036-.127.027-.08v.027.004c0 .089.036.17.095.228.058.059.139.095.228.095h.004.005c.071 0 .136-.026.187-.068.048-.037.085-.086.108-.142l.001-.002zm6.055-.328c0-.006 0-.013 0-.02 0-.415-.172-.79-.449-1.058-.273-.278-.652-.45-1.072-.45-.012 0-.023 0-.035 0h.002c-.006 0-.012 0-.019 0-.416 0-.791.173-1.058.45-.277.268-.45.643-.45 1.058v.021-.001.032c0 .42.172.8.45 1.072.268.278.643.451 1.059.451h.02-.001.033c.42 0 .799-.172 1.072-.45.277-.273.449-.652.449-1.071 0-.012 0-.025 0-.037v.002zm-.655 0v.02c0 .243-.099.462-.259.62-.158.16-.377.259-.62.259-.007 0-.014 0-.021 0h.001c-.001 0-.002 0-.003 0-.244 0-.464-.099-.624-.259-.168-.156-.273-.377-.273-.624 0-.006 0-.012 0-.017v.001c.001-.247.105-.47.272-.627.157-.168.38-.272.627-.273h.016c.246 0 .468.105.623.272l.001.001c.16.16.259.381.259.625v.002zm-19.937 1.559h.019c.415 0 .79-.172 1.058-.449.278-.273.451-.653.451-1.073 0-.011 0-.023 0-.034v.002c0-.006 0-.012 0-.019 0-.416-.173-.791-.45-1.058-.268-.277-.643-.45-1.058-.45-.007 0-.014 0-.021 0h.001c-.01 0-.021 0-.032 0-.42 0-.8.172-1.072.45-.277.268-.45.643-.45 1.058v.021-.001.032c0 .42.172.8.45 1.072.273.277.652.449 1.071.449h.035zm0-.655c-.006 0-.013 0-.02 0-.243 0-.462-.099-.62-.259-.16-.158-.259-.377-.259-.62 0-.007 0-.014 0-.021v.001c0-.001 0-.002 0-.003 0-.244.099-.464.259-.624.156-.168.377-.273.624-.273h.017-.001c.247.001.47.105.627.272.168.157.272.38.273.627v.016c0 .246-.105.468-.272.623l-.001.001c-.16.158-.379.255-.621.255-.002 0-.004 0-.006 0zm9.52-16.064h.033c.42 0 .799-.172 1.072-.45.278-.268.451-.643.451-1.059 0-.007 0-.013 0-.02v.001c0-.01 0-.021 0-.033 0-.42-.172-.799-.45-1.072-.273-.278-.652-.45-1.072-.45-.012 0-.023 0-.035 0h.002c-.006 0-.012 0-.019 0-.416 0-.791.173-1.058.45-.278.273-.45.652-.45 1.072v.035-.002.019c0 .416.173.791.45 1.058.268.277.643.45 1.058.45h.017-.001zm0-.654c-.002 0-.005 0-.007 0-.238 0-.453-.099-.606-.259-.16-.153-.259-.368-.259-.606 0-.003 0-.005 0-.008 0-.006 0-.013 0-.02 0-.243.099-.462.259-.62.153-.16.368-.259.606-.259h.008.02c.243 0 .462.099.62.259.16.158.259.377.259.62v.021-.001.007c0 .238-.099.453-.259.606-.158.161-.378.26-.621.26-.007 0-.014 0-.02 0h.001zm.246 11.264c-.035.017-.075.027-.118.027-.001 0-.003 0-.004 0h-.125c-.005 0-.011 0-.018 0-.303 0-.577-.125-.773-.327-.202-.196-.327-.47-.327-.774 0-.006 0-.012 0-.019v.001c0-.007 0-.015 0-.023 0-.298.126-.566.327-.754l.001-.001c.198-.194.47-.314.77-.314h.022-.001.021c.262 0 .502.093.69.247l-.002-.001c.188.148.323.355.38.593l.001.007v.011c0 .044.005.087.014.129l-.001-.004c.009.033.014.07.014.109v.021c0 .262-.093.502-.247.69l.001-.002c-.155.192-.371.33-.619.382l-.007.001z" />
                                 </svg>
-                                <p class="normalText ml-3 opacity-80">Electron.js</p>
+                                <p class="smallText ml-3 opacity-80">Electron.js</p>
                             </div>
                         </div>
                     </a>
                     <a href="https://tailwindcss.com?utm_source=eleven.js.org" target="_blank">
-                        <div class="card rounded-xl h-full">
+                        <div class="card rounded-custom h-full">
                             <div class="p-3 flex space-x-2 items-center overflow-hidden">
                                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                    class="flex-shrink-0 h-6 w-6 rounded-lg">
+                                    class="flex-shrink-0 h-5 w-5 rounded-lg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                         d="M6.333 9.933C7.088 6.911 8.978 5.4 12 5.4c4.533 0 5.1 3.4 7.367 3.967 1.511.377 2.833-.189 3.966-1.7-.755 3.022-2.644 4.533-5.666 4.533-4.534 0-5.1-3.4-7.367-3.967-1.511-.378-2.833.189-3.967 1.7zm-5.666 6.8C1.422 13.711 3.31 12.2 6.333 12.2c4.534 0 5.1 3.4 7.367 3.967 1.51.377 2.833-.19 3.967-1.7C16.91 17.489 15.022 19 12 19c-4.533 0-5.1-3.4-7.367-3.967-1.511-.378-2.833.189-3.966 1.7z"
                                         fill="url(#prefix__paint0_linear)" />
@@ -274,14 +287,14 @@
                                         </linearGradient>
                                     </defs>
                                 </svg>
-                                <p class="normalText ml-3 opacity-80">TailwindCSS</p>
+                                <p class="smallText ml-3 opacity-80">TailwindCSS</p>
                             </div>
                         </div>
                     </a>
                     <a href="https://mongodb.com?utm_source=eleven.js.org" target="_blank">
-                        <div class="card rounded-xl h-full">
+                        <div class="card rounded-custom h-full">
                             <div class="p-3 flex space-x-2 items-center overflow-hidden">
-                                <svg class="flex-shrink-0 h-6 w-6 rounded-lg" xmlns="http://www.w3.org/2000/svg"
+                                <svg class="flex-shrink-0 h-5 w-5 rounded-lg" xmlns="http://www.w3.org/2000/svg"
                                     enable-background="new 0 0 24 24" viewBox="0 0 24 24">
                                     <path fill="#FFF"
                                         d="M12.546,24l-0.639-0.218c0,0,0.078-3.257-1.091-3.491c-0.779-0.904,0.125-38.338,2.93-0.125c0,0-0.966,0.483-1.138,1.309C12.422,22.286,12.546,24,12.546,24L12.546,24z" />
@@ -296,15 +309,15 @@
                                     <path fill="#58AA50"
                                         d="M11.58,21.054c0,0-5.252-3.584-4.94-9.896c0.296-6.312,4.005-9.413,4.722-9.974C11.83,0.686,11.845,0.499,11.876,0c0.327,0.701,0.265,10.488,0.312,11.641C12.328,16.083,11.939,20.213,11.58,21.054z" />
                                 </svg>
-                                <p class="normalText ml-3 opacity-80">MongoDB</p>
+                                <p class="smallText ml-3 opacity-80">MongoDB</p>
                             </div>
                         </div>
                     </a>
                     <a href="hhttps://www.adobe.com/tr/products/photoshop.html?utm_source=eleven.js.org"
                         target="_blank">
-                        <div class="card rounded-xl h-full">
+                        <div class="card rounded-custom h-full">
                             <div class="p-3 flex space-x-2 items-center overflow-hidden">
-                                <svg class="h-6 w-6 rounded-lg" version="1.1" id="Layer_1"
+                                <svg class="h-5 w-5 rounded-lg" version="1.1" id="Layer_1"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                     x="0px" y="0px" viewBox="0 0 240 234" style="enable-background:new 0 0 240 234;"
                                     xml:space="preserve">
@@ -337,14 +350,14 @@
                                         </g>
                                     </g>
                                 </svg>
-                                <p class="normalText ml-3 opacity-80">Photoshop</p>
+                                <p class="smallText ml-3 opacity-80">Photoshop</p>
                             </div>
                         </div>
                     </a>
                     <a href="https://figma.com?utm_source=eleven.js.org" target="_blank">
-                        <div class="card rounded-xl h-full">
+                        <div class="card rounded-custom h-full">
                             <div class="p-3 flex space-x-2 items-center overflow-hidden">
-                                <svg class="flex-shrink-0 h-6 w-6 rounded-lg" xmlns="http://www.w3.org/2000/svg"
+                                <svg class="flex-shrink-0 h-5 w-5 rounded-lg" xmlns="http://www.w3.org/2000/svg"
                                     enable-background="new 0 0 24 24" viewBox="0 0 24 24">
                                     <path fill="#0ACF83"
                                         d="M8,24c2.208,0,4-1.792,4-4v-4H8c-2.208,0-4,1.792-4,4S5.792,24,8,24z" />
@@ -354,14 +367,14 @@
                                     <path fill="#1ABCFE"
                                         d="M20,12c0,2.208-1.792,4-4,4s-4-1.792-4-4s1.792-4,4-4S20,9.792,20,12z" />
                                 </svg>
-                                <p class="normalText ml-3 opacity-80">Figma</p>
+                                <p class="smallText ml-3 opacity-80">Figma</p>
                             </div>
                         </div>
                     </a>
                     <a href="https://code.visualstudio.com?utm_source=eleven.js.org" target="_blank">
-                        <div class="card rounded-xl h-full">
+                        <div class="card rounded-custom h-full">
                             <div class="p-3 flex space-x-2 items-center overflow-hidden">
-                                <svg class="h-6 w-6 rounded-lg" viewBox="-11.9 -2 1003.9 995.6"
+                                <svg class="h-5 w-5 rounded-lg" viewBox="-11.9 -2 1003.9 995.6"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="m12.1 353.9s-24-17.3 4.8-40.4l67.1-60s19.2-20.2 39.5-2.6l619.2 468.8v224.8s-.3 35.3-45.6 31.4z"
@@ -375,14 +388,14 @@
                                         d="m697.1 976.2c17 17.4 37.6 11.7 37.6 11.7l228.1-112.4c29.2-19.9 25.1-44.6 25.1-44.6v-671.2c0-29.5-30.2-39.7-30.2-39.7l-197.7-95.3c-43.2-26.7-71.5 4.8-71.5 4.8s36.4-26.2 54.2 23.4v887.5c0 6.1-1.3 12.1-3.9 17.5-5.2 10.5-16.5 20.3-43.6 16.2z"
                                         fill="#3c99d4" />
                                 </svg>
-                                <p class="normalText ml-3 opacity-80">VS Code</p>
+                                <p class="smallText ml-3 opacity-80">VS Code</p>
                             </div>
                         </div>
                     </a>
                     <a href="https://nuxtjs.org?utm_source=eleven.js.org" target="_blank">
-                        <div class="card rounded-xl h-full">
+                        <div class="card rounded-custom h-full">
                             <div class="p-3 flex space-x-2 items-center overflow-hidden">
-                                <svg class="flex-shrink-0 h-6 w-6 rounded-lg" viewBox="0 0 124 124" fill="none"
+                                <svg class="flex-shrink-0 h-5 w-5rounded-lg" viewBox="0 0 124 124" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                         d="M55.7498 27.1551C52.5277 21.615 44.4723 21.6149 41.2502 27.1551L6.13404 87.5346C2.91191 93.0748 6.93956 100 13.3838 100H40.7975C38.0438 97.5934 37.0241 93.4303 39.1079 89.8584L65.7033 44.2694L55.7498 27.1551Z"
@@ -391,42 +404,42 @@
                                         d="M78.0002 40.3997C80.6668 35.8668 87.3332 35.8668 89.9998 40.3997L119.061 89.801C121.728 94.3339 118.395 100 113.062 100H54.9383C49.6052 100 46.2719 94.3339 48.9385 89.801L78.0002 40.3997Z"
                                         fill="#00DC82" />
                                 </svg>
-                                <p class="normalText ml-3 opacity-80">Nuxt.js</p>
+                                <p class="smallText ml-3 opacity-80">Nuxt.js</p>
                             </div>
                         </div>
                     </a>
                     <a href="https://vuejs.org?utm_source=eleven.js.org" target="_blank">
-                        <div class="card rounded-xl h-full">
+                        <div class="card rounded-custom h-full">
                             <div class="p-3 flex space-x-2 items-center overflow-hidden">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                                    class="flex-shrink-0 h-6 w-6 rounded-lg">
+                                    class="flex-shrink-0 h-5 w-5 rounded-lg">
                                     <path d="M256 144.03l-55.49-96.11h-79.43L256 281.61 390.92 47.92h-79.43L256 144.03z"
                                         fill="#35495E" />
                                     <path d="M409.4 47.92L256 313.61 102.6 47.92H15.74L256 464.08 496.26 47.92H409.4z"
                                         fill="#41B883" />
                                 </svg>
-                                <p class="normalText ml-3 opacity-80">Vue.js</p>
+                                <p class="smallText ml-3 opacity-80">Vue.js</p>
                             </div>
                         </div>
                     </a>
                     <a href="https://www.typescriptlang.org?utm_source=eleven.js.org" target="_blank">
-                        <div class="card rounded-xl h-full">
+                        <div class="card rounded-custom h-full">
                             <div class="p-3 flex space-x-2 items-center overflow-hidden">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 h-6 w-6 rounded-lg"
+                                <svg class="flex-shrink-0 h-5 w-5 rounded-lg" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 128 128">
                                     <rect width="99.67" height="73.67" x="22.67" y="47" fill="#fff" />
                                     <path fill="#007acc"
                                         d="M1.5,63.91v62.5h125V1.41H1.5Zm100.73-5a15.56,15.56,0,0,1,7.82,4.5,20.58,20.58,0,0,1,3,4c0,.16-5.4,3.81-8.69,5.85-.12.08-.6-.44-1.13-1.23a7.09,7.09,0,0,0-5.87-3.53c-3.79-.26-6.23,1.73-6.21,5a4.58,4.58,0,0,0,.54,2.34c.83,1.73,2.38,2.76,7.24,4.86,8.95,3.85,12.78,6.39,15.16,10,2.66,4,3.25,10.46,1.45,15.24-2,5.2-6.9,8.73-13.83,9.9a38.32,38.32,0,0,1-9.52-.1,23,23,0,0,1-12.72-6.63c-1.15-1.27-3.39-4.58-3.25-4.82a9.34,9.34,0,0,1,1.15-.73L82,101l3.59-2.08.75,1.11a16.78,16.78,0,0,0,4.74,4.54c4,2.1,9.46,1.81,12.16-.62a5.43,5.43,0,0,0,.69-6.92c-1-1.39-3-2.56-8.59-5-6.45-2.78-9.23-4.5-11.77-7.24a16.48,16.48,0,0,1-3.43-6.25,25,25,0,0,1-.22-8c1.33-6.23,6-10.58,12.82-11.87A31.66,31.66,0,0,1,102.23,58.93ZM72.89,64.15l0,5.12H56.66V115.5H45.15V69.26H28.88v-5A49.19,49.19,0,0,1,29,59.09C29.08,59,39,59,51,59L72.83,59Z"
                                         data-name="original" />
                                 </svg>
-                                <p class="normalText ml-3 opacity-80">TypeScript</p>
+                                <p class="smallText ml-3 opacity-80">TypeScript</p>
                             </div>
                         </div>
                     </a>
                     <a href="https://svelte.dev?utm_source=eleven.js.org" target="_blank">
-                        <div class="card rounded-xl h-full">
+                        <div class="card rounded-custom h-full">
                             <div class="p-3 flex space-x-2 items-center overflow-hidden">
-                                <svg class="flex-shrink-0 h-6 w-6 rounded-lg" xmlns="http://www.w3.org/2000/svg"
+                                <svg class="flex-shrink-0 h-5 w-5 rounded-lg" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 107 128">
                                     <path
                                         d="M94.1566,22.8189c-10.4-14.8851-30.94-19.2971-45.7914-9.8348L22.2825,29.6078A29.9234,29.9234,0,0,0,8.7639,49.6506a31.5136,31.5136,0,0,0,3.1076,20.2318A30.0061,30.0061,0,0,0,7.3953,81.0653a31.8886,31.8886,0,0,0,5.4473,24.1157c10.4022,14.8865,30.9423,19.2966,45.7914,9.8348L84.7167,98.3921A29.9177,29.9177,0,0,0,98.2353,78.3493,31.5263,31.5263,0,0,0,95.13,58.117a30,30,0,0,0,4.4743-11.1824,31.88,31.88,0,0,0-5.4473-24.1157"
@@ -435,7 +448,7 @@
                                         d="M45.8171,106.5815A20.7182,20.7182,0,0,1,23.58,98.3389a19.1739,19.1739,0,0,1-3.2766-14.5025,18.1886,18.1886,0,0,1,.6233-2.4357l.4912-1.4978,1.3363.9815a33.6443,33.6443,0,0,0,10.203,5.0978l.9694.2941-.0893.9675a5.8474,5.8474,0,0,0,1.052,3.8781,6.2389,6.2389,0,0,0,6.6952,2.485,5.7449,5.7449,0,0,0,1.6021-.7041L69.27,76.281a5.4306,5.4306,0,0,0,2.4506-3.631,5.7948,5.7948,0,0,0-.9875-4.3712,6.2436,6.2436,0,0,0-6.6978-2.4864,5.7427,5.7427,0,0,0-1.6.7036l-9.9532,6.3449a19.0329,19.0329,0,0,1-5.2965,2.3259,20.7181,20.7181,0,0,1-22.2368-8.2427,19.1725,19.1725,0,0,1-3.2766-14.5024,17.9885,17.9885,0,0,1,8.13-12.0513L55.8833,23.7472a19.0038,19.0038,0,0,1,5.3-2.3287A20.7182,20.7182,0,0,1,83.42,29.6611a19.1739,19.1739,0,0,1,3.2766,14.5025,18.4,18.4,0,0,1-.6233,2.4357l-.4912,1.4978-1.3356-.98a33.6175,33.6175,0,0,0-10.2037-5.1l-.9694-.2942.0893-.9675a5.8588,5.8588,0,0,0-1.052-3.878,6.2389,6.2389,0,0,0-6.6952-2.485,5.7449,5.7449,0,0,0-1.6021.7041L37.73,51.719a5.4218,5.4218,0,0,0-2.4487,3.63,5.7862,5.7862,0,0,0,.9856,4.3717,6.2437,6.2437,0,0,0,6.6978,2.4864,5.7652,5.7652,0,0,0,1.602-.7041l9.9519-6.3425a18.978,18.978,0,0,1,5.2959-2.3278,20.7181,20.7181,0,0,1,22.2368,8.2427,19.1725,19.1725,0,0,1,3.2766,14.5024,17.9977,17.9977,0,0,1-8.13,12.0532L51.1167,104.2528a19.0038,19.0038,0,0,1-5.3,2.3287"
                                         style="fill:#fff" />
                                 </svg>
-                                <p class="normalText ml-3 opacity-80">Svelte</p>
+                                <p class="smallText ml-3 opacity-80">Svelte</p>
                             </div>
                         </div>
                     </a>
@@ -447,8 +460,8 @@
     <section id="footer">
         <div class="footer section">
             <div class="footerLeft">
-                <span class="normalText textCard rounded-xl mr-1 opacity-80">v5R</span>
-                <span class="normalText opacity-80">Eleven</span>
+                <span class="smallText textCard rounded-custom mr-1 opacity-80">v5R2</span>
+                <span class="smallText opacity-80">Eleven</span>
             </div>
             <div class="footerRight mt-3 sm:mt-0">
                 <p class="smallText opacity-80"><a
@@ -458,77 +471,9 @@
         </div>
     </section>
 
-    <button onclick="topFunction()" id="goTop" class="normalText transition-shadow  opacity-90">
+    <button onclick="topFunction()" id="goTop" class="smallText transition-shadow  opacity-90">
         <i class="fa-regular fa-chevron-up"></i>
     </button>
-
-    <div class="modal fade" id="aboutMeModal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content rounded-xl">
-                <div class="modal-body">
-                    <a href="javascript:closeModal(aboutMeModal)" data-dismiss="modal">
-                        <p class="thinText sectionTopRightText sectionTopRightTextModal rounded-xl p-2 opacity-80">Close
-                            Modal</p>
-                    </a>
-                    <div id="inModal" class="p-3 mt-1 mb-1 space-x-2">
-                        <center>
-                            <div id="aboutMeModalAvatarContainer">
-                                <!-- for avatar image -->
-                                <!--
-                                <img draggable="false" id="aboutMeModalAvatar" class="rounded-full"
-                                    src="/assets/img/niceAvatar.png" alt="IMG" width="140" height="140">
-                                -->
-                                <!-- for initials -->
-                                <div id="aboutMeModalAvatarInitials"
-                                    class="relative inline-flex items-center justify-center overflow-hidden rounded-full">
-                                    <span class="boldText">AI</span>
-                                </div>
-                                <div id="discordStatus">
-                                    <div class="discordStatusOffline"></div>
-                                </div>
-                            </div>
-                            <p class="boldText opacity-90 mt-4">Alper "Eleven" Ince</p>
-                            <p id="dateActivity" class="normalText opacity-80 mt-2"><i
-                                    class="fa-light fa-spinner-third animate-spin inline-flex ml-1 mr-2"></i>Loading</p>
-                        </center>
-                        <p class="normalText opacity-80 mt-4">I am Alper "Eleven" Ince, a self taught full-stack web
-                            developer based in Turkey.</p>
-                        <p class="normalText opacity-80 mt-4">I am passionate about design and technology so I always
-                            try to
-                            craft great-looking products.</p>
-                        <p class="normalText opacity-80 mt-4">Before getting into web development, I was building
-                            discord
-                            bots and I had a bot serving over 1.5k servers. When I started programming my first bot, I
-                            realized what my true passion was and started learning more about programming.</p>
-                        <p class="normalText opacity-80 mt-4">When not coding, I like to watch TV shows and movies, play
-                            some games with friends or hang out with them. I'm also listening to music most of the time.
-                        </p>
-                        <p class="normalText opacity-80 mt-4">I consider myself a curious and inquisitive person, so on
-                            my
-                            spare time I like to work on side projects, try to contribute to open source software and
-                            aim to
-                            constantly learn something new to improve my skillset.</p>
-                        <p class="normalText opacity-80 mt-4">And last but not least, please don't hesitate to contact
-                            me!
-                        </p>
-                        <p class="normalText opacity-80 mt-4"><a
-                                href="https://github.com/elevenvac?utm_source=eleven.js.org" target="_blank"><i
-                                    class="fa-brands fa-github"></i></a> <span class="ml-2 mr-2"></span> <a
-                                href="https://twitter.com/elevenvac?utm_source=eleven.js.org" target="_blank"><i
-                                    class="fa-brands fa-twitter"></i></a> <span class="ml-2 mr-2"></span> <a
-                                href="mailto:elevenvac@pm.me" target="_blank"><i class="fa-solid fa-mailbox"></i></a>
-                            <span class="ml-2 mr-2"></span> <a
-                                href="https://youtube.com/@Elevenvac?utm_source=eleven.js.org" target="_blank"><i
-                                    class="fa-brands fa-youtube"></i></a>
-                            <span class="ml-2 mr-2"></span> <a
-                                href="https://discord.gg/uhwjhWryND?utm_source=eleven.js.org" target="_blank"><i
-                                    class="fa-brands fa-discord"></i></a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 </body>
 
@@ -541,7 +486,6 @@
 <script src="/assets/js/tippy.js"></script>
 <script src="/assets/js/githubRepositories.js"></script>
 <script src="/assets/js/darkMode.js"></script>
-<script src="/assets/js/dateActivity.js"></script>
 <script src="/assets/js/weather.js"></script>
 
 </html>

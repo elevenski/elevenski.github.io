@@ -23,10 +23,10 @@ window.addEventListener('DOMContentLoaded', async function () {
       });
   
       el.innerHTML = `
-      <div data-id="${data.full_name || 'NOT_FOUND'}" onclick="window.open('https://github.com/${data.full_name || elevenvac}?utm_source=eleven.js.org')" class="card rounded-xl h-full">
+      <div data-id="${data.full_name || 'NOT_FOUND'}" onclick="window.open('https://github.com/${data.full_name || elevenvac}?utm_source=eleven.js.org')" class="card rounded-custom h-full">
           <div class="p-3 flex space-x-2 items-center overflow-hidden">
               <p class="normalText opacity-90">${data.name || "No data"}</p>
-              <p class="thinText sectionTopRightText rounded-xl p-2 opacity-80"><i class="fa-regular fa-star"></i> &nbsp; ${data.stargazers_count || "0"}</p>
+              <p class="thinText sectionTopRightText rounded-custom-strt p-2 opacity-80"><i class="fa-regular fa-star"></i> &nbsp; ${data.stargazers_count || "0"}</p>
           </div>
           <div class="smallText p-3 cardNoMT opacity-80">${data.description || "<i>No description or website provided.</i>"}</div>
       </div>
