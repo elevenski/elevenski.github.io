@@ -1,5 +1,11 @@
 @import"https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap";
 
+/*
+
+Red Rose
+
+*/
+
 :root {
     --primary-background-color: #f9fafb;
     --secondary-background-color: #f8f8f9;
@@ -287,8 +293,8 @@ a:hover {
     border: 5px solid var(--primary-background-color);
     bottom: 0;
     right: 0;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin-right: 6px;
+    margin-bottom: 6px;
     position: absolute;
     text-align: center;
     align-items: center;
@@ -303,8 +309,8 @@ a:hover {
     border: 5px solid var(--primary-background-color);
     bottom: 0;
     right: 0;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin-right: 6px;
+    margin-bottom: 6px;
     position: absolute;
     text-align: center;
     align-items: center;
@@ -319,8 +325,8 @@ a:hover {
     border: 5px solid var(--primary-background-color);
     bottom: 0;
     right: 0;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin-right: 6px;
+    margin-bottom: 6px;
     position: absolute;
     text-align: center;
     align-items: center;
@@ -335,8 +341,8 @@ a:hover {
     border: 5px solid var(--primary-background-color);
     bottom: 0;
     right: 0;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin-right: 6px;
+    margin-bottom: 6px;
     position: absolute;
     text-align: center;
     align-items: center;
