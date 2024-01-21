@@ -9,3 +9,15 @@ tippy('#headAvatar', {
     followCursor: false,
     arrow: false
 });
+
+tippy('#repositoriesInfo', {
+    content: '<p class="smallText opacity-80 ml-1 mr-1">potential projects are not shared*</p>',
+    animation: 'scale',
+    placement: 'right',
+    theme: 'ws',
+    inertia: true,
+    interactive: false,
+    allowHTML: true,
+    followCursor: false,
+    arrow: false
+});
