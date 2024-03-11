@@ -15,7 +15,7 @@ lanyard.onopen = function () {
     JSON.stringify({
       op: 2,
       d: {
-        subscribe_to_id: "692681908873723965",
+        subscribe_to_id: "354343248698802187",
       },
     })
   );
@@ -45,6 +45,28 @@ function update_presence() {
     update_status(api.d.discord_status);
   }*/
 
+  var figmaAppID = "866719067092418580"
+  var figmaActivity = api.d.activities.find(activity => activity.application_id == figmaAppID)
+
+  if (figmaActivity) {
+    var figmaDetails = figmaActivity.details
+    var figmaState = figmaActivity.state
+
+    figmaPlaying.innerHTML = `
+    <a href="javascript:void(0)">
+    <div class="card rounded-custom h-full">
+        <div class="p-4 flex space-x-2 items-center overflow-hidden">
+            <img draggable="false" src="/assets/img/figma.png" alt="IMG" class="rounded-custom cardImage"
+                width="60" height="60">
+            <p class="normalText ml-3 opacity-80">${figmaState || "Figma"}<br><span class="normalText opacity-60">${figmaDetails || " "}</span></p>
+        </div>
+    </div>
+    </a>`;
+  } else {
+    figmaPlaying.innerHTML = ``;
+    document.getElementById("figmaPlaying").style.display = "none";
+  }
+
   var vsCodeAppID = "383226320970055681"
   var vsCodeActivity = api.d.activities.find(activity => activity.application_id == vsCodeAppID)
 
@@ -55,11 +77,10 @@ function update_presence() {
     visualStudioCodePlaying.innerHTML = `
     <a href="javascript:void(0)">
     <div class="card rounded-custom h-full">
-        <div class="p-3 flex space-x-2 items-center overflow-hidden">
-            <img draggable="false" src="/assets/img/visualStudioCode.svg" alt="IMG" class="rounded-custom"
-                width="50" height="50">
-            <p class="normalText ml-3 opacity-90">VS Code<br><span class="smallText opacity-80">${vsCodeState || "<i>No data</i>"}</span></p>
-            <p class="thinText sectionTopRightText rounded-custom-strt p-2 opacity-80">${vsCodeDetails || "<i>No data</i>"}</p>
+        <div class="p-4 flex space-x-2 items-center overflow-hidden">
+            <img draggable="false" src="/assets/img/visualStudioCode.png" alt="IMG" class="rounded-custom cardImage"
+                width="60" height="60">
+            <p class="normalText ml-3 opacity-80">${vsCodeState || "VS Code"}<br><span class="normalText opacity-60">${vsCodeDetails || " "}</span></p>
         </div>
     </div>
     </a>`;
@@ -79,11 +100,10 @@ function update_presence() {
     netflixWatching.innerHTML = `
   <a href="javascript:void(0)">
   <div class="card rounded-custom h-full">
-      <div class="p-3 flex space-x-2 items-center overflow-hidden">
-          <img draggable="false" src="/assets/img/netflix.png" alt="IMG" class="rounded-custom"
-              width="50" height="50">
-          <p class="normalText ml-3 opacity-90">Netflix<br><span class="smallText opacity-80">${netflixActivity.details || "<i>No data</i>"}</span></p>
-          <p class="thinText sectionTopRightText rounded-custom-strt p-2 opacity-80">${netflixActivity.state || "<i>No data</i>"}</p>
+      <div class="p-4 flex space-x-2 items-center overflow-hidden">
+          <img draggable="false" src="${netflixImageLinkRevised || "/assets/img/netflix.png"}" alt="IMG" class="rounded-custom cardImage"
+              width="60" height="60">
+          <p class="normalText ml-3 opacity-80">${netflixActivity.details || "Netflix"}<br><span class="normalText opacity-60">${netflixActivity.state || " "}</span></p>
       </div>
   </div>
   </a>`;
@@ -99,11 +119,10 @@ function update_presence() {
     disneyPlusWatching.innerHTML = `
     <a href="javascript:void(0)">
     <div class="card rounded-custom h-full">
-        <div class="p-3 flex space-x-2 items-center overflow-hidden">
-            <img draggable="false" src="/assets/img/disneyPlus.png" alt="IMG" class="rounded-custom"
-                width="50" height="50">
-            <p class="normalText ml-3 opacity-90">Disney+<br><span class="smallText opacity-80">${disneyPlusActivity.details || "<i>No data</i>"}</span></p>
-            <p class="thinText sectionTopRightText rounded-custom-strt p-2 opacity-80">${disneyPlusActivity.state || "<i>No data</i>"}</p>
+        <div class="p-4 flex space-x-2 items-center overflow-hidden">
+            <img draggable="false" src="/assets/img/disneyPlus.png" alt="IMG" class="rounded-custom cardImage"
+                width="60" height="60">
+            <p class="normalText ml-3 opacity-80">${disneyPlusActivity.details || "Disney+"}<br><span class="normalText opacity-60">${disneyPlusActivity.state || " "}</span></p>
         </div>
     </div>
     </a>`;
@@ -111,8 +130,6 @@ function update_presence() {
     disneyPlusWatching.innerHTML = ``;
     document.getElementById("disneyPlusWatching").style.display = "none";
   }
-
-  setInterval(function () {
 
     if (api.d.listening_to_spotify == true) {
 
@@ -123,18 +140,19 @@ function update_presence() {
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
       var spotify_time = minutes + "m " + seconds + "s "
 
-      var artist = `${api.d.spotify.artist.split(";")[0].split(",")[0]
-        }`;
-      var song = `${api.d.spotify.song.split("(")[0]
-        }`;
+      /*var artist = `${api.d.spotify.artist.split(";")[0].split(",")[0]
+        }`;*/
+      var artist = `${api.d.spotify.artist}`;
+      /*var song = `${api.d.spotify.song.split("(")[0]
+        }`;*/
+      var song = `${api.d.spotify.song}`;
       spotifyListening.innerHTML = `
       <a href="https://open.spotify.com/track/${api.d.spotify.track_id}?si=155eeb7c98204d8e&utm_source=eleven.js.org" target="_blank">
       <div class="card rounded-custom h-full">
-          <div class="p-3 flex space-x-2 items-center overflow-hidden">
-              <img draggable="false" src="${api.d.spotify.album_art_url}" alt="IMG" class="rounded-custom"
-                  width="50" height="50">
-              <p class="normalText ml-3 opacity-90">Spotify<br><span class="smallText opacity-80">${song || "<i>No data</i>"}</span></p>
-              <p class="thinText sectionTopRightText rounded-custom-strt p-2 opacity-80">left ${spotify_time || "0m 0s"}</p>
+          <div class="p-4 flex space-x-2 items-center overflow-hidden">
+              <img draggable="false" src="${api.d.spotify.album_art_url || "/assets/img/spotify.png"}" alt="IMG" class="rounded-custom cardImage"
+                  width="60" height="60">
+              <p class="normalText ml-3 opacity-80">${song || "Spotify"}<br><span class="normalText opacity-60">${artist || "Unknown"}</span></p>
           </div>
       </div>
       </a>`;
@@ -142,8 +160,6 @@ function update_presence() {
       spotifyListening.innerHTML = ``;
       document.getElementById("spotifyListening").style.display = "none";
     }
-
-  }, 1000); //removed: animate__animated animate__flash
 
   if (api.d.discord_status === "dnd") {
     discordStatus.innerHTML = `<div class="discordStatusDnd"></div>`;
@@ -164,7 +180,7 @@ function update_presence() {
 
   setInterval(function () {
     if (api.d.listening_to_spotify == false && api.d.activities.find(activity => activity.application_id == disneyPlusAppID) == undefined && api.d.activities.find(activity => activity.application_id == netflixAppID) == undefined && api.d.activities.find(activity => activity.application_id == vsCodeAppID) == undefined) {
-      activitiesStatus.innerHTML = `<i class="smallText opacity-80">There are currently no activity</i>`;
+      activitiesStatus.innerHTML = `<span class="normalText opacity-80">There are currently no activity.</span>`;
     } else {
       activitiesStatus.innerHTML = ``;
       document.getElementById("activitiesStatus").style.display = "none";

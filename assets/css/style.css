@@ -9,19 +9,21 @@ Red Rose
 :root {
     --primary-background-color: #f9fafb;
     --secondary-background-color: #f8f8f9;
-    --tertiary-background-color: #f1f2f3;
+    --tertiary-background-color: #f4f4f9;
     --fff-background-color: #e5e5e5;
-    --text-color: #181919;
+    --text-color: #000;
+    --colored-text: #1c5d79;
     --image-invert: 100%;
     color-scheme: light
 }
 
 .dark-theme {
     --primary-background-color: #151519;
-    --secondary-background-color: #19191d;
-    --tertiary-background-color: #1c1c21;
-    --fff-background-color: #222228;
-    --text-color: #e4e4e4;
+    --secondary-background-color: #1a1a1e;
+    --tertiary-background-color: #1c1c1e;
+    --fff-background-color: #232327;
+    --text-color: #fff;
+    --colored-text: #1DBBFF;
     --image-invert: 0%;
     color-scheme: dark
 }
@@ -31,7 +33,8 @@ Red Rose
 ::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box
+    box-sizing: border-box;
+    transition: all 0.1s linear
 }
 
 button:focus {
@@ -39,7 +42,8 @@ button:focus {
 }
 
 html {
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
+    transition: all 0.1s linear
 }
 
 body {
@@ -73,17 +77,19 @@ a:hover {
         padding-bottom: 5em
     }
 
-    .sectionGrid {
-        display: grid;
-        grid-template-columns: auto auto
-    }
-
-    .sectionGridItemRight {
-        justify-self: end
+    #nameText {
+        float: center;
+        text-align: center
     }
 
     .blackText {
-        font-size: 55px;
+        font-size: 40px;
+        float: center;
+        text-align: center
+    }
+
+    #centeredButton {
+        text-align: center
     }
 
     .footerLeft {
@@ -92,6 +98,10 @@ a:hover {
 
     .footerRight {
         float: right;
+    }
+
+    #mobileBr {
+        display: none;
     }
 }
 
@@ -105,17 +115,13 @@ a:hover {
         padding-bottom: 4em
     }
 
-    .sectionGridItemRight {
-        padding-top: 1em
-    }
-
     .blackText {
         font-size: 40px;
         float: center;
         text-align: center
     }
 
-    #weatherText {
+    #nameText {
         float: center;
         text-align: center
     }
@@ -127,10 +133,6 @@ a:hover {
 
     #centeredButton {
         text-align: center
-    }
-
-    #headAvatar {
-        margin-top: 2rem
     }
 }
 
@@ -148,30 +150,18 @@ a:hover {
 
 .boldText {
     color: var(--text-color);
-    font-size: 25px;
-    font-weight: 500
+    font-size: 20px;
+    font-weight: normal
 }
 
 .normalText {
     color: var(--text-color);
-    font-size: 17px;
-    font-weight: normal
-}
-
-.smallText {
-    color: var(--text-color);
-    font-size: 15.5px;
-    font-weight: normal
-}
-
-.thinText {
-    color: var(--text-color);
-    font-size: 13px;
+    font-size: 15px;
     font-weight: normal
 }
 
 .coloredText {
-    background-image: linear-gradient(to right, #00b47e, #00a2ff);
+    background-image: linear-gradient(to right, var(--colored-text), var(--text-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     height: 100vh
@@ -185,7 +175,6 @@ a:hover {
     z-index: 99;
     outline: none;
     cursor: pointer;
-    border-radius: 999%;
     font-size: 18px;
     transform: scale(1);
     width: 45px;
@@ -216,8 +205,7 @@ a:hover {
     width: 45px;
     height: 45px;
     background: var(--secondary-background-color);
-    border: 1px solid var(--fff-background-color);
-    border-radius: 999%
+    border: 1px solid var(--fff-background-color)
 }
 
 .navbarButton:hover {
@@ -245,21 +233,6 @@ a:hover {
     color: var(--text-color) !important
 }
 
-.sectionTopRightText {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    border-top-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-top: none;
-    border-right: none;
-    background-color: var(--fff-background-color)
-}
-
-.cardNoMT {
-    margin-top: -15px
-}
-
 .githubCard {
     cursor: pointer
 }
@@ -267,11 +240,10 @@ a:hover {
 .textCard {
     background: var(--secondary-background-color);
     border: 1px solid var(--fff-background-color);
-    padding: 7px 13px
+    padding: 10px
 }
 
 #headAvatarContainer {
-    position: relative;
     width: 160px;
     height: 160px;
     text-align: center;
@@ -285,7 +257,7 @@ a:hover {
     object-fit: cover
 }
 
-.discordStatusOnline {
+/*.discordStatusOnline {
     width: 31px;
     height: 31px;
     border-radius: 999%;
@@ -347,36 +319,31 @@ a:hover {
     text-align: center;
     align-items: center;
     justify-content: center
-}
+}*/
 
 .svgInvert {
     fill: var(--text-color)
 }
 
-.leftFloat {
+.leftFloat, #left {
     float: left;
     text-align: left
 }
 
-.rightFloat {
+.rightFloat, #right {
     float: right;
     text-align: right
 }
 
-.bigButton,
+/*.bigButton,
 .card,
 button,
 .textCard {
     box-shadow: var(--theme-box-shadow)
-}
+}*/
 
 .rounded-custom {
     border-radius: 8px;
-}
-
-.rounded-custom-strt {
-    border-top-right-radius: 8px;
-    border-bottom-left-radius: 8px
 }
 
 .grayScale {
@@ -389,17 +356,12 @@ button,
     transition: all 0.1s linear
 }
 
-.cardBanner {
-    width: 100%;
-    height: 130px;
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
-    object-fit: cover;
-    object-position: top center;
-    transition: all 1.5s ease-in-out
+.cardImage {
+    width: 60px;
+    height: 60px;
+    object-fit: cover
 }
 
-.cardBanner:hover {
-    object-position: bottom center;
-    transition: all 1.5s ease-in-out
+#head {
+    height: 85vh;
 }

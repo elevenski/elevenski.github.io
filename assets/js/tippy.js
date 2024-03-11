@@ -1,17 +1,5 @@
 tippy('#headAvatar', {
-    content: '<p class="smallText opacity-80 ml-1 mr-1">working for better</p>',
-    animation: 'scale',
-    placement: 'bottom',
-    theme: 'ws',
-    inertia: true,
-    interactive: false,
-    allowHTML: true,
-    followCursor: false,
-    arrow: false
-});
-
-tippy('#repositoriesInfo', {
-    content: '<p class="smallText opacity-80 ml-1 mr-1">potential projects are not shared*</p>',
+    content: '<p class="normalText opacity-80 p-1">neye baktin birader?</p>',
     animation: 'scale',
     placement: 'right',
     theme: 'ws',
