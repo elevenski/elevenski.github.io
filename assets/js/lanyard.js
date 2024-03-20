@@ -15,7 +15,7 @@ lanyard.onopen = function () {
     JSON.stringify({
       op: 2,
       d: {
-        subscribe_to_id: "354343248698802187",
+        subscribe_to_id: "692681908873723965",
       },
     })
   );
@@ -142,7 +142,8 @@ function update_presence() {
 
       /*var artist = `${api.d.spotify.artist.split(";")[0].split(",")[0]
         }`;*/
-      var artist = `${api.d.spotify.artist}`;
+      //var artist = `${api.d.spotify.artist}`;
+      var artist = api.d.spotify.artist.replace(/\;/g, ",");
       /*var song = `${api.d.spotify.song.split("(")[0]
         }`;*/
       var song = `${api.d.spotify.song}`;

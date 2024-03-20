@@ -365,3 +365,12 @@ button,
 #head {
     height: 85vh;
 }
+
+.aboutImg {
+    width: 100%;
+    height: 225px;
+}
+
+.cardNoHover {
+    background: var(--secondary-background-color) !important
+}
