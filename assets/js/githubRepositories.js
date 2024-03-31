@@ -23,9 +23,9 @@ window.addEventListener('DOMContentLoaded', async function () {
     });
 
     el.innerHTML = `
-      <div data-id="${data.full_name || 'NOT_FOUND'}" onclick="window.open('https://github.com/${data.full_name || elevenvac}?utm_source=eleven.js.org')" class="card rounded-custom h-full">
+      <div data-id="${data.full_name || 'NOT_FOUND'}" onclick="window.open('https://github.com/${data.full_name || elevenski}?utm_source=eleven.js.org')" class="card rounded-custom h-full">
           <div class="p-4 space-x-2 items-center overflow-hidden">
-              <p id="left" class="normalText opacity-80">${data.name || "elevenvac"}</p>
+              <p id="left" class="normalText opacity-80">${data.name || "elevenski"}</p>
               <p id="right" class="normalText opacity-60"><i class="fa-solid fa-star mr-1"></i> ${data.stargazers_count || "0"}</p>
           </div>
       </div>
