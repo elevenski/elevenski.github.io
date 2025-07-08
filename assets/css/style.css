@@ -7,10 +7,10 @@ Red Rose
 */
 
 :root {
-    --primary-background-color: #f9fafb;
-    --secondary-background-color: #f8f8f9;
-    --tertiary-background-color: #f4f4f9;
-    --fff-background-color: #e5e5e5;
+    --primary-background-color: #f9f9f9;
+    --secondary-background-color: #f0f0f0;
+    --tertiary-background-color: #e5e5e5;
+    --fff-background-color: #dddddd;
     --text-color: #000;
     --colored-text: #1c5d79;
     --image-invert: 100%;
@@ -18,10 +18,10 @@ Red Rose
 }
 
 .dark-theme {
-    --primary-background-color: #151519;
-    --secondary-background-color: #1a1a1e;
-    --tertiary-background-color: #1c1c1e;
-    --fff-background-color: #232327;
+    --primary-background-color: #0d0d0d;
+    --secondary-background-color: #141414;
+    --tertiary-background-color: #1c1c1c;
+    --fff-background-color: #2a2a2a;
     --text-color: #fff;
     --colored-text: #1DBBFF;
     --image-invert: 0%;
@@ -49,7 +49,12 @@ html {
 body {
     font-family: "Inter";
     transition: all 0.1s linear;
-    background-color: var(--primary-background-color)
+    background-color: var(--primary-background-color);
+    background-image:
+        radial-gradient(circle, var(--tertiary-background-color) 1px, transparent 1px),
+        radial-gradient(circle, var(--tertiary-background-color) 1px, transparent 1px);
+    background-position: 0 0, 25px 25px;
+    background-size: 50px 50px;
 }
 
 img {
@@ -161,7 +166,7 @@ a:hover {
 }
 
 .coloredText {
-    background-image: linear-gradient(to right, var(--colored-text), var(--text-color));
+    background: linear-gradient(to right, #00c6ff, #0072ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     height: 100vh
@@ -325,12 +330,14 @@ a:hover {
     fill: var(--text-color)
 }
 
-.leftFloat, #left {
+.leftFloat,
+#left {
     float: left;
     text-align: left
 }
 
-.rightFloat, #right {
+.rightFloat,
+#right {
     float: right;
     text-align: right
 }
@@ -373,4 +380,19 @@ button,
 
 .cardNoHover {
     background: var(--secondary-background-color) !important
+}
+
+.countryText {
+  position: relative
+}
+
+.countryText::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: #e63946;
+  border-radius: 2px
 }

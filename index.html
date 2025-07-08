@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel='stylesheet' href="/assets/css/style.css">
     <link rel="manifest" href="manifest.json">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
     <script>
         window.onload = function () {
@@ -38,7 +39,7 @@
 
 <body class="container max-w-4xl mx-auto animate__animated animate__fadeIn js">
 
-    <section id="nav">
+    <section id="nav" data-aos="fade-down">
         <div class="mt-4">
             <div class="navGrid">
                 <div class="navGridItem">
@@ -56,7 +57,7 @@
         </div>
     </section>
 
-    <section id="head">
+    <section id="head" data-aos="fade-up">
         <div class="section">
             <center>
                 <div id="headAvatarContainer">
@@ -67,11 +68,10 @@
                 </div>
             </center>
             <br><br>
-            <p class="normalText opacity-80" id="nameText">This is Eleven</p>
+            <p class="normalText opacity-80" id="nameText">Still Eleven. Now with Wi-Fi.</p>
             <p class="blackText opacity-90 mt-2">Self-taught <br id="mobileBr"><span class="coloredText">web
                     developer</span></p>
-            <p class="blackText opacity-90">from <span
-                    class="countryText border-red-500 border-b-2 border-opacity-50">Türkiye</span>.</p>
+            <p class="blackText opacity-90">based in <span class="countryText">Türkiye</span>.</p>
             <br>
             <div id="centeredButton" class="mt-1">
                 <a href="mailto:elevenvac@pm.me" class="bigButton normalText rounded-custom mr-2"><span
@@ -88,7 +88,7 @@
         </div>
     </section>
 
-    <section id="activities">
+    <section id="activities" data-aos="fade-up">
         <div class="section">
             <div class="SectionTitle mb-1">
                 <p id="left" class="normalText text-uppercase opacity-50">Activities</p>
@@ -113,7 +113,7 @@
         </div>
     </section>
 
-    <section id="works">
+    <section id="works" data-aos="fade-up">
         <div class="section">
             <p class="normalText text-uppercase opacity-50">Works</p>
             <div id="worksGrid" class="mt-3">
@@ -129,7 +129,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="https://www.orcsan.eu.org/?utm_source=eleven.js.org" target="_blank">
+                    <!--<a href="https://www.orcsan.eu.org/?utm_source=eleven.js.org" target="_blank">
                         <div class="card rounded-custom h-full">
                             <div class="p-4 flex space-x-2 items-center overflow-hidden">
                                 <img draggable="false" src="assets/img/orcsan.png" alt="IMG"
@@ -139,7 +139,7 @@
                                             class="fa-light fa-hashtag ml-1 mr-1"></i> 2019-2023</span></p>
                             </div>
                         </div>
-                    </a>
+                    </a>-->
                     <a href="https://www.asunamie.xyz/?utm_source=eleven.js.org" target="_blank">
                         <div class="card rounded-custom h-full">
                             <div class="p-4 flex space-x-2 items-center overflow-hidden">
@@ -180,7 +180,7 @@
         </div>
     </section>-->
 
-    <section id="repositories">
+    <section id="repositories" data-aos="fade-up">
         <div class="section">
             <div class="SectionTitle mb-1">
                 <p id="left" class="normalText text-uppercase opacity-50">Repositories</p>
@@ -193,23 +193,18 @@
             </div>
             <br>
             <div id="repositoriesGrid" class="mt-2">
-                <div class="grid grid-cols-1 gap-3 sm:gird-cols-1 md:grid-cols-2">
-                    <div class="githubCard" data-repo="elevenski/elevenski.github.io">
+                <div id="githubReposContainer" class="grid grid-cols-1 gap-3 sm:gird-cols-1 md:grid-cols-2">
+                    <div id="repoStatus">
                         <p class="normalText opacity-80"><i
                                 class="fa-duotone fa-spinner-third animate-spin inline-flex ml-1 mr-2"></i>Loading...
                         </p>
                     </div>
-                    <div class="githubCard" data-repo="elevenski/personal-website"></div>
-                    <div class="githubCard" data-repo="elevenski/apptime"></div>
-                    <div class="githubCard" data-repo="elevenski/apptime-desktop"></div>
-                    <div class="githubCard" data-repo="elevenski/linksee"></div>
-                    <div class="githubCard" data-repo="elevenski/asuna-bot"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="technologies">
+    <section id="technologies" data-aos="fade-up">
         <div class="section">
             <p class="normalText text-uppercase opacity-50">Technologies</p>
             <div id="gridd" class="mt-3">
@@ -435,7 +430,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="https://nuxtjs.org?utm_source=eleven.js.org" target="_blank">
+                    <!--<a href="https://nuxtjs.org?utm_source=eleven.js.org" target="_blank">
                         <div class="card rounded-custom h-full">
                             <div class="p-4 flex space-x-2 items-center overflow-hidden">
                                 <svg class="flex-shrink-0 rounded-custom" width="20" height="20" viewBox="0 0 124 124"
@@ -498,16 +493,16 @@
                                         class="fa-brands fa-creative-commons-nd opacity-60 ml-1"></i></p>
                             </div>
                         </div>
-                    </a>
+                    </a>-->
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="footer">
+    <section id="footer" data-aos="fade-up">
         <div class="footer section">
             <div class="footerLeft">
-                <span class="textCard normalText rounded-custom"><span class="p-2 opacity-80">v6SE</span></span>
+                <span class="textCard normalText rounded-custom"><span class="p-2 opacity-80">v0.11</span></span>
             </div>
             <div class="footerRight mt-4 sm:mt-0">
                 <p class="normalText opacity-80"><a
@@ -524,6 +519,13 @@
 
 </body>
 
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: false
+    });
+</script>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="https://unpkg.com/@popperjs/core@2"></script>
