@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', async function () {
   ]);
 
   const filtered = repos
-    .filter(repo => repo.stargazers_count > 1)
+    .filter(repo => repo.stargazers_count > 2)
     .sort((a, b) => b.stargazers_count - a.stargazers_count);
 
   filtered.forEach(repo => {
@@ -31,10 +31,15 @@ window.addEventListener('DOMContentLoaded', async function () {
     card.className = "githubCard";
     card.innerHTML = `
       <div data-id="${repo.full_name}" onclick="window.open('${repo.html_url}?utm_source=eleven.js.org')" class="card rounded-custom h-full cursor-pointer">
-        <div class="p-4 space-x-2 items-center overflow-hidden">
+        <div class="p-4">
+         <div class="space-x-2 items-center overflow-hidden">
           <p id="left" class="normalText opacity-80">${repo.name}</p>
-          <p id="right" class="normalText opacity-60">
-            <i class="fa-solid fa-star mr-1"></i> ${repo.stargazers_count}
+          <p id="right" class="normalText opacity-70">
+            <i class="fa-light fa-star mr-1"></i> ${repo.stargazers_count}
+          </p>
+          </div>
+          <p class="mt-2 normalText opacity-60">
+            ${repo.description || 'No description.'}
           </p>
         </div>
       </div>

@@ -4,6 +4,7 @@ var visualStudioCodePlaying = document.getElementById("visualStudioCodePlaying")
 var netflixWatching = document.getElementById("netflixWatching");
 var disneyPlusWatching = document.getElementById("disneyPlusWatching");
 var activitiesStatus = document.getElementById("activitiesStatus");
+var discordStatus = document.getElementById("discordStatus");
 
 const lanyard = new WebSocket("wss://api.lanyard.rest/socket");
 
@@ -15,7 +16,7 @@ lanyard.onopen = function () {
     JSON.stringify({
       op: 2,
       d: {
-        subscribe_to_id: "692681908873723965",
+        subscribe_to_id: "1",
       },
     })
   );
@@ -163,19 +164,19 @@ function update_presence() {
     }
 
   if (api.d.discord_status === "dnd") {
-    discordStatus.innerHTML = `<div class="discordStatusDnd"></div>`;
+    discordStatus.innerHTML = `dnd`;
 
   } else if (api.d.discord_status === "idle") {
-    discordStatus.innerHTML = `<div class="discordStatusIdle"></div>`;
+    discordStatus.innerHTML = `idle`;
 
   } else if (api.d.discord_status === "online") {
-    discordStatus.innerHTML = `<div class="discordStatusOnline"></div>`;
+    discordStatus.innerHTML = `online`;
 
   } else if (api.d.discord_status === "offline") {
-    discordStatus.innerHTML = `<div class="discordStatusOffline"></div>`;
+    discordStatus.innerHTML = `offline`;
 
   } else {
-    discordStatus.innerHTML = `<div class="discordStatusOffline"></div>`;
+    discordStatus.innerHTML = `offline`;
 
   }
 

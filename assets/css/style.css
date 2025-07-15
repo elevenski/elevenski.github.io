@@ -1,5 +1,6 @@
 @import"https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap";
 
+
 /*
 
 Red Rose
@@ -55,6 +56,7 @@ body {
         radial-gradient(circle, var(--tertiary-background-color) 1px, transparent 1px);
     background-position: 0 0, 25px 25px;
     background-size: 50px 50px;
+    line-height: 1.7
 }
 
 img {
@@ -395,4 +397,8 @@ button,
   height: 2px;
   background: #e63946;
   border-radius: 2px
+}
+
+.signatureText {
+    font-size: 15px
 }
