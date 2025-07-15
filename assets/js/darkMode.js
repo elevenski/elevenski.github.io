@@ -23,10 +23,31 @@ $(document).ready(function () {
         document.documentElement.classList.toggle('dark-theme');
         console.log("dark moda geçildi")
         document.getElementById("switchModeButton").innerHTML = "<i class='fa-solid fa-moon'></i>"
-    } else if (theme === null || theme === "light") {
+    } else if (theme === "light") {
         document.documentElement.classList.remove('dark-theme');
         console.log("light moda geçildi")
         document.getElementById("switchModeButton").innerHTML = "<i class='fa-solid fa-sun-bright'></i>"
+    } else if (theme === null) {
+        const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
+        if (darkThemeMq.matches) {
+            if (theme === "dark") {
+                console.log("site zaten dark")
+            } else {
+                localStorage.setItem("data-theme", "dark");
+                document.documentElement.classList.toggle('dark-theme');
+                console.log("system oto dark moda geçildi")
+                document.getElementById("switchModeButton").innerHTML = "<i class='fa-solid fa-moon'></i>"
+            }
+        } else if (!darkThemeMq.matches) {
+            if (theme === "light") {
+                console.log("site zaten light")
+            } else {
+                localStorage.setItem("data-theme", "light");
+                document.documentElement.classList.remove('dark-theme');
+                console.log("system oto light moda geçildi")
+                document.getElementById("switchModeButton").innerHTML = "<i class='fa-solid fa-sun-bright'></i>"
+            }
+        }
     }
 });
 
