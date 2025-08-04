@@ -8,13 +8,29 @@
     <title>Eleven – Self-taught web developer.</title>
     <meta name="theme-color" content="#f9fafb">
     <meta property="og:site_name" content="eleven.js.org">
+    <meta name="description" content="Self-taught web developer based in Türkiye.">
+    <meta name="theme-color" content="#00c6ff">
+    <meta name="background-color" content="#00c6ff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Eleven">
+    <link rel="apple-touch-icon" href="assets/img/iconWhite.png">
+    <link rel="canonical" href="https://eleven.js.org">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta property="og:title" content="Eleven – Self-taught web developer.">
+    <meta property="og:description" content="Self-taught web developer based in Türkiye.">
+    <meta property="og:image" content="https://eleven.js.org/assets/img/iconWhite.png">
+    <meta property="og:url" content="https://eleven.js.org">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel='icon' type='image/png' href='/assets/img/iconLebensraum.png'>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css"
         ntegrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel='stylesheet' href="/assets/css/style.css">
@@ -63,9 +79,6 @@
                 <div id="headAvatarContainer">
                     <img draggable="false" id="headAvatar" src="/assets/img/memojiWink.webp" alt="IMG"
                         class="rounded-full">
-                    <div id="discordStatus" style="display:none"> <!--- nereye koycamı bulamadım gizledim a -->
-                        <div class="discordStatusOffline"></div>
-                    </div>
                 </div>
             </center>
             <br><br>
@@ -168,16 +181,15 @@
         <div class="section">
             <div class="SectionTitle">
                 <p id="left" class="normalText text-uppercase opacity-50">Activities</p>
-                <p id="right" class="normalText opacity-50">Powered by <a
-                        href="https://api.lanyard.rest/?utm_source=eleven.js.org" target="_blank"><span
-                            class="border-gray-500 border-b-2 border-opacity-50 hover:border-opacity-90">Lanyard</span></a>
+                <p id="right" class="normalText opacity-50"><span id="statusIcon" class=""><i
+                            class="fa-duotone fa-spinner-third animate-spin inline-flex ml-1 mr-2"></i>Loading...</span>
                 </p>
             </div>
             <br>
             <div id="activitiesGrid" class="mt-2">
                 <p id="activitiesStatus" class="normalText opacity-80"><i
                         class="fa-duotone fa-spinner-third animate-spin inline-flex ml-1 mr-2"></i>Loading...</p>
-                <div class="grid grid-cols-1 gap-3 sm:gird-cols-1 md:grid-cols-2">
+                <div class="grid grid-cols-1 gap-3 sm:grid-cols-1 md:grid-cols-2">
                     <div id="spotifyListening"></div>
                     <div id="disneyPlusWatching"></div>
                     <div id="netflixWatching"></div>
@@ -192,11 +204,11 @@
         <div class="section">
             <div class="SectionTitle">
                 <p id="left" class="normalText text-uppercase opacity-50">Works</p>
-                <p id="right" class="normalText opacity-50">0 active </p>
+                <p id="right" class="normalText opacity-50">0 active</p>
             </div>
             <br>
             <div id="worksGrid" class="mt-3">
-                <div class="grid grid-cols-1 gap-3 sm:gird-cols-1 md:grid-cols-2">
+                <div class="grid grid-cols-1 gap-3 sm:grid-cols-1 md:grid-cols-2">
 
                     <a href="https://www.apptime.eu.org/?utm_source=eleven.js.org" target="_blank">
                         <div class="card rounded-custom h-full">
@@ -210,7 +222,8 @@
                                 </div>
                                 <p class="normalText opacity-80 mt-3"><span class="normalText opacity-60">A reliable
                                         web-based uptime monitoring service designed specifically for Discord bots,
-                                        ensuring thousands of bots remain online continuously with ease and stability.</span></p>
+                                        ensuring thousands of bots remain online continuously with ease and
+                                        stability.</span></p>
                             </div>
                         </div>
                     </a>
@@ -231,7 +244,34 @@
                             </div>
                         </div>
                     </a>
-
+                    <a href="javascript:void(0)">
+                        <div class="card rounded-custom h-full">
+                            <div class="p-4">
+                                <div class="flex justify-between items-center w-full overflow-hidden">
+                                    <p class="normalText opacity-80">
+                                        Development Organization<br><span class="opacity-70">Team Leader</span>
+                                    </p>
+                                    <p class="normalText opacity-70 flex items-center">
+                                        2019-2024
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="javascript:void(0)">
+                        <div class="card rounded-custom h-full">
+                            <div class="p-4">
+                                <div class="flex justify-between items-center w-full overflow-hidden">
+                                    <p class="normalText opacity-80">
+                                        Javascript Hub<br><span class="opacity-70">Community Manager</span>
+                                    </p>
+                                    <p class="normalText opacity-70 flex items-center">
+                                        2022-2023
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -241,17 +281,16 @@
         <div class="section">
             <div class="SectionTitle mb-1">
                 <p id="left" class="normalText text-uppercase opacity-50">Repositories</p>
-                <p id="right" class="normalText opacity-50"><a
+                <p id="right" class="normalText opacity-50 hover:underline"><a
                         href="https://github.com/elevenski?tab=repositories&utm_source=eleven.js.org"
-                        target="_blank"><span
-                            class="border-gray-500 border-b-2 border-opacity-50 hover:border-opacity-90">Show
-                            all</span></a>
+                        target="_blank">Show
+                        all</a>
                 </p>
 
             </div>
             <br>
             <div id="repositoriesGrid" class="mt-2">
-                <div id="githubReposContainer" class="grid grid-cols-1 gap-3 sm:gird-cols-1 md:grid-cols-2">
+                <div id="githubReposContainer" class="grid grid-cols-1 gap-3 sm:grid-cols-1 md:grid-cols-2">
                     <div id="repoStatus">
                         <p class="normalText opacity-80"><i
                                 class="fa-duotone fa-spinner-third animate-spin inline-flex ml-1 mr-2"></i>Loading...
@@ -272,32 +311,39 @@
                         <div>
                             <p class="normalText opacity-80">You can reach out to me directly through this form.</p>
                             <br>
-                            <p class="normalText opacity-70">Whether you have a question, are interested in collaborating on a project, or simply wish to get in touch, feel free to use the fields below to send a message.</p>
+                            <p class="normalText opacity-70">Whether you have a question, are interested in
+                                collaborating on a project, or simply wish to get in touch, feel free to use the fields
+                                below to send a message.</p>
                             <br>
-                            <p class="normalText opacity-70">I typically respond within 1 to 2 business days, depending on the nature of the inquiry. While I may not be actively involved in large-scale development at the moment, I'm always open to meaningful conversations, insightful feedback, or future opportunities.</p>
+                            <p class="normalText opacity-70">I typically respond within 6 to 7 business days, depending
+                                on the nature of the inquiry. While I may not be actively involved in large-scale
+                                development at the moment, I'm always open to meaningful conversations, insightful
+                                feedback, or future opportunities.</p>
                             <br>
-                            <p class="normalText opacity-70">I value communication that is thoughtful, respectful, and to the point — clarity and simplicity always take precedence.</p>
+                            <p class="normalText opacity-70">I value communication that is thoughtful, respectful, and
+                                to the point — clarity and simplicity always take precedence.</p>
                         </div>
 
                         <form action="https://formspree.io/f/formId" method="POST" class="space-y-4">
                             <div>
                                 <label for="name" class="normalText opacity-80">Name</label>
-                                <input type="text" id="name" name="name" required
+                                <input type="text" id="name" name="name" required placeholder="Who can we call you?"
                                     class="card normalText text-opacity-70 w-full p-3 rounded-custom focus:outline-none focus:ring-0 ring-0 border-none ring-none transition-none">
                             </div>
                             <div>
                                 <label for="email" class="normalText opacity-80">Email</label>
                                 <input type="email" id="email" name="email" required
+                                    placeholder="Where can we reach you?"
                                     class="card normalText text-opacity-70 w-full p-3 rounded-custom focus:outline-none focus:ring-0 ring-0 border-none ring-none transition-none">
                             </div>
                             <div>
                                 <label for="message" class="normalText opacity-80">Message</label>
                                 <textarea id="message" name="message" rows="2" required
+                                    placeholder="Share your thoughts, questions, or ideas..."
                                     class="card normalText text-opacity-70 w-full p-3 rounded-custom focus:outline-none focus:ring-0 ring-0 border-none ring-none transition-none"></textarea>
                             </div>
                             <br>
-                            <button type="submit" disabled
-                                class="card w-full p-3 rounded-custom cursor-not-allowed">
+                            <button type="submit" disabled class="card w-full p-3 rounded-custom cursor-not-allowed">
                                 <p class="normalText opacity-80">Send</p>
                             </button>
                         </form>
@@ -310,25 +356,15 @@
         </div>
     </section>
 
-    <center>
-        <section id="signature" data-aos="fade-up">
-            <div class="section">
-                <p class="normalText signatureText opacity-80">
-                    free. &nbsp;clean. &nbsp;easy.
-                </p>
-            </div>
-        </section>
-    </center>
-
     <section id="footer" data-aos="fade-up">
         <div class="footer section">
             <div class="footerLeft">
                 <span class="textCard normalText rounded-custom"><span class="p-2 opacity-80">v0.11</span></span>
             </div>
             <div class="footerRight mt-4 sm:mt-0">
-                <p class="normalText opacity-80"><a
+                <p class="footerRightText normalText opacity-80"><a
                         href="https://github.com/elevenski/elevenski.github.io?utm_source=eleven.js.org" target="_blank"
-                        class=""><span class="border-gray-500 border-b-2 border-opacity-50 hover:border-opacity-90">Open
+                        class=""><span class="hover:underline">Open
                             Source</span></a></p>
             </div>
         </div>
@@ -344,7 +380,7 @@
 <script>
     AOS.init({
         duration: 1000,
-        once: false
+        once: true
     });
 </script>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>

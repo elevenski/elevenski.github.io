@@ -1,192 +1,154 @@
-//var statusIcon = document.getElementById("statusIcon");
-var spotifyListening = document.getElementById("spotifyListening");
-var visualStudioCodePlaying = document.getElementById("visualStudioCodePlaying");
-var netflixWatching = document.getElementById("netflixWatching");
-var disneyPlusWatching = document.getElementById("disneyPlusWatching");
-var activitiesStatus = document.getElementById("activitiesStatus");
-var discordStatus = document.getElementById("discordStatus");
-
-const lanyard = new WebSocket("wss://api.lanyard.rest/socket");
-
-var api = {};
-var received = false;
-
-lanyard.onopen = function () {
-  lanyard.send(
-    JSON.stringify({
-      op: 2,
-      d: {
-        subscribe_to_id: "1",
-      },
-    })
-  );
+const elements = {
+  statusIcon: document.getElementById("statusIcon"),
+  spotifyListening: document.getElementById("spotifyListening"),
+  visualStudioCodePlaying: document.getElementById("visualStudioCodePlaying"),
+  netflixWatching: document.getElementById("netflixWatching"),
+  disneyPlusWatching: document.getElementById("disneyPlusWatching"),
+  activitiesStatus: document.getElementById("activitiesStatus"),
 };
 
+const APP_IDS = {
+  figma: "866719067092418580",
+  vscode: "383226320970055681",
+  netflix: "926541425682829352",
+  disney: "630236276829716483"
+};
+
+let api = {};
+let received = false;
+let ws;
+
+function connectWebSocket() {
+  ws = new WebSocket("wss://api.lanyard.rest/socket");
+
+  ws.onopen = () => {
+    ws.send(JSON.stringify({ op: 2, d: { subscribe_to_id: "354343248698802187" } }));
+  };
+
+  ws.onmessage = (event) => {
+    received = true;
+    api = JSON.parse(event.data);
+    if (["INIT_STATE", "PRESENCE_UPDATE"].includes(api.t)) updatePresence();
+  };
+
+  ws.onclose = () => {
+    console.warn("WebSocket closed. Reconnecting...");
+    setTimeout(connectWebSocket, 2000);
+  };
+}
+
+function updateStatus(status) {
+  if (!elements.statusIcon) return;
+  const valid = ["online", "idle", "dnd", "offline"];
+  elements.statusIcon.innerHTML = valid.includes(status) ? status : "offline";
+}
+
+function mapAppActivity(appId, targetElement, imgPath, fallbackTitle) {
+  const activity = api.d.activities.find(a => a.application_id === appId);
+  if (!activity) {
+    targetElement.innerHTML = "";
+    targetElement.style.display = "none";
+    return;
+  }
+
+  targetElement.style.display = "";
+  const imageSrc = activity.assets?.large_image?.includes("https/") 
+    ? activity.assets.large_image.replace("https/", "https://") 
+    : imgPath;
+
+  targetElement.innerHTML = `
+    <a href="javascript:void(0)">
+      <div class="card rounded-custom h-full">
+        <div class="p-4 flex space-x-2 items-center overflow-hidden">
+          <img src="${imageSrc}" alt="IMG" class="rounded-custom cardImage" width="60" height="60">
+          <p class="normalText ml-3 opacity-80">
+            ${activity.state || fallbackTitle}<br>
+            <span class="normalText opacity-60">${activity.details || " "}</span>
+          </p>
+        </div>
+      </div>
+    </a>`;
+}
+
+function updateSpotify() {
+  const spotify = api.d.spotify;
+  const el = elements.spotifyListening;
+  if (!api.d.listening_to_spotify || !spotify) {
+    el.innerHTML = "";
+    el.style.display = "none";
+    clearInterval(window.spotifyRingInterval);
+    return;
+  }
+
+  el.style.display = "";
+  const duration = spotify.timestamps.end - spotify.timestamps.start;
+  const progress = Math.min(Date.now() - spotify.timestamps.start, duration);
+  const percent = (progress / duration) * 100;
+
+  el.innerHTML = `
+    <a href="https://open.spotify.com/track/${spotify.track_id}" target="_blank">
+      <div class="card rounded-custom h-full">
+        <div class="p-4 flex items-center space-x-4 overflow-hidden">
+          <div class="relative flex items-center justify-center cardImage animate-pulse">
+            <svg class="absolute cardImage" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" stroke="rgba(0, 0, 0, 0.5)" stroke-width="6" fill="none"/>
+              <circle id="spotifyRing" cx="50" cy="50" r="45" stroke="#1DB954" stroke-width="6" fill="none"
+                stroke-linecap="round" stroke-dasharray="282.6" stroke-dashoffset="282.6" transform="rotate(-90 50 50)"/>
+            </svg>
+            <img src="${spotify.album_art_url}" class="rounded-full object-cover cardImage">
+          </div>
+          <p class="normalText opacity-80">${spotify.song}<br>
+            <span class="normalText opacity-60">${spotify.artist.replace(/;/g, ",")}</span>
+          </p>
+        </div>
+      </div>
+    </a>`;
+
+  const updateRing = () => {
+    const now = Date.now();
+    const progress = Math.min(now - spotify.timestamps.start, duration);
+    const ring = document.getElementById("spotifyRing");
+    if (ring) {
+      const length = 2 * Math.PI * 45;
+      ring.style.strokeDashoffset = length * (1 - progress / duration);
+    }
+  };
+
+  clearInterval(window.spotifyRingInterval);
+  updateRing();
+  window.spotifyRingInterval = setInterval(updateRing, 1000);
+}
+
+function updatePresence() {
+  updateStatus(api.d.discord_status);
+  mapAppActivity(APP_IDS.figma, document.getElementById("figmaPlaying"), "/assets/img/figma.png", "Figma");
+  mapAppActivity(APP_IDS.vscode, elements.visualStudioCodePlaying, "/assets/img/visualStudioCode.png", "VS Code");
+  mapAppActivity(APP_IDS.netflix, elements.netflixWatching, "/assets/img/netflix.png", "Netflix");
+  mapAppActivity(APP_IDS.disney, elements.disneyPlusWatching, "/assets/img/disneyPlus.png", "Disney+");
+  updateSpotify();
+}
+
+function updateActivityStatusText() {
+  const a = api.d.activities;
+  const hasNothing =
+    !api.d.listening_to_spotify &&
+    !a.find(act => Object.values(APP_IDS).includes(act.application_id));
+
+  if (hasNothing) {
+    elements.activitiesStatus.innerHTML = `<span class="normalText opacity-80">There are currently no activity.</span>`;
+    elements.activitiesStatus.style.display = "";
+  } else {
+    elements.activitiesStatus.innerHTML = "";
+    elements.activitiesStatus.style.display = "none";
+  }
+}
+
 setInterval(() => {
-  if (received) {
-    lanyard.send(
-      JSON.stringify({
-        op: 3,
-      })
-    );
+  if (ws.readyState === WebSocket.OPEN && received) {
+    ws.send(JSON.stringify({ op: 3 }));
   }
 }, 30000);
 
-lanyard.onmessage = function (event) {
-  received = true;
-  api = JSON.parse(event.data);
+setInterval(updateActivityStatusText, 1000);
 
-  if (api.t === "INIT_STATE" || api.t === "PRESENCE_UPDATE") {
-    update_presence();
-  }
-};
-
-function update_presence() {
-  /*if (statusIcon != null) {
-    update_status(api.d.discord_status);
-  }*/
-
-  var figmaAppID = "866719067092418580"
-  var figmaActivity = api.d.activities.find(activity => activity.application_id == figmaAppID)
-
-  if (figmaActivity) {
-    var figmaDetails = figmaActivity.details
-    var figmaState = figmaActivity.state
-
-    figmaPlaying.innerHTML = `
-    <a href="javascript:void(0)">
-    <div class="card rounded-custom h-full">
-        <div class="p-4 flex space-x-2 items-center overflow-hidden">
-            <img draggable="false" src="/assets/img/figma.png" alt="IMG" class="rounded-custom cardImage"
-                width="60" height="60">
-            <p class="normalText ml-3 opacity-80">${figmaState || "Figma"}<br><span class="normalText opacity-60">${figmaDetails || " "}</span></p>
-        </div>
-    </div>
-    </a>`;
-  } else {
-    figmaPlaying.innerHTML = ``;
-    document.getElementById("figmaPlaying").style.display = "none";
-  }
-
-  var vsCodeAppID = "383226320970055681"
-  var vsCodeActivity = api.d.activities.find(activity => activity.application_id == vsCodeAppID)
-
-  if (vsCodeActivity) {
-    var vsCodeDetails = vsCodeActivity.details
-    var vsCodeState = vsCodeActivity.state
-
-    visualStudioCodePlaying.innerHTML = `
-    <a href="javascript:void(0)">
-    <div class="card rounded-custom h-full">
-        <div class="p-4 flex space-x-2 items-center overflow-hidden">
-            <img draggable="false" src="/assets/img/visualStudioCode.png" alt="IMG" class="rounded-custom cardImage"
-                width="60" height="60">
-            <p class="normalText ml-3 opacity-80">${vsCodeState || "VS Code"}<br><span class="normalText opacity-60">${vsCodeDetails || " "}</span></p>
-        </div>
-    </div>
-    </a>`;
-  } else {
-    visualStudioCodePlaying.innerHTML = ``;
-    document.getElementById("visualStudioCodePlaying").style.display = "none";
-  }
-
-  var netflixAppID = "926541425682829352"
-  var netflixActivity = api.d.activities.find(activity => activity.application_id == netflixAppID)
-
-  if (netflixActivity) {
-    var netflixImage = netflixActivity.assets.large_image
-    var netflixImageLink = netflixImage.substring(netflixImage.indexOf("https/"));
-    var netflixImageLinkRevised = netflixImageLink.replace('https/', 'https://');
-
-    netflixWatching.innerHTML = `
-  <a href="javascript:void(0)">
-  <div class="card rounded-custom h-full">
-      <div class="p-4 flex space-x-2 items-center overflow-hidden">
-          <img draggable="false" src="${netflixImageLinkRevised || "/assets/img/netflix.png"}" alt="IMG" class="rounded-custom cardImage"
-              width="60" height="60">
-          <p class="normalText ml-3 opacity-80">${netflixActivity.details || "Netflix"}<br><span class="normalText opacity-60">${netflixActivity.state || " "}</span></p>
-      </div>
-  </div>
-  </a>`;
-  } else {
-    netflixWatching.innerHTML = ``;
-    document.getElementById("netflixWatching").style.display = "none";
-  }
-
-  var disneyPlusAppID = "630236276829716483"
-  var disneyPlusActivity = api.d.activities.find(activity => activity.application_id == disneyPlusAppID)
-
-  if (disneyPlusActivity) {
-    disneyPlusWatching.innerHTML = `
-    <a href="javascript:void(0)">
-    <div class="card rounded-custom h-full">
-        <div class="p-4 flex space-x-2 items-center overflow-hidden">
-            <img draggable="false" src="/assets/img/disneyPlus.png" alt="IMG" class="rounded-custom cardImage"
-                width="60" height="60">
-            <p class="normalText ml-3 opacity-80">${disneyPlusActivity.details || "Disney+"}<br><span class="normalText opacity-60">${disneyPlusActivity.state || " "}</span></p>
-        </div>
-    </div>
-    </a>`;
-  } else {
-    disneyPlusWatching.innerHTML = ``;
-    document.getElementById("disneyPlusWatching").style.display = "none";
-  }
-
-    if (api.d.listening_to_spotify == true) {
-
-      var countDownDate = new Date(api.d.spotify.timestamps.end).getTime();
-      var now = new Date().getTime();
-      var distance = countDownDate - now;
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      var spotify_time = minutes + "m " + seconds + "s "
-
-      /*var artist = `${api.d.spotify.artist.split(";")[0].split(",")[0]
-        }`;*/
-      //var artist = `${api.d.spotify.artist}`;
-      var artist = api.d.spotify.artist.replace(/\;/g, ",");
-      /*var song = `${api.d.spotify.song.split("(")[0]
-        }`;*/
-      var song = `${api.d.spotify.song}`;
-      spotifyListening.innerHTML = `
-      <a href="https://open.spotify.com/track/${api.d.spotify.track_id}?si=155eeb7c98204d8e&utm_source=eleven.js.org" target="_blank">
-      <div class="card rounded-custom h-full">
-          <div class="p-4 flex space-x-2 items-center overflow-hidden">
-              <img draggable="false" src="${api.d.spotify.album_art_url || "/assets/img/spotify.png"}" alt="IMG" class="rounded-custom cardImage"
-                  width="60" height="60">
-              <p class="normalText ml-3 opacity-80">${song || "Spotify"}<br><span class="normalText opacity-60">${artist || "Unknown"}</span></p>
-          </div>
-      </div>
-      </a>`;
-    } else {
-      spotifyListening.innerHTML = ``;
-      document.getElementById("spotifyListening").style.display = "none";
-    }
-
-  if (api.d.discord_status === "dnd") {
-    discordStatus.innerHTML = `dnd`;
-
-  } else if (api.d.discord_status === "idle") {
-    discordStatus.innerHTML = `idle`;
-
-  } else if (api.d.discord_status === "online") {
-    discordStatus.innerHTML = `online`;
-
-  } else if (api.d.discord_status === "offline") {
-    discordStatus.innerHTML = `offline`;
-
-  } else {
-    discordStatus.innerHTML = `offline`;
-
-  }
-
-  setInterval(function () {
-    if (api.d.listening_to_spotify == false && api.d.activities.find(activity => activity.application_id == disneyPlusAppID) == undefined && api.d.activities.find(activity => activity.application_id == netflixAppID) == undefined && api.d.activities.find(activity => activity.application_id == vsCodeAppID) == undefined) {
-      activitiesStatus.innerHTML = `<span class="normalText opacity-80">There are currently no activity.</span>`;
-    } else {
-      activitiesStatus.innerHTML = ``;
-      document.getElementById("activitiesStatus").style.display = "none";
-    }
-  }, 1000) // biraz sıkıntılı gibi gibi
-
-}
+connectWebSocket();

@@ -1,4 +1,5 @@
 @import"https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap";
+@import"https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap";
 
 
 /*
@@ -10,10 +11,9 @@ Red Rose
 :root {
     --primary-background-color: #f9f9f9;
     --secondary-background-color: #f0f0f0;
-    --tertiary-background-color: #e5e5e5;
+    --tertiary-background-color: #f1f1f1;
     --fff-background-color: #dddddd;
     --text-color: #000;
-    --colored-text: #1c5d79;
     --image-invert: 100%;
     color-scheme: light
 }
@@ -21,10 +21,9 @@ Red Rose
 .dark-theme {
     --primary-background-color: #0d0d0d;
     --secondary-background-color: #141414;
-    --tertiary-background-color: #1c1c1c;
+    --tertiary-background-color: #101010;
     --fff-background-color: #2a2a2a;
     --text-color: #fff;
-    --colored-text: #1DBBFF;
     --image-invert: 0%;
     color-scheme: dark
 }
@@ -110,6 +109,10 @@ a:hover {
     #mobileBr {
         display: none;
     }
+
+    .footerRightText {
+        margin-top:-25px
+    }
 }
 
 @media only screen and (max-width: 640px) {
@@ -145,7 +148,7 @@ a:hover {
 
 .tippy-box[data-theme~=ws] {
     color: var(--text-color);
-    background: var(--secondary-background-color);
+    background: transparent;
     border: 1px solid var(--fff-background-color)
 }
 
@@ -168,6 +171,7 @@ a:hover {
 }
 
 .coloredText {
+    font-family: "Playwrite HU", sans-serif;
     background: linear-gradient(to right, #00c6ff, #0072ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -187,7 +191,7 @@ a:hover {
     width: 45px;
     height: 45px;
     color: var(--text-color);
-    background: var(--secondary-background-color);
+    background: transparent;
     border: 1px solid var(--fff-background-color)
 }
 
@@ -211,7 +215,7 @@ a:hover {
 .navbarButton {
     width: 45px;
     height: 45px;
-    background: var(--secondary-background-color);
+    background: transparent;
     border: 1px solid var(--fff-background-color)
 }
 
@@ -220,7 +224,7 @@ a:hover {
 }
 
 .bigButton {
-    background: var(--secondary-background-color);
+    background: transparent;
     border: 1px solid var(--fff-background-color);
     padding: 10px
 }
@@ -231,7 +235,7 @@ a:hover {
 }
 
 .card {
-    background: var(--secondary-background-color);
+    background: transparent; /*var(--secondary-background-color)*/
     border: 1px solid var(--fff-background-color)
 }
 
@@ -245,7 +249,7 @@ a:hover {
 }
 
 .textCard {
-    background: var(--secondary-background-color);
+    background: transparent;
     border: 1px solid var(--fff-background-color);
     padding: 10px
 }
@@ -263,70 +267,6 @@ a:hover {
     height: 230px;
     object-fit: cover
 }
-
-/*.discordStatusOnline {
-    width: 31px;
-    height: 31px;
-    border-radius: 999%;
-    background-color: #3ba55d;
-    border: 5px solid var(--primary-background-color);
-    bottom: 0;
-    right: 0;
-    margin-right: 6px;
-    margin-bottom: 6px;
-    position: absolute;
-    text-align: center;
-    align-items: center;
-    justify-content: center
-}
-
-.discordStatusDnd {
-    width: 31px;
-    height: 31px;
-    border-radius: 999%;
-    background-color: #ed4245;
-    border: 5px solid var(--primary-background-color);
-    bottom: 0;
-    right: 0;
-    margin-right: 6px;
-    margin-bottom: 6px;
-    position: absolute;
-    text-align: center;
-    align-items: center;
-    justify-content: center
-}
-
-.discordStatusIdle {
-    width: 31px;
-    height: 31px;
-    border-radius: 999%;
-    background-color: #faa81a;
-    border: 5px solid var(--primary-background-color);
-    bottom: 0;
-    right: 0;
-    margin-right: 6px;
-    margin-bottom: 6px;
-    position: absolute;
-    text-align: center;
-    align-items: center;
-    justify-content: center
-}
-
-.discordStatusOffline {
-    width: 31px;
-    height: 31px;
-    border-radius: 999%;
-    background-color: #747f8d;
-    border: 5px solid var(--primary-background-color);
-    bottom: 0;
-    right: 0;
-    margin-right: 6px;
-    margin-bottom: 6px;
-    position: absolute;
-    text-align: center;
-    align-items: center;
-    justify-content: center
-}*/
 
 .svgInvert {
     fill: var(--text-color)
@@ -352,7 +292,7 @@ button,
 }*/
 
 .rounded-custom {
-    border-radius: 8px;
+    border-radius: 13px;
 }
 
 .grayScale {
@@ -397,8 +337,4 @@ button,
   height: 2px;
   background: #e63946;
   border-radius: 2px
-}
-
-.signatureText {
-    font-size: 15px
 }
