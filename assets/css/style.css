@@ -1,4 +1,4 @@
-@import"https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap";
+@import"https://fonts.googleapis.com/css2?family=Geist:wght@100;200;300;400;500;600;700;800;900&display=swap";
 @import"https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap";
 
 
@@ -47,7 +47,7 @@ html {
 }
 
 body {
-    font-family: "Inter";
+    font-family: "Geist";
     transition: all 0.1s linear;
     background-color: var(--primary-background-color);
     background-image:
