@@ -129,9 +129,9 @@ function updatePresence() {
 }
 
 function updateActivityStatusText() {
-  const a = api.d.activities;
+  const a = api?.d?.activities || [];
   const hasNothing =
-    !api.d.listening_to_spotify &&
+    !api?.d?.listening_to_spotify &&
     !a.find(act => Object.values(APP_IDS).includes(act.application_id));
 
   if (hasNothing) {
@@ -142,6 +142,7 @@ function updateActivityStatusText() {
     elements.activitiesStatus.style.display = "none";
   }
 }
+
 
 setInterval(() => {
   if (ws.readyState === WebSocket.OPEN && received) {
