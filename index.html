@@ -111,7 +111,7 @@
                     <div class="p-0">
                         <div class="flex flex-col md:flex-row md:space-x-4 items-center md:items-start overflow-hidden">
                             <img draggable="false" src="assets/img/memojiLaptop.webp" alt="IMG"
-                                class="rounded-custom w-40 h-auto md:w-[200px] self-start mx-auto md:mx-0">
+                                class="rounded-custom w-40 h-auto md:w-[200px] self-start mx-auto md:mx-0 aboutAvatar">
 
                             <p class="normalText mt-4 md:mt-0 md:ml-3 opacity-80">
                                 Hello, I’m Eleven — a self-taught web developer who cares about simplicity, clarity, and
@@ -181,7 +181,6 @@
                     <div id="disneyPlusWatching"></div>
                     <div id="netflixWatching"></div>
                     <div id="visualStudioCodePlaying"></div>
-                    <div id="figmaPlaying"></div>
                 </div>
             </div>
         </div>
@@ -314,18 +313,18 @@
                         <form action="https://formspree.io/f/formId" method="POST" class="space-y-4">
                             <div>
                                 <label for="name" class="normalText opacity-80">Name</label>
-                                <input type="text" id="name" name="name" required placeholder="Who can we call you?"
+                                <input style="transition: all 0.1s linear" type="text" id="name" name="name" required placeholder="Who can we call you?"
                                     class="card normalText text-opacity-70 w-full p-3 rounded-custom focus:outline-none focus:ring-0 ring-0 border-none ring-none transition-none">
                             </div>
                             <div>
                                 <label for="email" class="normalText opacity-80">Email</label>
-                                <input type="email" id="email" name="email" required
+                                <input style="transition: all 0.1s linear" type="email" id="email" name="email" required
                                     placeholder="Where can we reach you?"
                                     class="card normalText text-opacity-70 w-full p-3 rounded-custom focus:outline-none focus:ring-0 ring-0 border-none ring-none transition-none">
                             </div>
                             <div>
                                 <label for="message" class="normalText opacity-80">Message</label>
-                                <textarea id="message" name="message" rows="2" required
+                                <textarea style="transition: all 0.1s linear" id="message" name="message" rows="2" required
                                     placeholder="Share your thoughts, questions, or ideas..."
                                     class="card normalText text-opacity-70 w-full p-3 rounded-custom focus:outline-none focus:ring-0 ring-0 border-none ring-none transition-none"></textarea>
                             </div>

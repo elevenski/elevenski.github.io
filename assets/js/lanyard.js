@@ -8,7 +8,6 @@ const elements = {
 };
 
 const APP_IDS = {
-  figma: "866719067092418580",
   vscode: "383226320970055681",
   netflix: "926541425682829352",
   disney: "630236276829716483"
@@ -43,6 +42,30 @@ function updateStatus(status) {
   elements.statusIcon.innerHTML = valid.includes(status) ? status : "offline";
 }
 
+function resolveAssetUrl(raw, appId, fallback) {
+  if (!raw) return fallback;
+  let s = String(raw);
+
+  if (s.startsWith("mp:external/") && s.includes("https/")) {
+    return s.substring(s.indexOf("https/")).replace("https/", "https://");
+  }
+
+  if (s.startsWith("https/")) {
+    return s.replace("https/", "https://");
+  }
+
+  if (s.startsWith("http")) {
+    return s;
+  }
+
+  /*if (/^[\w-]+$/.test(s)) {
+    return `https://cdn.discordapp.com/app-assets/${appId}/${s}.png`;
+  }*/
+
+  return fallback;
+}
+
+
 function mapAppActivity(appId, targetElement, imgPath, fallbackTitle) {
   const activity = api.d.activities.find(a => a.application_id === appId);
   if (!activity) {
@@ -52,17 +75,23 @@ function mapAppActivity(appId, targetElement, imgPath, fallbackTitle) {
   }
 
   targetElement.style.display = "";
-  const imageSrc = activity.assets?.large_image?.includes("https/") 
-    ? activity.assets.large_image.replace("https/", "https://") 
-    : imgPath;
+
+  const largeImage = activity.assets?.large_image || "";
+  const imageSrc = resolveAssetUrl(largeImage, appId, imgPath);
+
+  const titleText = appId === APP_IDS.netflix
+    ? (activity.name || fallbackTitle)
+    : (activity.state || fallbackTitle);
 
   targetElement.innerHTML = `
     <a href="javascript:void(0)">
       <div class="card rounded-custom h-full">
         <div class="p-4 flex space-x-2 items-center overflow-hidden">
-          <img src="${imageSrc}" alt="IMG" class="rounded-custom cardImage" width="60" height="60">
+          <img src="${imageSrc}" alt="IMG"
+               class="rounded-custom cardImage activityImage" width="60" height="60"
+               onerror="this.onerror=null; this.src='${imgPath}'">
           <p class="normalText ml-3 opacity-80">
-            ${activity.state || fallbackTitle}<br>
+            ${titleText}<br>
             <span class="normalText opacity-60">${activity.details || " "}</span>
           </p>
         </div>
@@ -121,7 +150,6 @@ function updateSpotify() {
 
 function updatePresence() {
   updateStatus(api.d.discord_status);
-  mapAppActivity(APP_IDS.figma, document.getElementById("figmaPlaying"), "/assets/img/figma.png", "Figma");
   mapAppActivity(APP_IDS.vscode, elements.visualStudioCodePlaying, "/assets/img/visualStudioCode.png", "VS Code");
   mapAppActivity(APP_IDS.netflix, elements.netflixWatching, "/assets/img/netflix.png", "Netflix");
   mapAppActivity(APP_IDS.disney, elements.disneyPlusWatching, "/assets/img/disneyPlus.png", "Disney+");
