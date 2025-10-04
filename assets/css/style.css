@@ -98,37 +98,6 @@ img {
         mask-size: cover;
     }
 
-    .cardImageLargeGraR {
-        position: relative;
-        width: 100%;
-        height: 205px;
-        object-fit: cover;
-        border-bottom-left-radius: 0%;
-        border-bottom-right-radius: 0%;
-
-        -webkit-mask-image: linear-gradient(to right,
-                rgba(0, 0, 0, 1) 40%,
-                rgba(0, 0, 0, 0.9) 55%,
-                rgba(0, 0, 0, 0.7) 70%,
-                rgba(0, 0, 0, 0.5) 80%,
-                rgba(0, 0, 0, 0.2) 90%,
-                rgba(0, 0, 0, 0.05) 95%,
-                rgba(0, 0, 0, 0) 100%);
-        -webkit-mask-repeat: no-repeat;
-        -webkit-mask-size: cover;
-
-        mask-image: linear-gradient(to right,
-                rgba(0, 0, 0, 1) 40%,
-                rgba(0, 0, 0, 0.9) 55%,
-                rgba(0, 0, 0, 0.7) 70%,
-                rgba(0, 0, 0, 0.5) 80%,
-                rgba(0, 0, 0, 0.2) 90%,
-                rgba(0, 0, 0, 0.05) 95%,
-                rgba(0, 0, 0, 0) 100%);
-        mask-repeat: no-repeat;
-        mask-size: cover;
-    }
-
     .cardImageLargeGraMJ {
         position: relative;
         width: 100%;
@@ -177,37 +146,6 @@ img {
         position: relative;
         width: 100%;
         height: 210px;
-        object-fit: cover;
-        border-bottom-left-radius: 0%;
-        border-bottom-right-radius: 0%;
-
-        -webkit-mask-image: linear-gradient(to bottom,
-                rgba(0, 0, 0, 1) 40%,
-                rgba(0, 0, 0, 0.9) 55%,
-                rgba(0, 0, 0, 0.7) 70%,
-                rgba(0, 0, 0, 0.5) 80%,
-                rgba(0, 0, 0, 0.2) 90%,
-                rgba(0, 0, 0, 0.05) 95%,
-                rgba(0, 0, 0, 0) 100%);
-        -webkit-mask-repeat: no-repeat;
-        -webkit-mask-size: cover;
-
-        mask-image: linear-gradient(to bottom,
-                rgba(0, 0, 0, 1) 40%,
-                rgba(0, 0, 0, 0.9) 55%,
-                rgba(0, 0, 0, 0.7) 70%,
-                rgba(0, 0, 0, 0.5) 80%,
-                rgba(0, 0, 0, 0.2) 90%,
-                rgba(0, 0, 0, 0.05) 95%,
-                rgba(0, 0, 0, 0) 100%);
-        mask-repeat: no-repeat;
-        mask-size: cover;
-    }
-
-    .cardImageLargeGraR {
-        position: relative;
-        width: 100%;
-        height: 205px;
         object-fit: cover;
         border-bottom-left-radius: 0%;
         border-bottom-right-radius: 0%;
@@ -451,45 +389,6 @@ a:hover {
     border: 1px solid var(--border-hover-color)
 }
 
-.imageLargeGra {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%
-}
-
-.imageLargeGra {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    object-position: 0% 35%;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    -webkit-mask-image: linear-gradient(to bottom,
-            rgba(0, 0, 0, 1) 40%,
-            rgba(0, 0, 0, 0.9) 55%,
-            rgba(0, 0, 0, 0.7) 70%,
-            rgba(0, 0, 0, 0.5) 80%,
-            rgba(0, 0, 0, 0.2) 90%,
-            rgba(0, 0, 0, 0.05) 95%,
-            rgba(0, 0, 0, 0) 100%);
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: cover;
-
-    mask-image: linear-gradient(to bottom,
-            rgba(0, 0, 0, 1) 40%,
-            rgba(0, 0, 0, 0.9) 55%,
-            rgba(0, 0, 0, 0.7) 70%,
-            rgba(0, 0, 0, 0.5) 80%,
-            rgba(0, 0, 0, 0.2) 90%,
-            rgba(0, 0, 0, 0.05) 95%,
-            rgba(0, 0, 0, 0) 100%);
-    mask-repeat: no-repeat;
-    mask-size: cover;
-}
-
 .myStoryFL::first-letter {
     font-size: 3.4rem;
     font-weight: bold;
@@ -505,8 +404,4 @@ a:hover {
 
 .blurImg {
     filter: blur(3px)
-
 }
-
-
-

@@ -1,15 +1,40 @@
 {
   "name": "Eleven",
   "short_name": "Eleven",
-  "description": "Self-taught web developer based in Türkiye.",
-  "lang": "en",
+  "description": "A self-taught web developer passionate about simplicity, clarity, and clean, accessible design, with experience in building websites and UI projects that focus on usability, efficiency, and intuitive user experiences.",
+  "dir": "ltr",
+  "lang": "en-US",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
-  "theme_color": "#00c6ff",
-  "background_color": "#00c6ff",
+  "categories": [
+    "productivity",
+    "utilities",
+    "portfolio",
+    "developer-tools"
+  ],
   "icons": [
+    {
+      "src": "assets/img/iconWhite.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/iconWhite.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/iconWhite.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/iconWhite.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
     {
       "src": "assets/img/iconWhite.png",
       "sizes": "192x192",
@@ -19,6 +44,25 @@
       "src": "assets/img/iconWhite.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "assets/img/iconWhite.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "GitHub",
+      "short_name": "GitHub",
+      "description": "Go to my GitHub profile",
+      "url": "https://github.com/elevenski"
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Send me an email",
+      "url": "mailto:elevenvac@pm.me"
     }
   ]
 }
