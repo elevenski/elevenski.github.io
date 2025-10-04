@@ -1,30 +1,25 @@
-@import"https://fonts.googleapis.com/css2?family=Geist:wght@100;200;300;400;500;600;700;800;900&display=swap";
-@import"https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap";
-
-
-/*
-
-Red Rose
-
-*/
+@import"https://fonts.googleapis.com/css2?family=Manrope:wght@100;200;300;400;500;600;700;800;900&display=swap";
+@import"https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@100;200;300;400;500;600;700;800;900&display=swap";
 
 :root {
-    --primary-background-color: #f9f9f9;
-    --secondary-background-color: #f0f0f0;
-    --tertiary-background-color: #f1f1f1;
-    --fff-background-color: #dddddd;
+    --primary-background-color: #F5F5F5;
+    --secondary-background-color: #F0F0F0;
+    --glass-background-color: rgba(245, 245, 245, 0.1);
+    --border-color: #e0e0e0;
+    --border-hover-color: #c2c2c2;
     --text-color: #000;
-    --image-invert: 100%;
+    --image-invert: 0%;
     color-scheme: light
 }
 
 .dark-theme {
-    --primary-background-color: #0d0d0d;
-    --secondary-background-color: #141414;
-    --tertiary-background-color: #101010;
-    --fff-background-color: #2a2a2a;
+    --primary-background-color: #0a0a0a;
+    --secondary-background-color: #0f0f0f;
+    --glass-background-color: rgba(10, 10, 10, 0.1);
+    --border-color: #1b1b1b;
+    --border-hover-color: #2d2d2d;
     --text-color: #fff;
-    --image-invert: 0%;
+    --image-invert: 100%;
     color-scheme: dark
 }
 
@@ -34,10 +29,11 @@ Red Rose
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: all 0.1s linear
+    transition: all 0.1s linear;
 }
 
-button:focus {
+*,
+:focus {
     outline: none
 }
 
@@ -47,14 +43,9 @@ html {
 }
 
 body {
-    font-family: "Geist";
+    font-family: "Manrope";
     transition: all 0.1s linear;
     background-color: var(--primary-background-color);
-    background-image:
-        radial-gradient(circle, var(--tertiary-background-color) 1px, transparent 1px),
-        radial-gradient(circle, var(--tertiary-background-color) 1px, transparent 1px);
-    background-position: 0 0, 25px 25px;
-    background-size: 50px 50px;
     line-height: 1.7
 }
 
@@ -64,118 +55,381 @@ img {
     user-select: none
 }
 
-a:hover {
-    text-decoration: none;
-    color: unset !important
-}
-
-.naturalLink:hover {
-    text-decoration: underline
-}
-
 @media only screen and (min-width: 640px) {
-    #head {
-        padding-top: 5em
+    section {
+        padding-top: 3em;
+        padding-bottom: 3em
     }
 
-    .section {
-        padding-top: 5em;
-        padding-bottom: 5em
+    .textBlack {
+        font-size: 55px;
+        line-height: 66px;
+        font-weight: 700
     }
 
-    #nameText {
-        float: center;
-        text-align: center
+    .cardImageLargeGra {
+        position: relative;
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+
+        -webkit-mask-image: linear-gradient(to bottom,
+                rgba(0, 0, 0, 1) 40%,
+                rgba(0, 0, 0, 0.9) 55%,
+                rgba(0, 0, 0, 0.7) 70%,
+                rgba(0, 0, 0, 0.5) 80%,
+                rgba(0, 0, 0, 0.2) 90%,
+                rgba(0, 0, 0, 0.05) 95%,
+                rgba(0, 0, 0, 0) 100%);
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: cover;
+
+        mask-image: linear-gradient(to bottom,
+                rgba(0, 0, 0, 1) 40%,
+                rgba(0, 0, 0, 0.9) 55%,
+                rgba(0, 0, 0, 0.7) 70%,
+                rgba(0, 0, 0, 0.5) 80%,
+                rgba(0, 0, 0, 0.2) 90%,
+                rgba(0, 0, 0, 0.05) 95%,
+                rgba(0, 0, 0, 0) 100%);
+        mask-repeat: no-repeat;
+        mask-size: cover;
     }
 
-    .blackText {
-        font-size: 40px;
-        float: center;
-        text-align: center
+    .cardImageLargeGraR {
+        position: relative;
+        width: 100%;
+        height: 205px;
+        object-fit: cover;
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+
+        -webkit-mask-image: linear-gradient(to right,
+                rgba(0, 0, 0, 1) 40%,
+                rgba(0, 0, 0, 0.9) 55%,
+                rgba(0, 0, 0, 0.7) 70%,
+                rgba(0, 0, 0, 0.5) 80%,
+                rgba(0, 0, 0, 0.2) 90%,
+                rgba(0, 0, 0, 0.05) 95%,
+                rgba(0, 0, 0, 0) 100%);
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: cover;
+
+        mask-image: linear-gradient(to right,
+                rgba(0, 0, 0, 1) 40%,
+                rgba(0, 0, 0, 0.9) 55%,
+                rgba(0, 0, 0, 0.7) 70%,
+                rgba(0, 0, 0, 0.5) 80%,
+                rgba(0, 0, 0, 0.2) 90%,
+                rgba(0, 0, 0, 0.05) 95%,
+                rgba(0, 0, 0, 0) 100%);
+        mask-repeat: no-repeat;
+        mask-size: cover;
     }
 
-    #centeredButton {
-        text-align: center
-    }
+    .cardImageLargeGraMJ {
+        position: relative;
+        width: 100%;
+        height: 205px;
+        object-fit: cover;
+        border-top-left-radius: 0%;
+        border-bottom-left-radius: 0%;
 
-    .footerLeft {
-        float: left
-    }
+        -webkit-mask-image: linear-gradient(to left,
+                rgba(0, 0, 0, 1) 40%,
+                rgba(0, 0, 0, 0.9) 55%,
+                rgba(0, 0, 0, 0.7) 70%,
+                rgba(0, 0, 0, 0.5) 80%,
+                rgba(0, 0, 0, 0.2) 90%,
+                rgba(0, 0, 0, 0.05) 95%,
+                rgba(0, 0, 0, 0) 100%);
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: cover;
 
-    .footerRight {
-        float: right;
-    }
-
-    #mobileBr {
-        display: none;
-    }
-
-    .footerRightText {
-        margin-top: -25px
+        mask-image: linear-gradient(to left,
+                rgba(0, 0, 0, 1) 40%,
+                rgba(0, 0, 0, 0.9) 55%,
+                rgba(0, 0, 0, 0.7) 70%,
+                rgba(0, 0, 0, 0.5) 80%,
+                rgba(0, 0, 0, 0.2) 90%,
+                rgba(0, 0, 0, 0.05) 95%,
+                rgba(0, 0, 0, 0) 100%);
+        mask-repeat: no-repeat;
+        mask-size: cover;
     }
 }
 
 @media only screen and (max-width: 640px) {
-    #head {
-        padding-top: 4em
-    }
-
-    .section {
+    section {
         padding-top: 4em;
         padding-bottom: 4em
     }
 
-    .blackText {
-        font-size: 40px;
-        float: center;
-        text-align: center
+    .textBlack {
+        font-size: 31px;
+        line-height: 40px;
+        font-weight: 600
     }
 
-    #nameText {
-        float: center;
-        text-align: center
+    .cardImageLargeGra {
+        position: relative;
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+
+        -webkit-mask-image: linear-gradient(to bottom,
+                rgba(0, 0, 0, 1) 40%,
+                rgba(0, 0, 0, 0.9) 55%,
+                rgba(0, 0, 0, 0.7) 70%,
+                rgba(0, 0, 0, 0.5) 80%,
+                rgba(0, 0, 0, 0.2) 90%,
+                rgba(0, 0, 0, 0.05) 95%,
+                rgba(0, 0, 0, 0) 100%);
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: cover;
+
+        mask-image: linear-gradient(to bottom,
+                rgba(0, 0, 0, 1) 40%,
+                rgba(0, 0, 0, 0.9) 55%,
+                rgba(0, 0, 0, 0.7) 70%,
+                rgba(0, 0, 0, 0.5) 80%,
+                rgba(0, 0, 0, 0.2) 90%,
+                rgba(0, 0, 0, 0.05) 95%,
+                rgba(0, 0, 0, 0) 100%);
+        mask-repeat: no-repeat;
+        mask-size: cover;
     }
 
-    .footer {
-        text-align: center;
-        float: center
+    .cardImageLargeGraR {
+        position: relative;
+        width: 100%;
+        height: 205px;
+        object-fit: cover;
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+
+        -webkit-mask-image: linear-gradient(to bottom,
+                rgba(0, 0, 0, 1) 40%,
+                rgba(0, 0, 0, 0.9) 55%,
+                rgba(0, 0, 0, 0.7) 70%,
+                rgba(0, 0, 0, 0.5) 80%,
+                rgba(0, 0, 0, 0.2) 90%,
+                rgba(0, 0, 0, 0.05) 95%,
+                rgba(0, 0, 0, 0) 100%);
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: cover;
+
+        mask-image: linear-gradient(to bottom,
+                rgba(0, 0, 0, 1) 40%,
+                rgba(0, 0, 0, 0.9) 55%,
+                rgba(0, 0, 0, 0.7) 70%,
+                rgba(0, 0, 0, 0.5) 80%,
+                rgba(0, 0, 0, 0.2) 90%,
+                rgba(0, 0, 0, 0.05) 95%,
+                rgba(0, 0, 0, 0) 100%);
+        mask-repeat: no-repeat;
+        mask-size: cover;
     }
 
-    #centeredButton {
-        text-align: center
+    .cardImageLargeGraMJ {
+        position: relative;
+        width: 100%;
+        height: 205px;
+        object-fit: cover;
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+
+        -webkit-mask-image: linear-gradient(to bottom,
+                rgba(0, 0, 0, 1) 40%,
+                rgba(0, 0, 0, 0.9) 55%,
+                rgba(0, 0, 0, 0.7) 70%,
+                rgba(0, 0, 0, 0.5) 80%,
+                rgba(0, 0, 0, 0.2) 90%,
+                rgba(0, 0, 0, 0.05) 95%,
+                rgba(0, 0, 0, 0) 100%);
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: cover;
+
+        mask-image: linear-gradient(to bottom,
+                rgba(0, 0, 0, 1) 40%,
+                rgba(0, 0, 0, 0.9) 55%,
+                rgba(0, 0, 0, 0.7) 70%,
+                rgba(0, 0, 0, 0.5) 80%,
+                rgba(0, 0, 0, 0.2) 90%,
+                rgba(0, 0, 0, 0.05) 95%,
+                rgba(0, 0, 0, 0) 100%);
+        mask-repeat: no-repeat;
+        mask-size: cover;
+    }
+
+    .myJourneyImage {
+        object-fit: cover;
+        object-position: 10% 10%;
+        height: 40vh !important
     }
 }
 
-.tippy-box[data-theme~=ws] {
-    color: var(--text-color);
-    background: transparent;
-    border: 1px solid var(--fff-background-color)
+.textBlack {
+    color: var(--text-color)
 }
 
-.blackText {
-    color: var(--text-color);
-    font-weight: 600;
-    line-height: 1.3em;
+.textBig {
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text-color)
 }
 
-.boldText {
-    color: var(--text-color);
-    font-size: 20px;
-    font-weight: normal
+.textTitle {
+    font-family: "Space Grotesk"
 }
 
-.normalText {
-    color: var(--text-color);
+.textBold {
+    font-weight: 500 !important
+}
+
+.textNormal {
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text-color)
+}
+
+.textLNormal {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color)
+}
+
+.textThin {
     font-size: 15px;
-    font-weight: normal
+    font-weight: 400;
+    color: var(--text-color) !important
 }
 
-.coloredText {
-    font-family: "Playwrite HU", sans-serif;
-    background: linear-gradient(to right, #00c6ff, #0072ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    height: 100vh
+.textNav {
+    line-height: 20px;
+}
+
+#head {
+    height: 100vh;
+}
+
+a:hover {
+    color: none !important;
+    text-decoration: none !important
+}
+
+.button {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+}
+
+.button:hover {
+    border: 1px solid var(--border-hover-color)
+}
+
+.buttonOnlyBorder {
+    border: 1px solid var(--border-color);
+}
+
+.navImage {
+    border: 1px solid var(--border-color);
+}
+
+.card {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+}
+
+.card:hover {
+    background-color: var(--secondary-background-color)
+}
+
+.cardNH {
+    background-color: transparent;
+    border: 1px solid var(--border-color)
+}
+
+.cardNHS {
+    background-color: transparent;
+    border: 1px solid var(--border-color)
+}
+
+.cardNH:hover {
+    border: 1px solid var(--border-hover-color)
+}
+
+.cardNHB {
+    background-color: transparent
+}
+
+.cardImage {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.cardImageLarge {
+    width: 100%;
+    height: 165px;
+    object-fit: cover;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%
+}
+
+.truncate-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.underlineSpaced {
+    display: inline-block;
+    padding-bottom: 1px;
+    border-bottom: 1px solid transparent;
+}
+
+.underlineSpaced:hover {
+    border-bottom-color: currentColor
+}
+
+.intro {
+    position: relative;
+    overflow: visible;
+}
+
+.animated-bg {
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle at center, #fff, #f8f8f8, transparent 70%);
+    border-radius: 50%;
+    filter: blur(150px);
+    opacity: 0.25;
+    z-index: 0;
+    animation: float 10s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+
+    50% {
+        transform: translate(-50%, -52%) scale(0.7);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(0.5);
+    }
 }
 
 #goTop {
@@ -186,172 +440,69 @@ a:hover {
     z-index: 99;
     outline: none;
     cursor: pointer;
-    font-size: 18px;
-    transform: scale(1);
-    width: 45px;
-    height: 45px;
     color: var(--text-color);
-    background: transparent;
-    border: 1px solid var(--fff-background-color)
+    border: 1px solid var(--border-color);
+    background: var(--glass-background-color);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px)
 }
 
 #goTop:hover {
-    background: var(--tertiary-background-color)
+    border: 1px solid var(--border-hover-color)
 }
 
-.navGrid {
-    display: grid;
-    grid-template-columns: auto auto
-}
-
-.navGridItemRight {
-    justify-self: end
-}
-
-#navbarImage {
-    filter: invert(var(--image-invert))
-}
-
-.navbarButton {
-    width: 45px;
-    height: 45px;
-    background: transparent;
-    border: 1px solid var(--fff-background-color)
-}
-
-.navbarButton:hover {
-    background: var(--tertiary-background-color)
-}
-
-.bigButton {
-    background: transparent;
-    border: 1px solid var(--fff-background-color);
-    padding: 10px
-}
-
-.bigButton:hover {
-    background: var(--tertiary-background-color);
-    color: var(--text-color) !important
-}
-
-.card {
-    background: transparent;
-    /*var(--secondary-background-color)*/
-    border: 1px solid var(--fff-background-color)
-}
-
-.card:hover {
-    background: var(--tertiary-background-color);
-    color: var(--text-color) !important
-}
-
-.githubCard {
-    cursor: pointer
-}
-
-.textCard {
-    background: transparent;
-    border: 1px solid var(--fff-background-color);
-    padding: 10px
-}
-
-#headAvatarContainer {
-    width: 160px;
-    height: 160px;
-    text-align: center;
-    align-items: center;
-    justify-content: center
-}
-
-#headAvatar {
-    width: 230px;
-    height: 230px;
+.imageLargeGra {
+    width: 100%;
+    height: 300px;
     object-fit: cover;
-    filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.3))
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%
 }
 
-.aboutAvatar {
-    filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.2))
+.imageLargeGra {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: 0% 35%;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    -webkit-mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 1) 40%,
+            rgba(0, 0, 0, 0.9) 55%,
+            rgba(0, 0, 0, 0.7) 70%,
+            rgba(0, 0, 0, 0.5) 80%,
+            rgba(0, 0, 0, 0.2) 90%,
+            rgba(0, 0, 0, 0.05) 95%,
+            rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+
+    mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 1) 40%,
+            rgba(0, 0, 0, 0.9) 55%,
+            rgba(0, 0, 0, 0.7) 70%,
+            rgba(0, 0, 0, 0.5) 80%,
+            rgba(0, 0, 0, 0.2) 90%,
+            rgba(0, 0, 0, 0.05) 95%,
+            rgba(0, 0, 0, 0) 100%);
+    mask-repeat: no-repeat;
+    mask-size: cover;
 }
 
-.svgInvert {
-    fill: var(--text-color)
-}
-
-.leftFloat,
-#left {
+.myStoryFL::first-letter {
+    font-size: 3.4rem;
+    font-weight: bold;
     float: left;
-    text-align: left
+    margin-right: 8px;
+    line-height: 1;
 }
 
-.rightFloat,
-#right {
-    float: right;
-    text-align: right
-}
-
-/*.bigButton,
-.card,
-button,
-.textCard {
-    box-shadow: var(--theme-box-shadow)
-}*/
-
-.rounded-custom {
-    border-radius: 13px;
-}
-
-.card .grayScale {
+.grayScale {
     filter: grayscale(100%);
     transition: all 0.1s linear
 }
 
-.card:hover .grayScale {
-    filter: grayscale(0%);
-}
-
-.cardImage {
-    width: 60px;
-    height: 60px;
-    object-fit: cover
-}
-
-#head {
-    height: 85vh;
-}
-
-.aboutImg {
-    width: 100%;
-    height: 225px;
-}
-
-.cardNoHover {
-    background: var(--secondary-background-color) !important
-}
-
-.countryText {
-    position: relative
-}
-
-.countryText::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 100%;
-    height: 2px;
-    background: #e63946;
-    border-radius: 2px
-}
-
-input::placeholder,
-textarea::placeholder {
-    color: var(--text-color);
-    font-size: 15px;
-    font-weight: normal;
-    opacity: 0.3
-}
-
-.activityImage {
-    background-color: var(--tertiary-background-color) !important
+.blurImg {
+    filter: blur(3px)
 }

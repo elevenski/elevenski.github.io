@@ -1,16 +1,7 @@
 const elements = {
   statusIcon: document.getElementById("statusIcon"),
-  spotifyListening: document.getElementById("spotifyListening"),
-  visualStudioCodePlaying: document.getElementById("visualStudioCodePlaying"),
-  netflixWatching: document.getElementById("netflixWatching"),
-  disneyPlusWatching: document.getElementById("disneyPlusWatching"),
+  activitiesContainer: document.getElementById("activitiesContainer"),
   activitiesStatus: document.getElementById("activitiesStatus"),
-};
-
-const APP_IDS = {
-  vscode: "383226320970055681",
-  netflix: "926541425682829352",
-  disney: "630236276829716483"
 };
 
 let api = {};
@@ -21,7 +12,7 @@ function connectWebSocket() {
   ws = new WebSocket("wss://api.lanyard.rest/socket");
 
   ws.onopen = () => {
-    ws.send(JSON.stringify({ op: 2, d: { subscribe_to_id: "354343248698802187" } }));
+    ws.send(JSON.stringify({ op: 2, d: { subscribe_to_id: "354343248698802187" } })); // kendi ID'ni yaz
   };
 
   ws.onmessage = (event) => {
@@ -58,126 +49,182 @@ function resolveAssetUrl(raw, appId, fallback) {
     return s;
   }
 
-  /*if (/^[\w-]+$/.test(s)) {
+  if (appId && s) {
     return `https://cdn.discordapp.com/app-assets/${appId}/${s}.png`;
-  }*/
+  }
 
   return fallback;
 }
 
-
-function mapAppActivity(appId, targetElement, imgPath, fallbackTitle) {
-  const activity = api.d.activities.find(a => a.application_id === appId);
-  if (!activity) {
-    targetElement.innerHTML = "";
-    targetElement.style.display = "none";
-    return;
-  }
-
-  targetElement.style.display = "";
-
-  const largeImage = activity.assets?.large_image || "";
-  const imageSrc = resolveAssetUrl(largeImage, appId, imgPath);
-
-  const titleText = appId === APP_IDS.netflix
-    ? (activity.name || fallbackTitle)
-    : (activity.state || fallbackTitle);
-
-  targetElement.innerHTML = `
-    <a href="javascript:void(0)">
-      <div class="card rounded-custom h-full">
-        <div class="p-4 flex space-x-2 items-center overflow-hidden">
-          <img src="${imageSrc}" alt="IMG"
-               class="rounded-custom cardImage activityImage" width="60" height="60"
-               onerror="this.onerror=null; this.src='${imgPath}'">
-          <p class="normalText ml-3 opacity-80">
-            ${titleText}<br>
-            <span class="normalText opacity-60">${activity.details || " "}</span>
-          </p>
-        </div>
-      </div>
-    </a>`;
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
 }
 
-function updateSpotify() {
-  const spotify = api.d.spotify;
-  const el = elements.spotifyListening;
-  if (!api.d.listening_to_spotify || !spotify) {
-    el.innerHTML = "";
-    el.style.display = "none";
-    clearInterval(window.spotifyRingInterval);
-    return;
-  }
+function renderActivities() {
+  const container = elements.activitiesContainer;
+  if (!container) return;
+  container.innerHTML = "";
 
-  el.style.display = "";
-  const duration = spotify.timestamps.end - spotify.timestamps.start;
-  const progress = Math.min(Date.now() - spotify.timestamps.start, duration);
-  const percent = (progress / duration) * 100;
+  const activities = api?.d?.activities || [];
 
-  el.innerHTML = `
-    <a href="https://open.spotify.com/track/${spotify.track_id}" target="_blank">
-      <div class="card rounded-custom h-full">
-        <div class="p-4 flex items-center space-x-4 overflow-hidden">
-          <div class="relative flex items-center justify-center cardImage animate-pulse">
-            <svg class="absolute cardImage" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="45" stroke="rgba(0, 0, 0, 0.5)" stroke-width="6" fill="none"/>
+  const spotifyActivity = activities.find(
+    a => a.name === "Spotify" && api?.d?.listening_to_spotify && api?.d?.spotify
+  );
+  const otherActivities = activities.filter(a => a.name !== "Spotify");
+
+  if (spotifyActivity) {
+    const spotify = api.d.spotify;
+    const duration = spotify.timestamps.end - spotify.timestamps.start;
+
+    const card = document.createElement("div");
+    card.className = "cardNH rounded-3xl h-full visible";
+    card.innerHTML = `
+      <a href="https://open.spotify.com/track/${spotify.track_id}" target="_blank">
+        <div class="px-6 py-3 flex items-center space-x-4 overflow-hidden">
+          <div class="relative flex items-center justify-center cardImage">
+            <svg class="absolute cardImage" viewBox="0 0 100 100" style="width:60px;height:60px">
+              <circle cx="50" cy="50" r="45" stroke="rgba(0, 0, 0, 0.12)" stroke-width="6" fill="none"/>
               <circle id="spotifyRing" cx="50" cy="50" r="45" stroke="#1DB954" stroke-width="6" fill="none"
                 stroke-linecap="round" stroke-dasharray="282.6" stroke-dashoffset="282.6" transform="rotate(-90 50 50)"/>
             </svg>
-            <img src="${spotify.album_art_url}" class="rounded-full object-cover cardImage">
+            <img draggable="false" src="${spotify.album_art_url}" class="rounded-full object-cover cardImage" width="60" height="60" alt="IMG">
           </div>
-          <p class="normalText opacity-80">${spotify.song}<br>
-            <span class="normalText opacity-60">${spotify.artist.replace(/;/g, ",")}</span>
-          </p>
+          <div class="flex flex-col flex-1 overflow-hidden ml-3">
+            <p class="textLNormal textBold opacity-80 truncate">${escapeHtml(spotify.song)}</p>
+            <p class="textThin opacity-60 truncate">${escapeHtml(spotify.artist.replace(/;/g, ","))}</p>
+          </div>
+        </div>
+      </a>
+    `;
+    container.appendChild(card);
+
+    clearInterval(window.spotifyRingInterval);
+    const updateRing = () => {
+      const now = Date.now();
+      const prog = Math.min(now - spotify.timestamps.start, duration);
+      const ring = document.getElementById("spotifyRing");
+      if (ring) {
+        const length = 2 * Math.PI * 45;
+        ring.style.strokeDashoffset = length * (1 - prog / duration);
+      }
+    };
+    updateRing();
+    window.spotifyRingInterval = setInterval(updateRing, 1000);
+  }
+
+  otherActivities.forEach(activity => {
+    const largeImage = activity.assets?.large_image || activity.assets?.small_image || "";
+    const imageSrc = resolveAssetUrl(
+      largeImage,
+      activity.application_id,
+      "assets/img/pattern.png"
+    );
+
+    const title = activity.name || "Unknown App";
+    const state = activity.state || "";
+    const details = activity.details || "";
+
+    const card = document.createElement("div");
+    card.className = "cardNHS rounded-3xl h-full overflow-hidden visible";
+    card.innerHTML = `
+      <div class="px-6 py-3 flex space-x-2 items-center h-full">
+        <div class="flex items-center gap-3 w-full">
+          <img draggable="false" src="${imageSrc}" alt="IMG"
+               class="rounded-xl cardImage activityImage" width="60" height="60"
+               onerror="this.onerror=null; this.src='/assets/img/pattern.png'">
+          <div class="flex flex-col flex-1 overflow-hidden">
+            <p class="textLNormal textBold opacity-80 truncate">${escapeHtml(title)}</p>
+            <p class="textThin opacity-60 truncate">${escapeHtml(details || state || " ")}</p>
+          </div>
         </div>
       </div>
-    </a>`;
-
-  const updateRing = () => {
-    const now = Date.now();
-    const progress = Math.min(now - spotify.timestamps.start, duration);
-    const ring = document.getElementById("spotifyRing");
-    if (ring) {
-      const length = 2 * Math.PI * 45;
-      ring.style.strokeDashoffset = length * (1 - progress / duration);
-    }
-  };
-
-  clearInterval(window.spotifyRingInterval);
-  updateRing();
-  window.spotifyRingInterval = setInterval(updateRing, 1000);
+    `;
+    container.appendChild(card);
+  });
 }
+
 
 function updatePresence() {
   updateStatus(api.d.discord_status);
-  mapAppActivity(APP_IDS.vscode, elements.visualStudioCodePlaying, "/assets/img/visualStudioCode.png", "VS Code");
-  mapAppActivity(APP_IDS.netflix, elements.netflixWatching, "/assets/img/netflix.png", "Netflix");
-  mapAppActivity(APP_IDS.disney, elements.disneyPlusWatching, "/assets/img/disneyPlus.png", "Disney+");
-  updateSpotify();
+  renderActivities();
+  adjustLayout();
+  updateActivityStatusText();
 }
 
 function updateActivityStatusText() {
   const a = api?.d?.activities || [];
-  const hasNothing =
-    !api?.d?.listening_to_spotify &&
-    !a.find(act => Object.values(APP_IDS).includes(act.application_id));
+  const hasNothing = a.length === 0;
 
-  if (hasNothing) {
-    elements.activitiesStatus.innerHTML = `<span class="normalText opacity-80">There are currently no activity.</span>`;
-    elements.activitiesStatus.style.display = "";
-  } else {
-    elements.activitiesStatus.innerHTML = "";
-    elements.activitiesStatus.style.display = "none";
+  if (elements.activitiesStatus) {
+    if (hasNothing) {
+      elements.activitiesStatus.innerHTML = "";
+      elements.activitiesStatus.style.display = "none";
+    } else {
+      elements.activitiesStatus.innerHTML = "";
+      elements.activitiesStatus.style.display = "none";
+    }
   }
 }
 
-
 setInterval(() => {
-  if (ws.readyState === WebSocket.OPEN && received) {
+  if (ws && ws.readyState === WebSocket.OPEN && received) {
     ws.send(JSON.stringify({ op: 3 }));
   }
 }, 30000);
 
 setInterval(updateActivityStatusText, 1000);
 
+window.addEventListener('resize', () => {
+  adjustLayout();
+});
+
 connectWebSocket();
+
+function adjustLayout() {
+  const container = elements.activitiesContainer;
+  if (!container) return;
+
+  const visible = Array.from(container.children).filter(el =>
+    el.classList.contains('visible') &&
+    window.getComputedStyle(el).display !== 'none'
+  );
+
+  visible.forEach(el => el.classList.add('hidden'));
+
+  const toShow = visible.slice(0, 3);
+  toShow.forEach(el => el.classList.remove('hidden'));
+
+  if (window.matchMedia('(max-width: 768px)').matches) {
+    toShow.forEach(el => {
+      el.classList.remove("sm:w-full", "sm:w-1/2", "sm:w-1/3", "w-[300px]", "mx-auto");
+      el.classList.add("w-full", "mb-3");
+    });
+    container.classList.remove("flex", "justify-center");
+    return;
+  }
+
+  container.classList.remove("flex", "justify-center");
+  if (toShow.length === 1) {
+    container.classList.add("flex", "justify-center");
+    const el = toShow[0];
+    el.classList.remove("w-full", "sm:w-1/2", "sm:w-1/3");
+    el.classList.add("w-[400px]");
+  } else if (toShow.length === 2) {
+    container.classList.add("flex", "justify-start", "gap-6");
+    toShow.forEach(el => {
+      el.classList.remove("w-full", "sm:w-full", "sm:w-1/2", "sm:w-1/3");
+      el.classList.add("sm:w-1/2");
+    });
+  } else if (toShow.length === 3) {
+    container.classList.add("flex", "justify-start", "gap-6");
+    toShow.forEach(el => {
+      el.classList.remove("w-full", "sm:w-full", "sm:w-1/2", "sm:w-1/3");
+      el.classList.add("sm:w-1/3");
+    });
+  }
+}
