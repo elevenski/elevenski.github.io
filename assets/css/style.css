@@ -168,7 +168,7 @@ img {
     }
 
     .textBlack {
-        font-size: 31px;
+        font-size: 28px;
         line-height: 40px;
         font-weight: 600
     }
@@ -505,4 +505,5 @@ a:hover {
 
 .blurImg {
     filter: blur(3px)
+
 }
